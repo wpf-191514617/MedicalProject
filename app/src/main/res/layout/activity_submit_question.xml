@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tvSubmitPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_38dp"
+        android:background="#FEEFD3"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:singleLine="true"
+        android:text="重要：急重症不适合网上咨询，请立即前往当地医院就医"
+        android:textColor="#FF803F"
+        android:textSize="@dimen/sp_14" />
+
+
+    <EditText
+        android:id="@+id/etSubmitQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="left|top"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginRight="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:lineSpacingExtra="@dimen/dimen_5dp"
+        android:textColorHint="@color/grayb4"
+        android:hint="请用10~500字详细描述您的症症状、疾病和身体状况，否则可能无法获得医生的详细解答。请勿透露您的真实姓名或联系方式"
+        android:textColor="@color/gray66"/>
+
+
+
+</LinearLayout>
