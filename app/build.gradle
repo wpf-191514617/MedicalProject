@@ -14,6 +14,15 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        debug {
+            storeFile file('export.jks')
+            storePassword 'medical000'
+            keyAlias 'exportKey'
+            keyPassword 'medical000'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -39,4 +48,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':beitonelibrary')
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
 }

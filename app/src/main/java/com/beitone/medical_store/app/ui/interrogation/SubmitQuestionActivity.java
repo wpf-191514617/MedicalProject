@@ -28,6 +28,7 @@ public class SubmitQuestionActivity extends BaseActivity {
     protected void initViewAndData() {
         ButterKnife.bind(this);
         setTitle("快速提问");
+        tvSubmitPrompt.setSelected(true);
     }
 
     @Override
@@ -39,7 +40,7 @@ public class SubmitQuestionActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_next) {
-
+            jumpTo(SelectSeeDoctorPeopleActivity.class);
             return true;
         }
         return super.onOptionsItemSelected(item);

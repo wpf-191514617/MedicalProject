@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_30dp"
+        android:paddingRight="@dimen/dimen_30dp"
+        android:paddingTop="@dimen/dimen_25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_24"
+            android:text="登录/注册"
+            android:textColor="@color/gray33"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:text="未注册手机号验证后即可完成注册"
+            android:textColor="@color/gray33"
+            android:layout_marginTop="@dimen/dimen_10dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_45dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/gray33"
+                android:textStyle="bold"
+                android:text="+86"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:inputType="phone"
+                android:textColor="@color/gray33"
+                android:textColorHint="#B4B4B4"
+                android:textSize="@dimen/sp_14"
+                android:hint="请输入11位手机号"/>
+
+
+            <ImageView
+                android:id="@+id/ivClearPhone"
+                android:layout_width="@dimen/dimen_23dp"
+                android:layout_height="@dimen/dimen_23dp"
+                android:padding="@dimen/dimen_5dp"
+                android:src="@drawable/ic_clear"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/line"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dimen_12dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etAuthCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_weight="1"
+                android:textColor="@color/gray33"
+                android:textColorHint="#B4B4B4"
+                android:inputType="number"
+                android:textSize="@dimen/sp_14"
+                android:hint="请输入验证码"/>
+
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="@dimen/dimen_23dp"
+                android:background="@color/grayDE"/>
+
+            <cn.betatown.mobile.beitonelibrary.widget.CountDownButton
+                android:id="@+id/countDownButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_13dp"
+                android:layout_marginRight="@dimen/dimen_8dp"
+                app:start_text="获取验证码"
+                app:start_text_color="@color/colorAccent"
+                app:end_text="重新发送"
+                app:load_text_color="@color/gray66"
+                app:count_time="10"
+                />
+
+
+        </LinearLayout>
+
+
+        <include layout="@layout/line"/>
+
+
+
+        <com.beitone.medical_store.app.widget.AppButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45dp"
+            android:text="登录"
+            android:layout_marginTop="@dimen/dimen_32dp"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dimen_16dp">
+
+            <TextView
+                android:id="@+id/tvLoginType1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/gray33"
+                android:text="账号密码登录"
+                android:padding="@dimen/dimen_10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="@dimen/dimen_29dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.8dp"
+                    android:layout_weight="1"
+                    android:background="@color/grayDE"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合作账号登陆"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/gray99"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:layout_marginRight="@dimen/dimen_8dp"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.8dp"
+                    android:layout_weight="1"
+                    android:background="@color/grayDE"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_18dp">
+
+                <ImageView
+                    android:id="@+id/ivWechatLogin"
+                    android:layout_width="@dimen/dimen_40dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:src="@drawable/ic_wechat"/>
+
+                <ImageView
+                    android:id="@+id/ivQQLogin"
+                    android:layout_width="@dimen/dimen_40dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:src="@drawable/ic_qq"
+                    android:layout_marginLeft="@dimen/dimen_71dp"/>
+            </LinearLayout>
+
+
+
+            <com.beitone.medical_store.app.widget.ProtocolTextLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

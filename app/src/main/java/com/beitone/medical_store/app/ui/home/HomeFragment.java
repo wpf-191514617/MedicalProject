@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.ui.account.AccountActivity;
+import com.beitone.medical_store.app.ui.account.LoginAuthActivity;
 import com.beitone.medical_store.app.ui.interrogation.SubmitQuestionActivity;
 
 import butterknife.BindView;
@@ -18,7 +20,6 @@ import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 public class HomeFragment extends BaseFragment {
     @BindView(R.id.textView)
     Button textView;
-    private Unbinder unbinder;
 
     @Override
     protected int getContentViewLayoutID() {
@@ -33,22 +34,9 @@ public class HomeFragment extends BaseFragment {
 
     @OnClick(R.id.textView)
     public void onViewClicked() {
-        jumpTo(SubmitQuestionActivity.class);
+        //jumpTo(SubmitQuestionActivity.class);
+        jumpTo(AccountActivity.class);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        unbinder = ButterKnife.bind(this, rootView);
-        return rootView;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 
 }

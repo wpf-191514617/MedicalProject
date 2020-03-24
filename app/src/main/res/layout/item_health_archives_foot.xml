@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayf5"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="添加新档案"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/sp_16">
+
+    </TextView>
+
+</LinearLayout>

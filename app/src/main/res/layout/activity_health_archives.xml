@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_15dp">
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputRelation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="与您的关系"
+            app:inputHnit="请选择"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+        <include layout="@layout/line"/>
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="姓名"
+            app:inputHnit="请输入姓名"
+            app:inputGravity="right"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+        <include layout="@layout/line"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="性别"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/sp_14" />
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="男"/>
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbWomen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                app:text="女"
+                android:layout_marginLeft="@dimen/dimen_15dp"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputIDCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="身份证号"
+            app:inputHnit="请输入证件号码"
+            app:inputGravity="right"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            app:inputType="idcard"
+            />
+
+        <include layout="@layout/line"/>
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="出生日期"
+            app:inputHnit="请选择"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <com.beitone.medical_store.app.widget.AppButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_margin="@dimen/dimen_16dp"
+        />
+
+
+</LinearLayout>

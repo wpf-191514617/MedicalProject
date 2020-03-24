@@ -4,8 +4,10 @@
     <color name="color_00000050">#70000000</color>
     <color name="gray33">#333333</color>
     <color name="white">@android:color/white</color>
-    <color name="colorPrimary">#15D2C3</color>
+    <color name="colorPrimary">>@color/white</color>
     <color name="colorPrimaryDark">@color/white</color>
     <color name="colorAccent">#15D2C3</color>
     <color name="sr_window_background">#FFFEFEFE</color>
+    <color name="grayf5">#F5F5F5</color>
+    <color name="grayDE">#DEDEDE</color>
 </resources>

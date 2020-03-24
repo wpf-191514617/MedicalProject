@@ -19,12 +19,19 @@
             </intent-filter>
         </activity>
 
+        <!-- 用户账号相关 -->
+        <activity android:name=".ui.account.AccountActivity"
+            android:screenOrientation="portrait"/>
+
         <!-- 问诊 -->
         <activity
             android:name=".ui.interrogation.SubmitQuestionActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.interrogation.SelectSeeDoctorPeopleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.interrogation.HealthArchivesActivity"
             android:screenOrientation="portrait" />
 
     </application>
