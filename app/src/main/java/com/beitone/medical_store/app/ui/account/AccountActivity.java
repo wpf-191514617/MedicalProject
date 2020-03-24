@@ -10,6 +10,7 @@ import com.beitone.medical_store.app.ui.account.fragment.BindPhoneFragment;
 import com.beitone.medical_store.app.ui.account.fragment.FindPasswordFragment;
 import com.beitone.medical_store.app.ui.account.fragment.LoginAuthFragment;
 import com.beitone.medical_store.app.ui.account.fragment.LoginFragment;
+import com.beitone.medical_store.app.ui.account.fragment.SetPasswordFragment;
 
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
 
@@ -20,6 +21,8 @@ public class AccountActivity extends BaseActivity {
     private LoginFragment mLoginFragment;
     private LoginAuthFragment mLoginAuthFragment;
     private FindPasswordFragment mFindPasswordFragment;
+    private SetPasswordFragment mSetPasswordFragment;
+    private BindPhoneFragment mBindPhoneFragment;
 
     @Override
     protected int getContentViewLayoutId() {
@@ -31,6 +34,8 @@ public class AccountActivity extends BaseActivity {
         mLoginAuthFragment = new LoginAuthFragment(loginAuthCallback);
         mLoginFragment = new LoginFragment(loginCallback);
         mFindPasswordFragment = new FindPasswordFragment(findPasswordCallback);
+        mSetPasswordFragment = new SetPasswordFragment(setPasswordCallback);
+        mBindPhoneFragment = new BindPhoneFragment(bindPhoneCallback);
         switchFragment(mLoginAuthFragment).commitAllowingStateLoss();
     }
 
@@ -60,16 +65,35 @@ public class AccountActivity extends BaseActivity {
                 switchFragment(mLoginAuthFragment).commitAllowingStateLoss();
             } else if (currentFragment instanceof FindPasswordFragment){
                 switchFragment(mLoginFragment).commitAllowingStateLoss();
+            } else if (currentFragment instanceof SetPasswordFragment){
+                if (mSetPasswordFragment.isFromFindPassword()){
+                    switchFragment(mLoginFragment).commitAllowingStateLoss();
+                } else {
+                    // 首次设置密码
+                    onBackPressed();
+                }
             }
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
+    private SetPasswordFragment.Callback setPasswordCallback = new SetPasswordFragment.Callback() {
+        @Override
+        public void onSetPasswordDone(boolean isFromFindPassword) {
+            if (isFromFindPassword){
+                switchFragment(mLoginFragment).commitAllowingStateLoss();
+            } else {
+                onBackPressed();
+            }
+        }
+    };
+
     private FindPasswordFragment.Callback findPasswordCallback = new FindPasswordFragment.Callback() {
         @Override
-        public void onFindNext() {
-
+        public void onFindNext(String phone) {
+            mSetPasswordFragment.setFromFindPassword(true);
+            switchFragment(mSetPasswordFragment).commitAllowingStateLoss();
         }
     };
 
@@ -77,6 +101,14 @@ public class AccountActivity extends BaseActivity {
         @Override
         public void loginSuccess() {
 
+        }
+
+        @Override
+        public void loginWith(int type) {
+            if (type  == 1){ // 微信登录
+
+            }
+            switchFragment(mBindPhoneFragment).commitAllowingStateLoss();
         }
 
         @Override
@@ -105,7 +137,8 @@ public class AccountActivity extends BaseActivity {
     private BindPhoneFragment.Callback bindPhoneCallback = new BindPhoneFragment.Callback() {
         @Override
         public void loginBindSuccess() {
-
+            mSetPasswordFragment.setFromFindPassword(false);
+            switchFragment(mSetPasswordFragment).commitAllowingStateLoss();
         }
     };
 

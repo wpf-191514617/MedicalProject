@@ -2,6 +2,8 @@ package com.beitone.medical_store.app.ui.account.fragment;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -95,6 +97,13 @@ public class LoginFragment extends BaseFragment {
                 etPhone.getText().clear();
                 break;
             case R.id.ivEyes:
+                ivEyes.setSelected(!ivEyes.isSelected());
+                if (ivEyes.isSelected()){
+                    etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+                etPassword.setSelection(etPassword.getText().length());
                 break;
             case R.id.btnLogin:
                 break;

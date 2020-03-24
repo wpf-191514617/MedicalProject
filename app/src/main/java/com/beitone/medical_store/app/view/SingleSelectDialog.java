@@ -59,7 +59,7 @@ public class SingleSelectDialog extends Dialog {
         layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT;
         contentView.setLayoutParams(layoutParams);
         getWindow().setGravity(Gravity.BOTTOM);
-
+        getWindow().setWindowAnimations(R.style.BottomDialog_Animation);
         mTextAdapter = new TextAdapter(rvData);
         rvData.setLayoutManager(new LinearLayoutManager(context));
         rvData.setAdapter(mTextAdapter);

@@ -8,8 +8,6 @@ import android.widget.Button;
 
 import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.ui.account.AccountActivity;
-import com.beitone.medical_store.app.ui.account.LoginAuthActivity;
-import com.beitone.medical_store.app.ui.interrogation.SubmitQuestionActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

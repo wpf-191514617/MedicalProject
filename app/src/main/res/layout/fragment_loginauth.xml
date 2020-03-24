@@ -3,16 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white"
-        android:paddingLeft="@dimen/dimen_30dp"
-        android:paddingRight="@dimen/dimen_30dp"
-        android:paddingTop="@dimen/dimen_25dp">
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dimen_30dp"
+    android:paddingRight="@dimen/dimen_30dp"
+    android:paddingTop="@dimen/dimen_25dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -204,14 +199,28 @@
 
 
 
-            <com.beitone.medical_store.app.widget.ProtocolTextLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_20dp"/>
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_20dp">
+
+                <CheckBox
+                    android:id="@+id/cbProtocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/check_protocol"/>
+
+                <TextView
+                    android:id="@+id/tvProtocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/gray85"
+                    android:layout_marginLeft="@dimen/dimen_5dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
-
-
-    </LinearLayout>
 
 </LinearLayout>

@@ -27,7 +27,7 @@ public class AppButton extends AppCompatButton {
     private void init(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.AppButton);
         String btnText = array.getString(R.styleable.AppButton_btnText);
-        boolean btnEnable = array.getBoolean(R.styleable.AppButton_btnEnable, false);
+        boolean btnEnable = array.getBoolean(R.styleable.AppButton_btnEnable, true);
         array.recycle();
         // View view = LayoutInflater.from(context).inflate(R.layout.layout_button , this);
         //button = view.findViewById(R.id.button);
