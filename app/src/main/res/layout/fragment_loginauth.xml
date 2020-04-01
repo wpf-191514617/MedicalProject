@@ -106,7 +106,7 @@
                 app:start_text_color="@color/colorAccent"
                 app:end_text="重新发送"
                 app:load_text_color="@color/gray66"
-                app:count_time="10"
+                app:count_time="60"
                 />
 
 
@@ -205,11 +205,12 @@
                 android:gravity="center"
                 android:layout_marginTop="@dimen/dimen_20dp">
 
-                <CheckBox
+                <ImageView
                     android:id="@+id/cbProtocol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/check_protocol"/>
+                    android:layout_width="@dimen/dimen_28dp"
+                    android:layout_height="@dimen/dimen_28dp"
+                    android:padding="@dimen/dimen_8dp"
+                    android:src="@drawable/bg_checkbox1"/>
 
                 <TextView
                     android:id="@+id/tvProtocol"

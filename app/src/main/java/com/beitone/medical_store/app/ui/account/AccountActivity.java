@@ -1,5 +1,6 @@
 package com.beitone.medical_store.app.ui.account;
 
+import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import androidx.fragment.app.Fragment;
@@ -59,23 +60,29 @@ public class AccountActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home){
-            if (currentFragment instanceof LoginAuthFragment){
-                onBackPressed();
-            } else if (currentFragment instanceof LoginFragment){
-                switchFragment(mLoginAuthFragment).commitAllowingStateLoss();
-            } else if (currentFragment instanceof FindPasswordFragment){
-                switchFragment(mLoginFragment).commitAllowingStateLoss();
-            } else if (currentFragment instanceof SetPasswordFragment){
-                if (mSetPasswordFragment.isFromFindPassword()){
-                    switchFragment(mLoginFragment).commitAllowingStateLoss();
-                } else {
-                    // 首次设置密码
-                    onBackPressed();
-                }
-            }
+            onBack();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void onBack() {
+        if (currentFragment instanceof LoginAuthFragment){
+            onBackPressed();
+        } else if (currentFragment instanceof LoginFragment){
+            switchFragment(mLoginAuthFragment).commitAllowingStateLoss();
+        } else if (currentFragment instanceof FindPasswordFragment){
+            switchFragment(mLoginFragment).commitAllowingStateLoss();
+        } else if (currentFragment instanceof SetPasswordFragment){
+            if (mSetPasswordFragment.isFromFindPassword()){
+                switchFragment(mLoginFragment).commitAllowingStateLoss();
+            } else {
+                // 首次设置密码
+                onBackPressed();
+            }
+        } else if (currentFragment instanceof BindPhoneFragment){
+            switchFragment(mLoginFragment).commitAllowingStateLoss();
+        }
     }
 
     private SetPasswordFragment.Callback setPasswordCallback = new SetPasswordFragment.Callback() {
@@ -92,6 +99,7 @@ public class AccountActivity extends BaseActivity {
     private FindPasswordFragment.Callback findPasswordCallback = new FindPasswordFragment.Callback() {
         @Override
         public void onFindNext(String phone) {
+            mSetPasswordFragment.registerAndSetPassword(null , null);
             mSetPasswordFragment.setFromFindPassword(true);
             switchFragment(mSetPasswordFragment).commitAllowingStateLoss();
         }
@@ -101,6 +109,12 @@ public class AccountActivity extends BaseActivity {
         @Override
         public void loginSuccess() {
 
+        }
+
+        @Override
+        public void registerAccount(String mobile, String authCode) {
+            mSetPasswordFragment.registerAndSetPassword(mobile , authCode);
+            switchFragment(mSetPasswordFragment).commitAllowingStateLoss();
         }
 
         @Override
@@ -138,8 +152,17 @@ public class AccountActivity extends BaseActivity {
         @Override
         public void loginBindSuccess() {
             mSetPasswordFragment.setFromFindPassword(false);
+            mSetPasswordFragment.registerAndSetPassword(null , null);
             switchFragment(mSetPasswordFragment).commitAllowingStateLoss();
         }
     };
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+            onBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }

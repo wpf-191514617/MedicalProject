@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +15,7 @@ import com.beitone.medical_store.app.widget.AppButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseRecyclerAdapter;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseViewHolderHelper;
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
@@ -59,6 +61,16 @@ public class SelectSeeDoctorPeopleActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @OnClick(R.id.btnNext)
+    public void onViewClicked() {
+        if (mSelectArchivesListAdapter.getCheckedPosition() != -1) {
+            mSelectArchivesListAdapter.getItem(mSelectArchivesListAdapter.getCheckedPosition());
+            jumpTo(DoctorListActivity.class);
+        } else {
+
+        }
+    }
+
 
     class SelectArchivesListAdapter extends BaseRecyclerAdapter<String> {
 
@@ -76,11 +88,21 @@ public class SelectSeeDoctorPeopleActivity extends BaseActivity {
 
         @Override
         protected void fillData(BaseViewHolderHelper helper, int position, String model) {
+            if (position != getItemCount() - 1) {
+                ImageView ivCheck = helper.getImageView(R.id.ivCheck);
+                if (getCheckedPosition() == position) {
+                    ivCheck.setSelected(true);
+                } else {
+                    ivCheck.setSelected(false);
+                }
+            }
             helper.getConvertView().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (position == getItemCount() - 1) {
                         jumpTo(HealthArchivesActivity.class);
+                    } else {
+                        setCheckedPosition(position);
                     }
                 }
             });

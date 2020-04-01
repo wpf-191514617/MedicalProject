@@ -1,5 +1,6 @@
 package com.beitone.medical_store.app.ui.account.fragment;
 
+import android.content.DialogInterface;
 import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -12,14 +13,18 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.view.AppDialog;
 import com.beitone.medical_store.app.widget.AppButton;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
+import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
+import cn.betatown.mobile.beitonelibrary.util.Trace;
 import cn.betatown.mobile.beitonelibrary.widget.CountDownButton;
 
 public class LoginAuthFragment extends BaseFragment {
@@ -41,11 +46,13 @@ public class LoginAuthFragment extends BaseFragment {
     @BindView(R.id.countDownButton)
     CountDownButton countDownButton;
     @BindView(R.id.cbProtocol)
-    CheckBox cbProtocol;
+    ImageView cbProtocol;
     @BindView(R.id.tvProtocol)
     TextView tvProtocol;
 
     private Callback mCallback;
+
+    private AppDialog mSendAuthCodeDialog;
 
     public LoginAuthFragment(Callback mCallback) {
         this.mCallback = mCallback;
@@ -125,35 +132,63 @@ public class LoginAuthFragment extends BaseFragment {
             // 49，65
         }, 15, 21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         tvProtocol.setText(string);
-        cbProtocol.setChecked(true);
+        cbProtocol.setSelected(true);
+        mSendAuthCodeDialog = new AppDialog.Builder(getActivity()).setTitle("验证码获取成功，请及时查收")
+                .setOnlyConfrim(true)
+                .setPositive("确定", null).build();
     }
 
     @OnClick({R.id.btnLogin, R.id.tvLoginType1, R.id.ivWechatLogin, R.id.ivQQLogin,
-            R.id.ivClearPhone, R.id.countDownButton})
+            R.id.ivClearPhone, R.id.countDownButton, R.id.cbProtocol})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.cbProtocol:
+                cbProtocol.setSelected(cbProtocol.isSelected());
+                break;
             case R.id.countDownButton:
-                countDownButton.start();
-                new AppDialog.Builder(getActivity()).setTitle("验证码获取成功，请及时查收")
-                        .setOnlyConfrim(true)
-                        .setPositive("确定", null).build().show();
+                String phone = etPhone.getText().toString();
+                if (StringUtil.isMobileNO2(phone)) {
+                    sendAuthCode(phone);
+                } else {
+                    showToast("请输入正确的手机号码");
+                }
+               /* mSendAuthCodeDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        countDownButton.start();
+                    }
+                });
+                mSendAuthCodeDialog.show();*/
                 break;
             case R.id.ivClearPhone:
                 etPhone.getText().clear();
                 break;
             case R.id.btnLogin:
-                //if (!cbProtocol.isChecked()){
+                String mobile = etPhone.getText().toString();
+                if (!StringUtil.isMobileNO2(mobile)) {
+                    showToast("请输入正确的手机号");
+                    return;
+                }
+
+                String authCode = etAuthCode.getText().toString();
+                if (StringUtil.isEmpty(authCode)) {
+                    showToast("请输入验证码");
+                    return;
+                }
+
+                if (!cbProtocol.isSelected()){
                     new AppDialog.Builder(getActivity()).setTitle("请阅读并同意以下协议")
                             .setMessage(getDialogSpannable())
                             .setNative("不同意", null)
                             .setPositive("同意", new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    cbProtocol.setChecked(true);
+                                    cbProtocol.setSelected(true);
                                 }
                             }).build().show();
-                  //  return;
-               // }
+                    return;
+                }
+                doLogin(mobile, authCode);
                 break;
             case R.id.tvLoginType1:
                 if (mCallback != null) {
@@ -171,6 +206,62 @@ public class LoginAuthFragment extends BaseFragment {
                 }
                 break;
         }
+    }
+
+    private void doLogin(String mobile, String authCode) {
+        AccountProvider.doLoginByAuthCode(this, mobile, authCode, new OnJsonCallBack() {
+            @Override
+            public void onResult(Object data) {
+                // TODO 登录成功
+            }
+
+            @Override
+            public void onFailed(String msg) {
+                super.onFailed(msg);
+                if (msg.contains("用户不存在")){
+                    showRegisterAccount(mobile, authCode);
+                    return;
+                }
+                showToast(msg);
+            }
+        });
+    }
+
+    private void showRegisterAccount(String mobile, String authCode) {
+        new AppDialog.Builder(getActivity()).setTitle("用户不存在，是否设置密码进行注册？")
+                .setNative("取消", null)
+                .setPositive("确定", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (mCallback != null){
+                            mCallback.registerAccount(mobile , authCode);
+                        }
+                    }
+                }).build().show();
+    }
+
+    private void sendAuthCode(String phone) {
+        AccountProvider.sendAuthCode(this, phone, new OnJsonCallBack() {
+            @Override
+            public void onResult(Object data) {
+                countDownButton.start();
+                new AppDialog.Builder(getActivity()).setTitle("验证码获取成功，请及时查收")
+                        .setOnlyConfrim(true)
+                        .setPositive("确定", null).build().show();
+            }
+
+            @Override
+            public void onError(String msg) {
+                super.onError(msg);
+                showToast(msg);
+            }
+
+            @Override
+            public void onFailed(String msg) {
+                super.onFailed(msg);
+                showToast(msg);
+            }
+        });
     }
 
     private Spannable getDialogSpannable() {
@@ -223,9 +314,8 @@ public class LoginAuthFragment extends BaseFragment {
 
     public interface Callback {
         void loginSuccess();
-
+        void registerAccount(String mobile, String authCode);
         void loginWith(int type);
-
         void loginForPassword();
     }
 

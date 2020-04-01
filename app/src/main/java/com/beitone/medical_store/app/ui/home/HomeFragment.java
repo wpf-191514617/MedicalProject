@@ -8,11 +8,10 @@ import android.widget.Button;
 
 import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.ui.account.AccountActivity;
+import com.beitone.medical_store.app.ui.interrogation.SubmitQuestionActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 
 public class HomeFragment extends BaseFragment {

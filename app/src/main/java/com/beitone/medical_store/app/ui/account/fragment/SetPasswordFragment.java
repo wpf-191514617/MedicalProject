@@ -1,6 +1,7 @@
 package com.beitone.medical_store.app.ui.account.fragment;
 
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -10,12 +11,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.entity.response.UserResponse;
+import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
+import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
+import cn.betatown.mobile.beitonelibrary.util.Trace;
 
 public class SetPasswordFragment extends BaseFragment {
     @BindView(R.id.tvSetPhone)
@@ -32,6 +37,7 @@ public class SetPasswordFragment extends BaseFragment {
     private String phone;
 
     private Callback mCallback;
+    private String authCode;
 
     public SetPasswordFragment(Callback mCallback) {
         this.mCallback = mCallback;
@@ -48,8 +54,6 @@ public class SetPasswordFragment extends BaseFragment {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-
 
     @Override
     protected int getContentViewLayoutID() {
@@ -93,11 +97,47 @@ public class SetPasswordFragment extends BaseFragment {
                 etPassword.setSelection(etPassword.getText().length());
                 break;
             case R.id.btnDone:
-                if (mCallback != null){
-                    mCallback.onSetPasswordDone(isFromFindPassword);
+                if (TextUtils.isEmpty(etPassword.getText().toString())) {
+                    showToast("请输入密码");
+                    return;
                 }
+
+                if (!TextUtils.isEmpty(phone) && !TextUtils.isEmpty(authCode)) {
+                    registerByPhone();
+                    return;
+                }
+                /*if (mCallback != null){
+                    mCallback.onSetPasswordDone(isFromFindPassword);
+                }*/
                 break;
         }
+    }
+
+    private void registerByPhone() {
+        AccountProvider.registerAccountByPhone(this, phone, authCode,
+                etPassword.getText().toString(), new OnJsonCallBack<UserResponse>() {
+                    @Override
+                    public void onResult(UserResponse data) {
+
+                    }
+
+                    @Override
+                    public void onError(String msg) {
+                        super.onError(msg);
+                        showToast(msg);
+                    }
+
+                    @Override
+                    public void onFailed(String msg) {
+                        super.onFailed(msg);
+                        showToast(msg);
+                    }
+                });
+    }
+
+    public void registerAndSetPassword(String mobile, String authCode) {
+        this.phone = mobile;
+        this.authCode = authCode;
     }
 
     public interface Callback{

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dimen_16dp"
+    android:paddingTop="@dimen/dimen_14dp"
+    android:paddingRight="@dimen/dimen_16dp"
+    android:paddingBottom="@dimen/dimen_8dp">
+
+
+    <ImageView
+        android:layout_width="@dimen/dimen_43dp"
+        android:layout_height="@dimen/dimen_43dp"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDoctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张医生"
+                android:textColor="#ff333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_11dp"
+                android:text="呼吸内科 主治医师"
+                android:textColor="#ff858585"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <TextView
+                android:id="@+id/tvHospitalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天津医科大学总医院"
+                android:textColor="#ff858585"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvHospitalReputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="知名医院"
+                android:textColor="#FEA50B"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"
+            android:text="擅长：感冒、肺炎、哮喘、鼻咽炎、支气管扩张等呼吸疾病呼吸疾病呼吸疾病"
+            android:textColor="#ff858585"
+            android:layout_marginBottom="@dimen/dimen_11dp"
+            android:textSize="12sp" />
+
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_11dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSinglePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fffe7047"
+                android:textSize="14sp"
+                android:text="¥50"/>
+
+            <TextView
+                android:id="@+id/tvBuyCount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray85"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:textSize="14sp"
+                android:text="7818人购买"/>
+
+
+            <ImageView
+                android:id="@+id/ivCheckDoctor"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:src="@drawable/bg_checkbox"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

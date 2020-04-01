@@ -32,6 +32,9 @@ public class BaseProvider {
     private static final String TAG = "btHttp";
 
     public static final int LIMIT = 20;
+    private static String BaseUrl = "http://47.113.94.178:7000/platform-auth";
+  //  private static String BaseUrl = "http://test.hyj91.com/inqApi/hyj-inquiry";
+
 
     protected BaseProvider() {
     }
@@ -82,7 +85,7 @@ public class BaseProvider {
                 throw new IllegalArgumentException("访问 url 不能为空");
             }
 
-            requestBuilder.url(url);
+            requestBuilder.url(BaseUrl + url);
 
             if (params != null && params.size() > 0) {
                 Set<String> keySet = params.keySet();

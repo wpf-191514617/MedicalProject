@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_12dp"
+        android:paddingBottom="@dimen/dimen_12dp"
+        android:background="#FEEFD3"
+        android:gravity="center"
+        android:textColor="#FF803F"
+        android:textSize="@dimen/sp_14"
+        android:text="请15分内完成支付，超时订单自动取消"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvInterrogationName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:text="图文问诊 张医生"/>
+
+            <TextView
+                android:id="@+id/tvInterrogationPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#FE7047"
+                android:text="¥ 49"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:text="可选抵扣"/>
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@drawable/sel_tv_gray"
+                android:text="0个可选"/>
+
+            <ImageView
+                android:id="@+id/ivDiscount"
+                android:layout_width="@dimen/dimen_8dp"
+                android:layout_height="@dimen/dimen_12dp"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_next"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:text="优惠券抵扣"/>
+
+            <TextView
+                android:id="@+id/tvCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@drawable/sel_tv_gray"
+                android:text="无"/>
+
+            <ImageView
+                android:id="@+id/ivCoupon"
+                android:layout_width="@dimen/dimen_8dp"
+                android:layout_height="@dimen/dimen_12dp"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:src="@drawable/ic_next"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_18dp"
+        android:layout_marginBottom="@dimen/dimen_9dp"
+        android:text="选择支付方式"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/gray85"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutWechatPay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:layout_width="@dimen/dimen_19dp"
+                android:layout_height="@dimen/dimen_19dp"
+                android:src="@drawable/ic_wechatpay"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:text="微信支付"
+                android:layout_marginLeft="@dimen/dimen_13dp"/>
+
+            <ImageView
+                android:id="@+id/ivWechatPay"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:src="@drawable/bg_checkbox"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:id="@+id/layoutSystemPay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_19dp"
+                android:layout_height="@dimen/dimen_19dp"
+                android:src="@drawable/ic_systempay"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:text="健康账户"
+                android:layout_marginLeft="@dimen/dimen_13dp"/>
+
+            <ImageView
+                android:id="@+id/ivSystemPay"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:src="@drawable/bg_checkbox"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:id="@+id/layoutAliPay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_19dp"
+                android:layout_height="@dimen/dimen_19dp"
+                android:src="@drawable/ic_alipay"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:text="支付宝账户"
+                android:layout_marginLeft="@dimen/dimen_13dp"/>
+
+            <ImageView
+                android:id="@+id/ivAliPay"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:src="@drawable/bg_checkbox"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_65dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dimen_17dp"
+            android:paddingRight="@dimen/dimen_16dp"
+            android:background="@color/white">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/sp_16"
+                android:text="实际支付："/>
+
+            <TextView
+                android:id="@+id/tvTotalPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#FE6D72"
+                android:textSize="@dimen/sp_16"
+                android:text="¥ 0"/>
+
+
+            <TextView
+                android:id="@+id/tvPay"
+                android:layout_width="@dimen/dimen_156dp"
+                android:layout_height="@dimen/dimen_42dp"
+                android:background="@drawable/bg_radiu21"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:gravity="center"
+                android:text="立即支付"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
