@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.entity.response.UserResponse;
+import com.beitone.medical_store.app.helper.UserHelper;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.view.AppDialog;
 import com.beitone.medical_store.app.widget.AppButton;
@@ -209,10 +211,13 @@ public class LoginAuthFragment extends BaseFragment {
     }
 
     private void doLogin(String mobile, String authCode) {
-        AccountProvider.doLoginByAuthCode(this, mobile, authCode, new OnJsonCallBack() {
+        AccountProvider.doLoginByAuthCode(this, mobile, authCode, new OnJsonCallBack<UserResponse>() {
             @Override
-            public void onResult(Object data) {
-                // TODO 登录成功
+            public void onResult(UserResponse data) {
+                UserHelper.getInstance().putUserInfo(data);
+                if (mCallback != null){
+                    mCallback.loginSuccess();
+                }
             }
 
             @Override

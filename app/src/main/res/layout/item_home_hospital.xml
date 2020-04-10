@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dimen_16dp"
+    android:paddingRight="@dimen/dimen_16dp"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dimen_16dp"
+    android:paddingBottom="@dimen/dimen_10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHospitalName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:text="东莞市滨海湾中心医院"
+            android:textColor="#ff000000"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/tvChangeHospital"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="切换"
+            android:paddingRight="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:textColor="@color/gray99"
+            android:paddingLeft="@dimen/dimen_8dp"
+            android:textSize="@dimen/sp_12"/>
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:id="@+id/tvToHospitalHome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="进入主页 ＞"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:textColor="@color/gray99"
+            android:paddingLeft="@dimen/dimen_8dp"
+            android:textSize="@dimen/sp_12"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dimen_2dp"
+        android:layout_marginRight="@dimen/dimen_2dp"
+        android:layout_marginTop="@dimen/dimen_10dp">
+
+        <LinearLayout
+            android:id="@+id/layoutRegistered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_49dp"
+                android:src="@drawable/item_hospital_registered" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_3dp"
+                android:text="预约挂号"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/layoutPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_49dp"
+                android:src="@drawable/item_hospital_payment"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="门诊缴费"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/dimen_3dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/layoutCheckup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_49dp"
+                android:src="@drawable/item_hospital_checkup"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约体检"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/dimen_3dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <LinearLayout
+            android:id="@+id/layoutInspection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_49dp"
+                android:src="@drawable/item_hospital_inspection"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约检查"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/dimen_3dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <LinearLayout
+            android:id="@+id/layoutReportCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_49dp"
+                android:src="@drawable/item_hospital_reportcard"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报告单"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/dimen_3dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dimen_63dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"/>
+
+        <ImageView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dimen_63dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:background="@color/colorAccent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -33,4 +33,13 @@ public class AccountProvider extends BaseProvider {
         post(tag , "/user/registerByPhone" , params , onJsonCallBack);
     }
 
+    public static void doLoginByPassword(Object tag, String phone,
+                                         String password, OnJsonCallBack onJsonCallBack) {
+        Map<String, String> params = new HashMap<>();
+        params.put("userName" , phone);
+        params.put("isRememberMe" , "true");
+        params.put("password" , password);
+        post(tag , "/auth/getTokenByUserPWD" , params , onJsonCallBack);
+    }
+
 }

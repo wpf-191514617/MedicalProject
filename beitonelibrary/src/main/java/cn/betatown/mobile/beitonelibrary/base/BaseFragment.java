@@ -102,7 +102,7 @@ public abstract class BaseFragment extends BToneFragment implements BaseView, Cu
 
     @Override
     public float getSizeInDp() {
-        return 667;
+        return 668;
     }
 
 

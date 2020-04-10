@@ -13,14 +13,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <include layout="@layout/list"/>
+
+        <!--<androidx.recyclerview.widget.RecyclerView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:overScrollMode="never"
-            android:overScrollFooter="@android:color/transparent"
-            android:overScrollHeader="@android:color/transparent"
-            android:background="@color/grayf5"/>
+
+            android:background="@color/grayf5"/>-->
 
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter
             android:layout_width="match_parent"

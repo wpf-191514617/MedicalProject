@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.entity.response.UserResponse;
+import com.beitone.medical_store.app.helper.UserHelper;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
@@ -118,7 +119,9 @@ public class SetPasswordFragment extends BaseFragment {
                 etPassword.getText().toString(), new OnJsonCallBack<UserResponse>() {
                     @Override
                     public void onResult(UserResponse data) {
-
+                        UserHelper.getInstance().putUserInfo(data);
+                        if (mCallback != null)
+                            mCallback.onSetPasswordDone(false);
                     }
 
                     @Override

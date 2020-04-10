@@ -10,11 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.entity.response.UserResponse;
+import com.beitone.medical_store.app.helper.UserHelper;
+import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
+import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 
 public class LoginFragment extends BaseFragment {
@@ -106,6 +110,17 @@ public class LoginFragment extends BaseFragment {
                 etPassword.setSelection(etPassword.getText().length());
                 break;
             case R.id.btnLogin:
+                String phone = etPhone.getText().toString();
+                String password = etPassword.getText().toString();
+                if (!StringUtil.isMobileNO(phone)){
+                    showToast("请输入正确的手机号");
+                    return;
+                }
+                if (StringUtil.isEmpty(password)){
+                    showToast("请输入正确格式的密码");
+                    return;
+                }
+                doLogin(phone , password);
                 break;
             case R.id.tvLoginAuth:
                 if (mCallback != null) {
@@ -118,6 +133,30 @@ public class LoginFragment extends BaseFragment {
                 }
                 break;
         }
+    }
+
+    private void doLogin(String phone, String password) {
+        AccountProvider.doLoginByPassword(this, phone, password, new OnJsonCallBack<UserResponse>() {
+            @Override
+            public void onResult(UserResponse data) {
+                UserHelper.getInstance().putUserInfo(data);
+                if (mCallback != null){
+                    mCallback.loginSuccess();
+                }
+            }
+
+            @Override
+            public void onFailed(String msg) {
+                super.onFailed(msg);
+                showToast(msg);
+            }
+
+            @Override
+            public void onError(String msg) {
+                super.onError(msg);
+                showToast(msg);
+            }
+        });
     }
 
 

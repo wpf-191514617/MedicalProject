@@ -47,4 +47,5 @@ dependencies {
     api 'androidx.recyclerview:recyclerview:1.1.0'
     api 'com.jakewharton:butterknife:10.2.1'
     api 'com.github.lihangleo2:ShadowLayout:2.1.8'
+    api 'com.github.xiaohaibin:XBanner:1.6.6'
 }

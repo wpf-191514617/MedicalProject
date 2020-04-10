@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dimen_16dp"
+    android:paddingRight="@dimen/dimen_16dp"
+    android:paddingTop="@dimen/dimen_19dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/layoutQuickInterrogation"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_108dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_quickentry1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:src="@drawable/ic_quickentry1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="快速问诊"
+            android:textColor="#ff15d2c3"
+            android:textSize="16sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="知名专家"
+                android:textColor="#fffe7047"
+                android:textSize="11sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线接诊"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:textColor="@color/gray99"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/dimen_10dp"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/layoutDeliverMedicine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_108dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_quickentry2"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:src="@drawable/ic_quickentry2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="送药上门"
+            android:textColor="#D49B41"
+            android:textSize="16sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快速复购"
+                android:textColor="#fffe7047"
+                android:textSize="11sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="送货上门"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:textColor="@color/gray99"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="@dimen/dimen_10dp"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/layoutFindDoctor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_108dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_quickentry3"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:src="@drawable/ic_quickentry3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="找医生"
+            android:textColor="#4596EF"
+            android:textSize="16sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="海量名医"
+                android:textColor="#fffe7047"
+                android:textSize="11sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="丰富经验"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:textColor="@color/gray99"
+                android:textSize="11sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

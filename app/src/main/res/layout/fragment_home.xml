@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerHome"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <Button
-        android:id="@+id/textView"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_barlayout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_80dp"
-        android:gravity="center"
-        android:text="TextView" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed" >
+        <com.beitone.medical_store.app.ui.home.item.BannerItem
+            android:id="@+id/itemBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.beitone.medical_store.app.ui.home.item.QuickEntryItem
+            android:id="@+id/itemQuickEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.beitone.medical_store.app.ui.home.item.HospitalServiceItem
+            android:id="@+id/itemHospitalService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.beitone.medical_store.app.ui.home.item.DrugStoreItem
+            android:id="@+id/itemDrugStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40dp"
+            android:text="医生推荐"
+            android:textColor="#ff000000"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_10dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabHome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            app:tabMode="scrollable"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/homePager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

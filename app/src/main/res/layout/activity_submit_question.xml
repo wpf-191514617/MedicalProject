@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar" />
@@ -25,8 +26,7 @@
     <EditText
         android:id="@+id/etSubmitQuestion"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_0dp"
-        android:layout_weight="1"
+        android:layout_height="@dimen/dimen_200dp"
         android:background="@null"
         android:gravity="left|top"
         android:textSize="@dimen/sp_14"
@@ -39,5 +39,28 @@
         android:textColor="@color/gray66"/>
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginRight="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:lineSpacingExtra="@dimen/dimen_8dp"
+        android:text="上传相关图片（检查单、CT、病历、患处、药品等），慧医家会确保您的隐私安全"
+        android:textColor="@color/grayb4"
+        android:textSize="@dimen/sp_14" />
+
+
+    <com.beitone.medical_store.app.widget.SelectImageLayout
+        android:id="@+id/gridImgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:layout_marginRight="@dimen/dp_15"
+        android:scrollbars="none"
+        app:colCount="3"
+        app:maxSelectCount="9"
+        app:spacing="@dimen/dimen_13dp" />
 
 </LinearLayout>

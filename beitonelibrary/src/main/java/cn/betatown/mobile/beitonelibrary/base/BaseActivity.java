@@ -125,7 +125,7 @@ public abstract class BaseActivity extends BaseAppcomtActivity implements BaseVi
 
     @Override
     public float getSizeInDp() {
-        return 667;
+        return 668;
     }
 
     protected void onClickReload() {

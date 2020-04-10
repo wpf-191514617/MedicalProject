@@ -108,7 +108,7 @@ public class AccountActivity extends BaseActivity {
     private LoginAuthFragment.Callback loginAuthCallback = new LoginAuthFragment.Callback() {
         @Override
         public void loginSuccess() {
-
+            onBackPressed();
         }
 
         @Override
@@ -144,7 +144,7 @@ public class AccountActivity extends BaseActivity {
 
         @Override
         public void loginSuccess() {
-
+            onBackPressed();
         }
     };
 

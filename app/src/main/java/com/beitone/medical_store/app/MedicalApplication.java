@@ -1,6 +1,7 @@
 package com.beitone.medical_store.app;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.bt.http.OkHttpUtils;
 import com.bt.http.https.HttpsUtils;
@@ -13,6 +14,7 @@ import okio.Buffer;
 
 public class MedicalApplication extends Application {
 
+    private static Context context;
     private String CER_HYJ = "-----BEGIN RSA PRIVATE KEY-----\n" +
             "MIIEpQIBAAKCAQEAvLfPEio+7Ve/GZTuURjZ7pl2Q8EzAWZV4JhCO2xGxniBFwF7\n" +
             "g9F4QZR71f1CaHc5yW5PruPYgdnyCCEa0P8AbScKxMgIdIODUdOj4R7/4ZiCXvcp\n" +
@@ -44,6 +46,7 @@ public class MedicalApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        context = this;
         try {
             String a = "";
             InputStream[] inputStreams =
@@ -63,6 +66,10 @@ public class MedicalApplication extends Application {
         } catch (Exception e) {
 
         }
-
     }
+
+    public static Context getContext() {
+        return context;
+    }
+
 }
