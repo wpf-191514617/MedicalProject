@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar"/>
+
+
+    <com.beitone.medical_store.app.view.VisitingPeopleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="费用日期："
+            android:textColor="#ff333333"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_31dp"
+            android:layout_marginLeft="@dimen/dimen_7dp"
+            android:paddingLeft="@dimen/dimen_8dp"
+            android:paddingRight="@dimen/dimen_7dp"
+            android:background="@drawable/bg_grayc8_radiu3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="2019-11-08"
+                android:textColor="#ff858585"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="@dimen/dimen_15dp"
+                android:layout_height="@dimen/dimen_15dp"
+                android:src="@drawable/ic_calendar"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="费用总额："
+            android:textColor="#ff333333"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15333元"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:textColor="#FE7047"
+            android:textSize="14sp"/>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dimen_18dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="项目名称"
+            android:textColor="#ff333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="@dimen/dimen_65dp"
+            android:layout_height="wrap_content"
+            android:text="单价"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="wrap_content"
+            android:text="数量"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="@dimen/dimen_45dp"
+            android:layout_height="wrap_content"
+            android:text="单位"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="@dimen/dimen_75dp"
+            android:layout_height="wrap_content"
+            android:text="金额(元)"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            android:gravity="right"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDailyList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
+
+</LinearLayout>

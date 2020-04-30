@@ -12,6 +12,7 @@ import com.beitone.medical_store.app.ui.home.ShopCartFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
+import cn.betatown.mobile.beitonelibrary.util.Trace;
 import cn.betatown.mobile.beitonelibrary.widget.BmMainNavigateTabBar;
 
 public class MainActivity extends BaseActivity {
@@ -44,7 +45,22 @@ public class MainActivity extends BaseActivity {
         mainTab.addTab(MineFragment.class,
                 new BmMainNavigateTabBar.TabParam(R.drawable.ic_tab_mine_nor,
                         R.drawable.ic_tab_mine_sel, "我的"));
+            init();
+    }
 
+    private void init() {
+        String content = "动作名称：徒手操 动作内容：1、头部运动；2、扩胸运动；3、体转运动；4、扶背运动；5、正压腿；6、侧压腿；7、手腕脚踝环绕";
+        String[] array = content.split("动作内容：");
+        if (array != null){
+            if (array[0].contains("动作名称：")){
+                array[0].replace("动作名称：" , "");
+            }
+
+            if (array.length > 1){
+                Trace.d("arrayTag" , "0 - " + array[0]);
+                Trace.d("arrayTag" , "1 - " + array[1]);
+            }
+        }
     }
 
 }

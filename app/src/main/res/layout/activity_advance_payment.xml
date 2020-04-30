@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.beitone.medical_store.app.view.VisitingPeopleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:paddingTop="@dimen/dimen_18dp"
+        android:paddingBottom="@dimen/dimen_23dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前费用状况"
+            android:textColor="#ff333333"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_19dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未结总额："
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1000元"
+                        android:textColor="#FE7047"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未结预缴："
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500元"
+                        android:textColor="#FE7047"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="余额："
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-500元"
+                        android:textColor="#FE7047"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="@dimen/dimen_55dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:background="@drawable/bg_orange_radiu25"
+                android:gravity="center"
+                android:text="欠费"
+                android:textColor="#fffe7047"
+                android:textSize="14sp"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <com.beitone.medical_store.app.widget.AppButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:text="点击充值"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="有效充值记录"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/dimen_5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPayment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"/>
+
+</LinearLayout>

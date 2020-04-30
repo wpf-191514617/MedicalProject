@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:paddingLeft="@dimen/dimen_11dp"
+    android:paddingRight="@dimen/dimen_11dp"
+    android:paddingTop="@dimen/dimen_10dp"
+    android:orientation="vertical">
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_10dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowLimit="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_12dp"
+                android:paddingBottom="@dimen/dimen_9dp"
+                android:paddingLeft="@dimen/dimen_13dp"
+                android:paddingRight="@dimen/dimen_13dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[审核中]"
+                    android:textColor="#ff1884fe"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 青鹏软膏、塞来昔布胶囊、盐酸乙..."
+                    android:textColor="@color/gray33"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <include layout="@layout/line"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_13dp"
+                android:paddingRight="@dimen/dimen_13dp"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:paddingBottom="@dimen/dimen_19dp">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="诊断结果：颈痛、筋膜炎"
+                        android:textColor="#ff858585"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="医生：张医生  2020-02-11"
+                        android:textColor="#ff858585"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_85dp"
+                        android:layout_height="@dimen/dimen_32dp"
+                        android:background="@drawable/bg_radiu21"
+                        android:text="购买"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        android:gravity="center"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

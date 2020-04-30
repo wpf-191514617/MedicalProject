@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/layout_dialog_qrcode0"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/tv16sp" />
+
+    <TextView
+        android:id="@+id/tvTakeCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/layout_dialog_qrcode1"
+        android:textColor="@color/nc_red"
+        android:textSize="@dimen/tv20sp" />
+
+    <ImageView
+        android:id="@+id/ivQRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

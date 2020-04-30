@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/svAuthenticationUpload"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_border"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+            android:text="@string/layout_activity_step1_authentication0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/layout_activity_step1_authentication1" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/app_white"
+                android:hint="@string/layout_activity_step1_authentication2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp10"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/layout_activity_step1_authentication3" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/app_white"
+                android:hint="@string/layout_activity_step1_authentication4"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/layout_activity_step1_authentication5" />
+
+            <EditText
+                android:id="@+id/etID"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp16"
+                android:background="@color/app_white"
+                android:hint="@string/layout_activity_step1_authentication6"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <net.shopnc.b2b2c.android.ui.promotion.AuthImageView
+            android:id="@+id/aivFront"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <net.shopnc.b2b2c.android.ui.promotion.AuthImageView
+            android:id="@+id/aivBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10" />
+
+        <net.shopnc.b2b2c.android.ui.promotion.AuthImageView
+            android:id="@+id/aivHand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/nc_text_dark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_marginRight="@dimen/dp4"
+                android:text="@string/layout_activity_step1_authentication7" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/nc_text_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tvSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/promotion_agreement_switch" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text="@string/layout_activity_step1_authentication8" />
+
+            <TextView
+                android:id="@+id/tvAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/layout_activity_step1_authentication9"
+                android:textColor="#0000ff" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNextStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp16"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/promotion_next_step"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:text="@string/layout_activity_step1_authentication10"
+            android:textColor="@color/app_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ImageView
+        android:layout_width="204dp"
+        android:layout_height="@dimen/dimen_54dp"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:src="@drawable/bg_hospital_logo" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_60dp"
+        android:paddingLeft="@dimen/dimen_31dp"
+        android:paddingRight="@dimen/dimen_31dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊人"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                />
+
+            <EditText
+                android:id="@+id/etPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/dimen_18dp"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:textColorHint="#ffb4b4b4"
+                android:hint="请输入就诊人姓名"/>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCardLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊卡"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                />
+
+            <EditText
+                android:id="@+id/etNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/dimen_18dp"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:textColorHint="#ffb4b4b4"
+                android:hint="请输入就诊卡卡号"/>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/line"/>
+
+
+
+
+        <com.beitone.medical_store.app.widget.AppButton
+            android:id="@+id/btnDeFine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_58dp"
+            android:text="确定"/>
+
+
+        <TextView
+            android:id="@+id/btnCreateCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginTop="@dimen/dimen_18dp"
+            android:background="@drawable/bg_store_gray_45"
+            android:gravity="center"
+            android:text="暂无就诊卡，在线建卡"
+            android:textColor="#ff333333"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

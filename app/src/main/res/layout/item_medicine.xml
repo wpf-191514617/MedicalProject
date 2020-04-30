@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dimen_11dp"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_10dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowLimit="5dp">
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_249dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_13dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_14dp"
+            android:paddingBottom="@dimen/dimen_10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消痛贴膏5贴*1盒 塞来昔布..."
+                android:layout_marginRight="@dimen/dimen_30dp"
+                android:textColor="#ff333333"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:text="诊断结果：筋膜炎"
+                android:textColor="#ff858585"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:textSize="12sp" />
+
+            <include layout="@layout/line"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_9dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="医生：董庆"
+                        android:textColor="#ff858585"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2019-05-07"
+                        android:textColor="#ff858585"
+                        android:textSize="12sp"
+                        android:layout_marginTop="@dimen/dimen_4dp"/>
+
+                </LinearLayout>
+
+
+                
+                <TextView
+                    android:layout_width="@dimen/dimen_78dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:background="@drawable/bg_radiu21"
+                    android:text="复方续购"
+                    android:gravity="center"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp"/>
+                
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.lihang.ShadowLayout>
+
+</LinearLayout>

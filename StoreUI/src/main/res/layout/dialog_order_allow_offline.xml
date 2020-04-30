@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/activity_base" />
+
+    <TextView
+        android:id="@+id/tvPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_title"
+        android:background="@color/nc_white"
+        android:padding="@dimen/dp10"
+        android:text="@string/layout_buy_step1_view3"
+        android:textColor="@color/nc_text_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPay"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <CheckBox
+            android:id="@+id/cbShowOnlinePay"
+            style="@style/InvoiceSelectButton"
+            android:layout_width="100dp"
+            android:text="@string/layout_buy_step1_view4" />
+
+        <CheckBox
+            android:id="@+id/cbShowOfflinePay"
+            style="@style/InvoiceSelectButton"
+            android:layout_width="100dp"
+            android:text="@string/layout_buy_step1_view5" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/btnShowOnlinePay"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/spec_btn_select_bg"-->
+        <!--android:drawablePadding="@dimen/dp4"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="@dimen/dp5"-->
+        <!--android:paddingLeft="@dimen/dp10"-->
+        <!--android:paddingRight="@dimen/dp5"-->
+        <!--android:paddingTop="@dimen/dp5"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="@string/layout_buy_step1_view4"-->
+        <!--android:textColor="@drawable/spec_btn_select_text"-->
+        <!--android:textSize="@dimen/tv14sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/btnShowOfflinePay"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/dp10"-->
+        <!--android:background="@drawable/spec_btn_select_bg"-->
+        <!--android:drawablePadding="@dimen/dp4"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="@dimen/dp5"-->
+        <!--android:paddingLeft="@dimen/dp10"-->
+        <!--android:paddingRight="@dimen/dp5"-->
+        <!--android:paddingTop="@dimen/dp5"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="@string/layout_buy_step1_view5"-->
+        <!--android:textColor="@drawable/spec_btn_select_text"-->
+        <!--android:textSize="@dimen/tv14sp" />-->
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

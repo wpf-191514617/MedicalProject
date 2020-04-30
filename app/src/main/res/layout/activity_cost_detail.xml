@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_17dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_19dp"
+            android:paddingBottom="@dimen/dimen_16dp"
+            android:background="@drawable/bg_coat_top"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊人：张某"
+                android:textColor="#ff333333"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊医生：内二科 张医生"
+                android:textColor="#ff333333"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊时间：2019-11-06 09:33:26"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:textColor="#ff333333"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_19dp"
+            android:paddingRight="@dimen/dimen_25dp"
+            android:background="@drawable/bg_coat_bottom"
+            android:paddingTop="@dimen/dimen_23dp"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_18dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="项目名称"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"/>
+
+
+                <TextView
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="数量"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"/>
+
+
+                <TextView
+                    android:layout_width="@dimen/dimen_60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="金额"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:overScrollMode="never"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@drawable/bg_dashed_gray"
+                android:layout_marginTop="@dimen/dimen_20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingTop="@dimen/dimen_17dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="汇款金额："
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥ 600元"
+                    android:textColor="#FE7047"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"/>
+
+
+    <com.beitone.medical_store.app.widget.AppButton
+        android:id="@+id/btnPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:text="确认支付"/>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+	<FrameLayout
+		android:id="@+id/fraBack"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/transparent">
+
+	</FrameLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:layout_alignParentBottom="true"
+		android:background="#F1F1F1">
+
+		<Button
+			android:id="@+id/btnPhoto"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_marginTop="25dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="18dp"
+			android:layout_marginRight="18dp"
+			android:text="@string/layout_nc_photo_dialog0"
+			android:textSize="18sp"
+			android:background="@drawable/pub_button_hollow"/>
+
+		<Button
+			android:id="@+id/btnChoosePhoto"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginLeft="18dp"
+			android:layout_marginRight="18dp"
+			android:text="@string/layout_nc_photo_dialog1"
+			android:textSize="18sp"
+			android:background="@drawable/pub_button_hollow"/>
+
+		<Button
+			android:id="@+id/btnCancel"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:layout_marginBottom="25dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="18dp"
+			android:layout_marginRight="18dp"
+			android:text="@string/layout_nc_photo_dialog2"
+			android:textSize="18sp"
+			android:background="@drawable/pub_button_hollow_3"/>
+	</LinearLayout>
+</RelativeLayout>

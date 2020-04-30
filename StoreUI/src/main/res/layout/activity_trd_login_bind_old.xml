@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.mine.TrdLoginBindOldActivity">
+
+    <include layout="@layout/activity_base"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/nc_bg"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnBindNew"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/nc_new_btn_bg"/>
+
+        <Button
+            android:id="@+id/btnBindOld"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/nc_old_mb_btn_bg"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_trd_login_bind_old0"/>
+
+            <EditText
+                android:id="@+id/etUsername"
+                style="@style/NCFormEdit"
+                android:hint="@string/layout_activity_trd_login_bind_old1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_trd_login_bind_old2"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                style="@style/NCFormEditNoBorder"
+                android:hint="@string/layout_activity_trd_login_bind_old3"
+                android:password="true"/>
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/user_bg_selector"
+        android:text="@string/layout_activity_trd_login_bind_old4"
+        android:textColor="@color/nc_white"/>
+
+</LinearLayout>

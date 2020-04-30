@@ -2,14 +2,16 @@ package com.beitone.medical_store.app.ui.interrogation;
 
 import android.Manifest;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.widget.AppCheckBox;
+import com.beitone.medical_store.app.widget.InputLayout;
 import com.beitone.medical_store.app.widget.SelectImageLayout;
 import com.donkingliang.imageselector.utils.ImageSelector;
 import com.donkingliang.imageselector.utils.ImageSelectorUtils;
@@ -19,6 +21,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.adapter.AdapterUtil;
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
 import cn.betatown.mobile.beitonelibrary.permission.Acp;
@@ -34,6 +37,18 @@ public class SubmitQuestionActivity extends BaseActivity {
     @BindView(R.id.gridImgLayout)
     SelectImageLayout gridImgLayout;
     private final int REQUEST_SELECT_IMAGE = 0x10;
+    @BindView(R.id.cbHave)
+    AppCheckBox cbHave;
+    @BindView(R.id.cbNoHave)
+    AppCheckBox cbNoHave;
+    @BindView(R.id.inputAllergens)
+    InputLayout inputAllergens;
+    @BindView(R.id.cbFirstTreat)
+    AppCheckBox cbFirstTreat;
+    @BindView(R.id.cbSecondTreat)
+    AppCheckBox cbSecondTreat;
+    @BindView(R.id.tvNext)
+    TextView tvNext;
 
     @Override
     protected int getContentViewLayoutId() {
@@ -90,20 +105,35 @@ public class SubmitQuestionActivity extends BaseActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_next, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_next) {
-            jumpTo(SelectSeeDoctorPeopleActivity.class);
-            return true;
+    @OnClick({R.id.cbHave, R.id.cbNoHave, R.id.inputAllergens, R.id.cbFirstTreat,
+            R.id.cbSecondTreat, R.id.tvNext})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.cbHave:
+                cbHave.setChecked(true);
+                cbNoHave.setChecked(false);
+                inputAllergens.setVisibility(View.VISIBLE);
+                break;
+            case R.id.cbNoHave:
+                cbHave.setChecked(false);
+                cbNoHave.setChecked(true);
+                inputAllergens.setVisibility(View.GONE);
+                break;
+            case R.id.inputAllergens:
+                jumpToForResult(AllergensListActivity.class , 1);
+                break;
+            case R.id.cbFirstTreat:
+                cbFirstTreat.setChecked(true);
+                cbSecondTreat.setChecked(false);
+                break;
+            case R.id.cbSecondTreat:
+                cbFirstTreat.setChecked(false);
+                cbSecondTreat.setChecked(true);
+                break;
+            case R.id.tvNext:
+                jumpTo(SelectSeeDoctorPeopleActivity.class);
+                break;
         }
-        return super.onOptionsItemSelected(item);
     }
-
 
 }

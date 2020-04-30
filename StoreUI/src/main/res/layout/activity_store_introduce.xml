@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <!--主体-->
+    <net.shopnc.b2b2c.android.custom.CustomScrollView
+        android:id="@+id/SView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--店铺信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgStore"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/selector_activity_border"
+                    android:padding="8dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/textStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/imgStore"
+                    android:layout_toRightOf="@id/imgStore"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textStoreType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textStoreName"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/imgStore"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/tv14sp" />
+
+                <TextView
+                    android:id="@+id/textStoreTy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textStoreType"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/imgStore"
+                    android:background="@drawable/bg_round_red"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/tv14sp" />
+
+                <LinearLayout
+                    android:id="@+id/llCollect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/textNoCollect"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_collect_border"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/layout_activity_store_introduce0"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textCollect"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_collect_border_white_bg"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="6dp"
+                        android:text="@string/layout_activity_store_introduce1"
+                        android:textColor="@android:color/black"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/llCollect"
+                    android:layout_below="@id/llCollect"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textFans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="12"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/layout_activity_store_introduce2"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--店铺评价-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce3" />
+
+                    <TextView
+                        android:id="@+id/textInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce4" />
+
+                    <TextView
+                        android:id="@+id/textFuwu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce5" />
+
+                    <TextView
+                        android:id="@+id/textW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--公司信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llCompanyAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce6" />
+
+                    <TextView
+                        android:id="@+id/textComPanyAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce7" />
+
+                    <TextView
+                        android:id="@+id/textComPanyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llZy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce8" />
+
+                    <TextView
+                        android:id="@+id/textZy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBusinessLicence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvBusinessLicenceText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce9" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/tvBusinessLicenceText"
+                        android:src="@drawable/business_licence" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/nc_icon_arrow_right" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFoodCirculationPermit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvFoodCirculationPermitText"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce10" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/tvFoodCirculationPermitText"
+                        android:src="@drawable/food_circulation_permit" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/nc_icon_arrow_right" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--联系方式-->
+            <LinearLayout
+                android:id="@+id/llStorePhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvTouch"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce11" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textPhone"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@android:color/black" />
+
+                        <ImageView
+                            android:id="@+id/imgPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/tel_b" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llWorkTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp10"
+                        android:text="@string/layout_activity_store_introduce12" />
+
+                    <TextView
+                        android:id="@+id/textWorkTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </net.shopnc.b2b2c.android.custom.CustomScrollView>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              android:background="@color/nc_white"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/llItem1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivItem1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tvItem1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="11dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llItem2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivItem2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tvItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="11dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llItem3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivItem3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tvItem3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="11dp"/>
+    </LinearLayout>
+
+</LinearLayout>

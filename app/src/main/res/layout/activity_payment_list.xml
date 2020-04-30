@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:orientation="horizontal"
+        android:background="@color/grayf5"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_weight="1"
+            android:text="当前就诊人：张东东"
+            android:textColor="#ff333333"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:paddingRight="@dimen/dimen_16dp"
+            android:gravity="center_vertical"
+            android:text="切换就诊人＞"
+            android:textColor="#ff15d2c3"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabPayment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        app:tabTextColor="@color/gray33"
+        app:tabSelectedTextColor="@color/colorAccent" />
+
+    <include layout="@layout/line"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpPayment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

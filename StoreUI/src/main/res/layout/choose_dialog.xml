@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flChoosens"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp5"
+        android:background="@drawable/b3h">
+
+        <ListView
+            android:id="@+id/llChoosens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/nc_text_selectname"
+            android:dividerHeight="1px"
+            android:padding="@dimen/dp5"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_statusbar_background"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp10">
+
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/nc_icon_im_gray" />
+
+            <View
+                android:id="@+id/vhint"
+                android:layout_width="@dimen/dp5"
+                android:layout_height="@dimen/dp5"
+                android:layout_alignTop="@id/ivMessage"
+                android:layout_toRightOf="@id/ivMessage"
+                android:background="@drawable/nc_red_white_circle"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/discover" />
+
+        <View
+            style="@style/NCLine"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_no_network" />
+
+    <WebView
+        android:id="@+id/wvContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

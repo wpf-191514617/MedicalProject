@@ -1,0 +1,502 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light"></style>
+    <!-- 整个应用的基本主题 -->
+    <style name="MyTheme.Basic" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="AppBaseThemeMain" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 标题栏文字 -->
+    <style name="NCTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/nc_black</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <!-- 表单文本 -->
+    <style name="NCText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/nc_text</item>
+    </style>
+
+    <!--  文字字号 -->
+    <style name="dp10">
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="dp12">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="dp14">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="dp16">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="dp18">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="dp20">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <!-- tab栏上的按钮样式 -->
+    <style name="MyTabButton">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@drawable/main_index_textcolor_bg</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <!-- 我的按钮LinearLayout -->
+    <style name="NCMineButtonLinearLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Tab按钮 -->
+    <style name="NCTabButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/nc_tab_button_bg</item>
+        <item name="android:textColor">@drawable/nc_tab_button_text_color</item>
+    </style>
+
+    <!-- Tab文字-->
+    <style name="NCTabText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/nc_tab_text_bg</item>
+        <item name="android:textColor">@drawable/nc_tab_text_color</item>
+    </style>
+
+
+    <!-- 我的按钮ImageView -->
+    <style name="NCMineButtonImageView">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+    <!-- 我的按钮数字 -->
+    <style name="NCMineButtonNumberTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">#232326</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!-- 我的按钮文字 -->
+    <style name="NCMineButtonTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:textColor">#232326</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!-- 文字型按钮(自定义宽度颜色) -->
+    <style name="NCTextButtonSmall">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!-- 文字型按钮 -->
+    <style name="NCTextButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/nc_btn_bg</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 表单文本 -->
+    <style name="NCFormText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColor">@color/nc_text</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 表单输入框 -->
+    <style name="NCFormEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/nc_bg_border_bottom</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/nc_text_dark</item>
+        <item name="android:textColorHint">#CECECE</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!-- 表单输入框无下边框 -->
+    <style name="NCFormEditNoBorder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/nc_text_hint</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 分隔线 -->
+    <style name="NCLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:background">@color/nc_line</item>
+    </style>
+
+    <!-- 分隔线粗 -->
+    <style name="NCLineThick">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/nc_border</item>
+    </style>
+
+    <!-- 分隔虚线 -->
+    <style name="NCLineDotted">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@drawable/dash_line</item>
+    </style>
+
+
+    <style name="AnimationFade">
+        <!-- PopupWindow左右弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/popwin_top_in</item>
+        <item name="android:windowExitAnimation">@anim/popwin_top_out</item>
+    </style>
+
+    <!-- 常规Dialog样式，悬浮、背景透明，右进右出 -->
+    <style name="CommonDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+    </style>
+
+    <!-- 常规Dialog样式，悬浮、背景透明，无动画-->
+    <style name="NormalDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/translucent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!--等待loading对话框-->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <!-- 圆角按钮 -->
+    <style name="NCCornerButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="NCCornerButtonMain">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/nc_btn_bg_on</item>
+        <item name="android:textColor">@color/nc_white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NCCornerButtonNormal">
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/nc_btn_bg_normal</item>
+        <item name="android:textColor">@color/nc_text</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!--方形按钮-->
+    <style name="NCSquareButton">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- 选择型按钮 -->
+    <style name="NCSelectButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/nc_btn_corner_bg</item>
+        <item name="android:textColor">@drawable/nc_btn_text_color</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <!-- 发票类型选择按钮 -->
+    <style name="InvoiceSelectButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/invoice_bg_selector</item>
+        <item name="android:textColor">@drawable/invoice_text_color</item>
+        <item name="android:drawableLeft">@drawable/invoice_btn_selector</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <!-- 加载数据时的等待对话框(透明背景色) -->
+    <style name="MyProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/touming_color</item>
+        <item name="android:windowFrame">@color/touming_color</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <!--刷新-->
+    <style name="Widget_GifView" parent="AppBaseThemeMain">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 商品显示页面价格放大显示-->
+    <style name="goods_details_small_rmb">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="goods_details_big_price">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="goods_details_small_delete_rmb">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/buystep_sku_text</item>
+    </style>
+
+    <style name="search_good_small">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="search_good_big">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="goods_details_ownshop">
+        <item name="android:textColor">@color/nc_white</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="buystep_all_black_small">
+        <item name="android:textColor">@color/nc_text_dark</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="buystep_all_red_small">
+        <item name="android:textColor">@color/nc_red</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="cart_red_middle">
+        <item name="android:textColor">@color/nc_red</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="buystep_all_red_big">
+        <item name="android:textColor">@color/nc_red</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="try_time_black_bg">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+
+    </style>
+
+    <style name="try_time_white_bg">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="text_bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="text_normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="goods_details_goodname">
+        <item name="android:textColor">@color/nc_black</item>
+    </style>
+
+    <style name="refund_money_name">
+        <item name="android:textColor">@color/nc_text</item>
+    </style>
+
+    <style name="refund_money_num">
+        <item name="android:textColor">@color/nc_red</item>
+    </style>
+
+    <!--猜你喜欢商品价格显示-->
+    <style name="goods_guess_small_money">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="goods_guess_big_money">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MyTheme.Basic.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MyTheme.Basic.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MineTitleTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#001122</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    //////////////////////////////////////////////////
+    <!-- 我的商城界面-->
+
+    <style name="mine_deposit_tvStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/nc_white</item>
+    </style>
+
+    <style name="mine_deposit_remain_tvStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="mine_deposit_dark_tvStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="mine_deposit_time_tvStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="evaluate_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:textColor">@drawable/evaluate_tab_text_selector</item>
+        <item name="android:textSize">12dp</item>
+        <!--<item name="android:background">@drawable/btn_evaluate_selector</item>-->
+    </style>
+
+    <style name="evaluate_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!--订单评价-->
+    <!--星级评价按钮-->
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/room_rating_bar</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:maxHeight">60dp</item>
+    </style>
+
+
+    <!--圆角矩形对话框-->
+    <style name="promotionDialog" parent="android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

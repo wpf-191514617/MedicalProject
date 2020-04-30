@@ -1,0 +1,9 @@
+<resources>
+
+    <!--
+    sw360dp：screen width target 360dp
+    屏幕宽度为360dp
+    -->
+    <dimen name="home_image_cycle_height">157dp</dimen>
+    <dimen name="vp_height">330dp</dimen>
+</resources>

@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.shopnc.b2b2c.android.ui.promotion.WithdrawFragment">
+
+    <include layout="@layout/activity_base_empty" />
+
+    <TextView
+        android:id="@+id/tvWithDraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_red"
+        android:gravity="center"
+        android:padding="14dp"
+        android:text="@string/layout_fragment_withdraw0"
+        android:textColor="@color/app_white"
+        android:textSize="14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tvWithDraw" />
+
+</RelativeLayout>

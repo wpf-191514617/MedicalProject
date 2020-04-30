@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_bg"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+
+    <!--商品评价-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivGoodsPic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvGoodsName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="8dp"
+                android:maxLines="2"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14" />
+
+
+            <LinearLayout
+                android:id="@+id/llGoodsexaluate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/NCTabText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/layout_activity_order_evaluate_goods_item0"
+                    android:textColor="@color/nc_text" />
+
+                <RatingBar
+                    android:id="@+id/rbGoodsExaluate"
+                    style="@style/roomRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="1"></RatingBar>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 匿名评价-->
+    <LinearLayout
+        android:id="@+id/llEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_2"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp">
+
+
+        <EditText
+            android:id="@+id/etAdvice"
+            style="@style/NCFormEdit"
+            android:layout_margin="@dimen/dp10"
+            android:layout_weight="1"
+            android:hint="@string/layout_activity_order_evaluate_goods_item1"
+            android:textSize="@dimen/tv14sp" />
+
+
+        <LinearLayout
+            android:id="@+id/rlbtnAnonymity"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/btnAnonymity"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="@dimen/dimen_2"
+                android:background="@null"
+                android:padding="4dp"
+                android:src="@drawable/nc_check" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_2"
+                android:text="@string/layout_activity_order_evaluate_goods_item2"
+                android:textColor="@color/nc_text"
+                android:textSize="@dimen/dp12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--晒图-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="6dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imPhoto"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/photoshear" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imPhoto"
+                android:layout_marginTop="2dp"
+                android:text="@string/layout_activity_order_evaluate_goods_item3"
+                android:textColor="@color/nc_text" />
+
+        </RelativeLayout>
+
+        <net.shopnc.b2b2c.android.custom.MyGridView
+            android:id="@+id/gv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="6dp"
+            android:columnWidth="48dp"
+            android:horizontalSpacing="4dp"
+            android:listSelector="#00000000"
+            android:numColumns="5"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp"
+            android:visibility="visible">
+
+        </net.shopnc.b2b2c.android.custom.MyGridView>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

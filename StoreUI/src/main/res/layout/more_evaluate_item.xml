@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMoreEvaluate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/more_evaluate_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/more_evaluate_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/layout_more_evaluate_item0"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/more_evaluate_text"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/black"/>-->
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/more_evaluate_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:alignContent="flex_start"
+        app:flexWrap="wrap" />
+
+    <TextView
+        android:id="@+id/tvDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tv14sp" />
+
+    <TextView
+        android:id="@+id/tvExplainAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        android:textColor="@color/nc_red"
+        android:textSize="@dimen/tv14sp" />
+
+
+</LinearLayout>

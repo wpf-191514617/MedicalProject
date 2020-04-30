@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCommit"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_base" />
+
+        <include layout="@layout/tab_choose_second" />
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/rvVouchersUsable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/rvVouchersDisable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include layout="@layout/activity_base_empty" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nc_white"
+        android:padding="@dimen/dp10"
+        android:text="@string/disuse"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/tv14sp" />
+
+</RelativeLayout>

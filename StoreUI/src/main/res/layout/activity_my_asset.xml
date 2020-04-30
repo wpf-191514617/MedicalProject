@@ -1,0 +1,277 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/nc_white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- 账户余额 -->
+        <RelativeLayout
+            android:id="@+id/rlPredeposit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/nc_bg_border_bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/layout_activity_my_asset0"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout_activity_my_asset1"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPredepoit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nc_icon_arrow_right"
+                android:textColor="@color/nc_text_dark"/>
+
+        </RelativeLayout>
+
+        <!-- 充值卡余额 -->
+        <RelativeLayout
+            android:id="@+id/rlRechargeCard"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/nc_bg_border_bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/layout_activity_my_asset2"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout_activity_my_asset3"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAvailableRcBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nc_icon_arrow_right"
+                android:textColor="@color/nc_text_dark"/>
+
+        </RelativeLayout>
+
+        <!-- 平台红包 -->
+        <RelativeLayout
+            android:id="@+id/rlRedpacketList"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/nc_bg_border_bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/layout_activity_my_asset4"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout_activity_my_asset5"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRedpacket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nc_icon_arrow_right"
+                android:textColor="@color/nc_text_dark"/>
+
+        </RelativeLayout>
+
+        <!-- 店铺代金券 -->
+        <RelativeLayout
+            android:id="@+id/rlVoucherList"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/nc_bg_border_bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/layout_activity_my_asset6"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout_activity_my_asset7"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvVoucher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nc_icon_arrow_right"
+                android:textColor="@color/nc_text_dark"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPointLog"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/nc_bg_border_bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="@string/layout_activity_my_asset8"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout_activity_my_asset9"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nc_icon_arrow_right"
+                android:textColor="@color/nc_text_dark"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPrize"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/nc_bg_border_bottom"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="@string/layout_activity_my_asset10"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout_activity_my_asset11"
+                    android:textColor="@color/nc_text"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPrize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nc_icon_arrow_right"
+                android:textColor="@color/nc_text_dark"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

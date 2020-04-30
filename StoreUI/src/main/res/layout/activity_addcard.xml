@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_base"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_title_bg"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/NCTextButton"
+            android:layout_alignParentLeft="true"
+            android:text="@string/layout_activity_login0"
+            android:textColor="@color/nc_black" />
+
+        <TextView
+            style="@style/NCTitleText"
+            android:text="@string/add_card" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/NCTextButton"
+            android:layout_alignParentRight="true"
+            android:text="@string/save" />
+
+        <View
+            style="@style/NCLine"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/svAddCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlAddedCard"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="@string/added_card"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv14sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlMineOrder"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    android:id="@+id/tvMineOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="@string/layout_main_mine_view8"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/tv14sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlMineProperty"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    android:id="@+id/tvMineProperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="@string/layout_main_mine_view13"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/tv14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignLeft="@id/tvMineProperty"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/nc_text" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llAddCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/rlNoAddedCard"
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="@string/not_added_card"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv14sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llNoAddCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/activity_base" />
+
+    </RelativeLayout>
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select0"
+                    android:textSize="@dimen/tv16sp" />
+
+                <EditText
+                    android:id="@+id/etPriceFrom"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="@string/layout_activity_search_good_select1"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_toRightOf="@+id/etPriceFrom"
+                    android:text="───" />
+
+                <EditText
+                    android:id="@+id/etPriceTo"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/etPriceFrom"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="@string/layout_activity_search_good_select2"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14" />
+
+
+            </RelativeLayout>
+
+
+            <!--若再有多个选项，套RelativeLayout即可-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select3"
+                    android:textSize="@dimen/tv16sp" />
+
+                <EditText
+                    android:id="@+id/etNumBatch"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@color/nc_bg"
+                    android:gravity="center"
+                    android:hint="@string/layout_activity_search_good_select4"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/nc_text"
+                    android:textSize="@dimen/dp14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_toRightOf="@+id/etNumBatch"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/layout_activity_search_good_select5"
+                    android:textSize="@dimen/dp12" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select6"
+                    android:textSize="@dimen/tv16sp" />
+
+                <CheckBox
+                    android:id="@+id/cbDeliveryFree"
+                    style="@style/InvoiceSelectButton"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/layout_activity_search_good_select7" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select8"
+                    android:textSize="@dimen/tv16sp" />
+
+                <CheckBox
+                    android:id="@+id/cbStoreVouchers"
+                    style="@style/InvoiceSelectButton"
+                    android:layout_width="120dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/layout_activity_search_good_select9" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select10"
+                    android:textSize="@dimen/tv16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbXianshi"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/layout_activity_search_good_select11" />
+
+                        <CheckBox
+                            android:id="@+id/cbPreShow"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/layout_activity_search_good_select12" />
+
+                        <CheckBox
+                            android:id="@+id/cbPayPresell"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/layout_activity_search_good_select13" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbSeckill"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/seckill_action" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select14"
+                    android:textSize="@dimen/tv16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbOwnShop"
+                        style="@style/InvoiceSelectButton"
+                        android:layout_width="100dp"
+                        android:text="@string/layout_activity_search_good_select15" />
+
+                    <CheckBox
+                        android:id="@+id/cbOtherShop"
+                        style="@style/InvoiceSelectButton"
+                        android:layout_width="100dp"
+                        android:text="@string/layout_activity_search_good_select16" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/sales_model"
+                    android:textSize="@dimen/tv16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbRetail"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/retail_style" />
+
+                        <CheckBox
+                            android:id="@+id/cbWholesale"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/wholesale_style" />
+
+                        <CheckBox
+                            android:id="@+id/cbVirtual"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/virtual_style" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cbOverseas"
+                            style="@style/InvoiceSelectButton"
+                            android:layout_width="100dp"
+                            android:text="@string/overseas_style" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/nc_white">
+
+                <TextView
+                    style="@style/NCText"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/layout_activity_search_good_select17"
+                    android:textSize="@dimen/tv16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="34dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbGift"
+                        style="@style/InvoiceSelectButton"
+                        android:layout_width="80dp"
+                        android:text="@string/layout_activity_search_good_select18" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View style="@style/NCLine" />
+
+            <RelativeLayout
+                android:id="@+id/rlCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@color/nc_white"
+                android:padding="@dimen/dp5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp10"
+                    android:text="@string/layout_activity_search_good_select19"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv16sp" />
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp10"
+                    android:drawableRight="@drawable/click_arrow"
+                    android:text="@string/layout_activity_search_good_select20"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv14sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/llSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+    <View style="@style/NCLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRevert"
+            style="@style/NCSquareButton"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@color/nc_white"
+            android:text="@string/layout_activity_search_good_select21"
+            android:textColor="@color/nc_text_dark" />
+
+        <Button
+            android:id="@+id/btnSelectSave"
+            style="@style/NCSquareButton"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@color/nc_red"
+            android:text="@string/layout_activity_search_good_select22"
+            android:textColor="@color/nc_white" />
+    </LinearLayout>
+
+
+</LinearLayout>

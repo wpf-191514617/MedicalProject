@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_bg"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white">
+
+        <ImageView
+            android:id="@+id/ivGoodImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4"
+            android:minHeight="200dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/rlGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivGoodImg"
+            android:layout_margin="@dimen/dp4">
+
+            <ImageView
+                android:id="@+id/ivTrysType"
+                android:layout_width="@dimen/dp14"
+                android:layout_height="@dimen/dp14"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/dp4" />
+
+            <TextView
+                android:id="@+id/tvGoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@id/ivTrysType"
+                android:layout_toRightOf="@id/ivTrysType"
+                android:lines="2"
+                android:textColor="@color/nc_text"
+                android:textSize="@dimen/tv12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvGoodLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlGoodName"
+            android:layout_marginLeft="@dimen/dp4"
+            android:lines="1"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp" />
+
+        <TextView
+            android:id="@+id/tvGoodPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rlGoodName"
+            android:layout_marginRight="@dimen/dp4"
+            android:lines="1"
+            android:paddingBottom="4dp"
+            android:paddingRight="4dp"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp" />
+    </RelativeLayout>
+</RelativeLayout>

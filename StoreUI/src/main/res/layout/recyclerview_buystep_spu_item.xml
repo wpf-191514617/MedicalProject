@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white">
+
+    <ImageView
+        android:id="@+id/ivSpuImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvSpuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ivSpuImage"
+        android:text="@string/layout_recyclerview_buystep_spu_item0"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp14" />
+
+    <TextView
+        android:id="@+id/tvDisCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSpuName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ivSpuImage"
+        android:text="@string/layout_recyclerview_buystep_spu_item1"
+        android:visibility="gone" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/flowlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDisCount"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ivSpuImage"
+        zhy:max_select="-1" />
+
+    <LinearLayout
+        android:id="@+id/llSkuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivSpuImage"
+        android:orientation="vertical"
+        android:paddingTop="10dp" />
+
+
+</RelativeLayout>

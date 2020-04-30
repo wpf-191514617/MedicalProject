@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/toolbar"/>
+
+    <include layout="@layout/item_doctor_head"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/line"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dimen_3dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:background="@drawable/bg_radiu3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:text="擅长疾病"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvGoodAtInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="临床酸相关及幽门螺杆菌相关上胃肠道疾病（包括食管、胃及十二指肠炎症、溃疡及肿"
+            android:textColor="#ff858585"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dimen_3dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:background="@drawable/bg_radiu3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:text="个人简介"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="执业经历：男，医学博士，消化内科主任医师、教授。南京军区科委会消化内科学专业委员会副主任委员，中华医学会南京市消化内镜分会委员。"
+            android:textColor="#ff858585"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dimen_3dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:background="@drawable/bg_radiu3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:text="执业点"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="复旦大学附属耳鼻喉科医院   耳鼻喉科 "
+            android:textColor="#ff858585"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

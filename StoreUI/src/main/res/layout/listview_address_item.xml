@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+
+    <TextView
+        android:id="@+id/textAddressName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/layout_listview_address_item0"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textAddressPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textAddressName"
+        android:text="@string/layout_listview_address_item1"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textAddressAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAddressName"
+        android:layout_marginTop="10dp"
+        android:text="123"
+        android:textColor="#959595"
+        android:textSize="@dimen/dp14" />
+
+
+    <View
+        android:id="@+id/line"
+        style="@style/NCLineThick"
+        android:layout_below="@+id/textAddressAddress"
+        android:layout_marginTop="@dimen/dp10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnDefaultAddress"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/layout_listview_address_item2"
+            android:textColor="@color/promotion_red"
+            android:textSize="@dimen/dp12" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/nc_icon_edit" />
+
+            <TextView
+                android:id="@+id/btnEdit"
+                style="@style/NCTextButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@+id/ivEdit"
+                android:gravity="center_vertical"
+                android:text="@string/layout_listview_address_item3"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp12" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/nc_icon_del" />
+
+            <TextView
+                android:id="@+id/btnDel"
+                style="@style/NCTextButtonSmall"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/ivDelete"
+                android:gravity="center_vertical"
+                android:text="@string/layout_listview_address_item4"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp12" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/gvPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/llPredeposit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/btnSelect"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@null"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/nc_check" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="@string/layout_order_list_payment_grid0"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvPredeposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:text="@string/layout_order_list_payment_grid1"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etPredepositPsw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/layout_order_list_payment_grid2"
+        android:textColorHint="@color/text_gray"
+        android:inputType="textPassword" />
+
+
+</LinearLayout>

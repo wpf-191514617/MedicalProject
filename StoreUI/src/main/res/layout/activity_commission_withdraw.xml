@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commission_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.promotion.CommissionWithdrawActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <include layout="@layout/commission_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_one_top_line"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_commission_withdraw0"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvAccountType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/layout_activity_commission_withdraw1"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_one_top_line"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_commission_withdraw2"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvAccountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="xxx"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_one_top_line"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_commission_withdraw3"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvAccountNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="01000012"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_one_top_line"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_commission_withdraw4"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/layout_activity_commission_withdraw5"
+            android:inputType="numberDecimal"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_one_top_line"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_commission_withdraw6"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etPwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/layout_activity_commission_withdraw7"
+            android:inputType="textPassword"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/withdraw_btn_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/layout_activity_commission_withdraw8"
+        android:textColor="@drawable/withdraw_text_selector"
+        android:textSize="15sp" />
+</LinearLayout>

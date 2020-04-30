@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <TextView
+        android:id="@+id/tvGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="@string/layout_activity_submit_verification_code0" />
+
+    <LinearLayout
+        android:id="@+id/llSubmitCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <TextView style="@style/NCLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="@string/layout_activity_submit_verification_code1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llSMSdynamiccode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/layout_activity_submit_verification_code2" />
+
+                    <TextView
+                        android:id="@+id/tvTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/layout_activity_submit_verification_code3" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/etSMSdynamiccode"
+                    style="@style/NCFormEdit"
+                    android:layout_toLeftOf="@id/llSMSdynamiccode"
+                    android:hint="@string/layout_activity_submit_verification_code4" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="@string/layout_activity_submit_verification_code5" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvGetCodeAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/layout_activity_submit_verification_code6"
+                    android:textColor="@color/blue_middle"
+                    android:textSize="@dimen/tv12sp" />
+
+                <ImageView
+                    android:id="@+id/ivCode"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/tvGetCodeAgain" />
+
+                <EditText
+                    android:id="@+id/etCode"
+                    style="@style/NCFormEdit"
+                    android:layout_toLeftOf="@id/ivCode"
+                    android:hint="@string/layout_activity_submit_verification_code7" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSetPwd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="@string/layout_activity_submit_verification_code8" />
+
+            <EditText
+                android:id="@+id/etSetPwd"
+                style="@style/NCFormEdit"
+                android:hint="@string/layout_activity_submit_verification_code9"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSurePwd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:layout_width="wrap_content"
+                android:text="@string/layout_activity_submit_verification_code10" />
+
+            <EditText
+                android:id="@+id/etSurePwd"
+                style="@style/NCFormEdit"
+                android:hint="@string/layout_activity_submit_verification_code11"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/nc_btn_corner_bg_selected"
+        android:text="@string/layout_activity_submit_verification_code12"
+        android:textColor="@drawable/nc_btn_text_color_selected" />
+
+
+</LinearLayout>

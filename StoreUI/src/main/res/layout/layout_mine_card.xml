@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/ivCardTitle"
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tvCardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:gravity="center"
+                    android:textColor="@color/nc_black"
+                    android:textSize="@dimen/tv16sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/nc_text" />
+
+        <LinearLayout
+            android:id="@+id/llInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llLeft"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/dp5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMoneyUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="@color/promotion_green_dk"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvValue1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/tvValue1Unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp2"
+                        android:text="笔"
+                        android:textColor="@color/nc_orange"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvCardTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/tv14sp" />
+
+                <TextView
+                    android:id="@+id/tvCardContent1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/ivMiddle"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:maxWidth="80dp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tvMiddle"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:textSize="@dimen/tv12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/dp5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/dp5"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvValue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/tvValue2Unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp2"
+                            android:text="笔"
+                            android:textColor="@color/nc_orange"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivValue"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvCardTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/tv14sp" />
+
+                <TextView
+                    android:id="@+id/tvCardContent2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv12sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:textColor="@color/nc_black"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white"
+            android:padding="@dimen/dp4"
+            android:scaleType="centerCrop" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white">
+
+            <LinearLayout
+                android:id="@+id/llAddThisCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/bg_green_radius"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvAddThisCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="@string/add_this_card"
+                    android:textColor="@color/pay_selected" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/dp10"
+            android:textColor="@color/nc_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

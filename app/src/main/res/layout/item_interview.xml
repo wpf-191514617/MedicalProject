@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewDivier"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_8dp"
+        android:background="@color/grayf5"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dimen_12dp">
+
+        <LinearLayout
+            android:id="@+id/layoutInterviewText"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_100dp"
+            android:background="@drawable/bg_interview"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="8.5dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_35dp"
+                android:layout_height="@dimen/dimen_35dp"
+                android:src="@drawable/ic_interview_text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图文问诊"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/dimen_8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30元/次"
+                android:textColor="#fffe7047"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/dimen_5dp"/>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:layout_weight="1"/>
+
+
+       <!-- <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">-->
+
+            <LinearLayout
+                android:id="@+id/layoutInterviewVideo"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_100dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:src="@drawable/ic_interview_video"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频问诊"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/dimen_8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffb4b4b4"
+                    android:text="未开通"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_5dp"/>
+
+
+            </LinearLayout>
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:layout_weight="1"/>
+
+
+        <!--</LinearLayout>-->
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutInterviewPhone"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_100dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginRight="8.5dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_35dp"
+                android:layout_height="@dimen/dimen_35dp"
+                android:src="@drawable/ic_interview_phone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话问诊"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginTop="@dimen/dimen_8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffb4b4b4"
+                android:text="未开通"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/dimen_5dp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_interview_description">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用文字、图片、语音与医生线上沟通"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_2dp"
+            android:layout_marginTop="@dimen/dimen_7dp">
+
+            <View
+                android:layout_width="@dimen/dimen_4dp"
+                android:layout_height="@dimen/dimen_4dp"
+                android:background="@drawable/bg_circle_blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医生接诊后24小时内可不限次数交流"
+                android:textColor="#ff858585"
+                android:textSize="12sp"
+                android:layout_marginLeft="@dimen/dimen_7dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_2dp"
+            android:layout_marginTop="@dimen/dimen_7dp">
+
+            <View
+                android:layout_width="@dimen/dimen_4dp"
+                android:layout_height="@dimen/dimen_4dp"
+                android:background="@drawable/bg_circle_blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医生24小时未接诊，自动退款"
+                android:textColor="#ff858585"
+                android:textSize="12sp"
+                android:layout_marginLeft="@dimen/dimen_7dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

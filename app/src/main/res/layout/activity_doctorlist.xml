@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/sp_12"
                     android:textColor="@drawable/sel_tv_blue"
-                    android:text="科室"/>
+                    android:text="综合排序"/>
 
                 <ImageView
                     android:id="@+id/ivSort"
@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/sp_12"
                     android:textColor="@drawable/sel_tv_blue"
-                    android:text="科室"/>
+                    android:text="筛选"/>
 
                 <ImageView
                     android:id="@+id/ivFilter"

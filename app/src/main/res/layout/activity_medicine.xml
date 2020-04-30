@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="我的用药"
+            android:layout_weight="1"
+            android:textColor="#ff333333"
+            android:textSize="16sp"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:paddingTop="@dimen/dimen_18dp"
+            android:paddingBottom="@dimen/dimen_12dp"/>
+
+        <TextView
+            android:id="@+id/tvAllMedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="查看全部 ＞"
+            android:textColor="#ff858585"
+            android:gravity="bottom"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:textSize="12sp"
+            android:paddingRight="@dimen/dimen_16dp"
+            android:paddingBottom="@dimen/dimen_12dp"/>
+
+    </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMineMedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_11dp"
+            android:layout_marginRight="@dimen/dimen_11dp"
+            app:hl_cornerRadius="@dimen/dimen_10dp"
+            app:hl_shadowColor="#337F7F7F"
+            android:layout_marginTop="@dimen/dimen_11dp"
+            android:layout_marginBottom="@dimen/dimen_13dp"
+            app:hl_shadowLimit="5dp">
+
+            <LinearLayout
+                android:id="@+id/layoutPrescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_65dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_15dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_35dp"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:src="@drawable/ic_prescription"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="找医生问诊开方"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="适用于用药方案明确，病情稳定的复诊患者"
+                        android:textColor="#ff858585"
+                        android:textSize="12sp"
+                        android:layout_marginTop="@dimen/dimen_5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </com.lihang.ShadowLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:text="闪电送药"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_11dp"
+        android:layout_marginRight="@dimen/dimen_11dp"
+        app:hl_cornerRadius="@dimen/dimen_10dp"
+        app:hl_shadowColor="#337F7F7F"
+        android:layout_marginTop="@dimen/dimen_13dp"
+        app:hl_shadowLimit="5dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPharmacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+    </com.lihang.ShadowLayout>
+
+
+</LinearLayout>

@@ -18,6 +18,8 @@ import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.entity.SelectImageEntity;
 import com.bumptech.glide.Glide;
 
+import net.shopnc.b2b2c.android.custom.MyGridView;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ import me.jessyan.autosize.utils.ScreenUtils;
 
 public class SelectImageLayout extends LinearLayout {
 
-    private GridView mGridView;
+    private MyGridView mGridView;
     private int mSpacing;
     private int mColCount;
     private int mMaxSelectCount;

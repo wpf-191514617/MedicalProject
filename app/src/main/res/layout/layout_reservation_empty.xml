@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="@dimen/dimen_107dp"
+        android:layout_height="@dimen/dimen_80dp"
+        android:layout_marginTop="@dimen/dimen_35dp"
+        android:src="@drawable/ic_empty" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_18dp"
+        android:text="您还没有预约过任何医生"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_54dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:background="@drawable/bg_circle_blue"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择医院科室医生"
+                android:textColor="#ff858585"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/dimen_13dp"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_marginLeft="9.5dp"
+            android:background="@drawable/shape_dash_line"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:background="@drawable/bg_circle_blue"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填写预约信息"
+                android:textColor="#ff858585"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/dimen_13dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_marginLeft="9.5dp"
+            android:background="@drawable/shape_dash_line"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:background="@drawable/bg_circle_blue"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="凭身份证和短信去医院就诊"
+                android:textColor="#ff858585"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/dimen_13dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvReservation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_55dp"
+        android:text="快速预约"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_radiu21"
+        android:textSize="@dimen/sp_16"/>
+
+
+</LinearLayout>

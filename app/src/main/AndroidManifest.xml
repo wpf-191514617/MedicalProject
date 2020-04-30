@@ -4,23 +4,32 @@
     package="com.beitone.medical_store.app">
 
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!-- 指纹权限 -->
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <!-- 震动权限 -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- 挂载sd卡 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/> <!-- 图pain轮播权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="ANDROID.PERMISSION.WRITE_APN_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 高德相关权限（去掉重复获取的权限） -->
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
@@ -60,26 +69,94 @@
         <!-- 问诊 -->
         <activity
             android:name=".ui.interrogation.SubmitQuestionActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.interrogation.SelectSeeDoctorPeopleActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.interrogation.HealthArchivesActivity"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".ui.interrogation.DoctorListActivity"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="portrait" />
         <activity android:name=".ui.interrogation.SubmitInterrogationOrderActivity"
-            android:screenOrientation="fullSensor"/>
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.interrogation.AllergensListActivity"
+            android:screenOrientation="portrait"/>
 
 
 
+        <activity android:name=".ui.doctor.DoctorListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.doctor.DoctorHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.doctor.DoctorSummrayActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.medicine.MedicineHomeActivity"
+            android:screenOrientation="portrait"/>
 
 
 
+        <activity android:name=".ui.user.ReservationListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.user.ReservationDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.reservation.ReservationSuccessActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.payment.PaymentListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.payment.CostDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.report.ReportHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.HospitalServiceActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.medical_records.MedicalRecordsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.medical_records.MedicalDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.dailylist.DailyListActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.advance_payment.AdvancePaymentActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.be.HospitalizedActivity"
+            android:screenOrientation="portrait"/>
 
 
+
+        <activity android:name=".ui.user.MineDoctorActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.user.MineReportListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.user.MineInquiryListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.user.MineMedicineListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.user.InquiryDetailActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.reservation.DoctorListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.reservation.DepartmentListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.reservation.DoctorHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.reservation.ReservationOrderActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.hospital.reservation.DiseaseListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.medical_card.BindCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.medical_card.CreateCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.hospital.medical_card.MedicalCardDetailActivity"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.donkingliang.imageselector.ImageSelectorActivity"

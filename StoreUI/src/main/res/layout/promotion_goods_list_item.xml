@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/nc_white">
+
+
+    <ImageView
+        android:id="@+id/ivGoodPic"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="6dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlPrice"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@id/ivGoodPic">
+
+        <View
+            android:id="@+id/line"
+            style="@style/NCLine" />
+
+
+        <LinearLayout
+            android:id="@+id/llPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGoodName"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/layout_promotion_goods_list_item0"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/tv12sp" />
+
+            <TextView
+                android:id="@+id/tvGoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="312.00"
+                android:textColor="@color/nc_red"
+                android:textSize="@dimen/dp20" />
+
+            <LinearLayout
+                android:id="@+id/llBatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/promotion_batch_blue_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="2dp"
+                android:textColor="@color/app_white"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="@dimen/tv12sp"
+                    android:layout_height="@dimen/tv12sp"
+                    android:background="@color/promotion_batch_blue"
+                    android:gravity="center"
+                    android:text="@string/layout_promotion_goods_list_item1"
+                    android:textColor="@color/app_white"
+                    android:textSize="@dimen/tv10sp" />
+
+                <TextView
+                    android:id="@+id/tvBatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp2"
+                    android:text="@string/layout_promotion_goods_list_item2"
+                    android:textColor="@color/promotion_batch_blue"
+                    android:textSize="@dimen/tv10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPromotionFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/promotion_flag_bg"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/layout_promotion_goods_list_item3"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvGiftFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/promotion_flag_bg"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/layout_promotion_goods_list_item4"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tvPresell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/promotion_flag_bg"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/layout_promotion_goods_list_item5"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/dp10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvPayPresell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/promotion_flag_bg"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="@string/layout_promotion_goods_list_item6"
+                android:textColor="@color/app_white"
+                android:textSize="@dimen/dp10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvGoodSalenum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/layout_promotion_goods_list_item7"
+                android:textColor="@color/nc_text"
+                android:textSize="@dimen/dp12"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llPrice"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/layout_promotion_goods_list_item8"
+            android:textColor="@color/nc_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRate"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/layout_promotion_goods_list_item9"
+            android:textColor="@color/nc_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvChoose2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/llPrice"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp24"
+            android:background="@drawable/promotion_select_text_bg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/layout_promotion_goods_list_item10"
+            android:textColor="@color/app_white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/nc_border" />
+
+        <TextView
+            android:id="@+id/tvGoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/layout_promotion_goods_list_item11"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_base" />
+
+        <net.shopnc.b2b2c.android.xrefresh.XScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_bg"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tvMyComplaintInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/layout_activity_order_complaint_details0"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/nc_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llComplaintGoods"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_details1"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintGoods"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_details2"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintState"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_details3"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_details4"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintTheme"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_details5"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvComplaintContent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/layout_activity_order_complaint_details6"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvImageNone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_cancle"
+                            android:text="@string/layout_activity_order_complaint_details7"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14"
+                            android:visibility="gone" />
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:id="@+id/fblImages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:alignContent="flex_start"
+                            app:flexWrap="wrap" />
+
+                    </LinearLayout>
+
+                    <View style="@style/NCLine" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlSupplementary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvSupplementary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/layout_activity_order_complaint_details8"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:id="@+id/tvSubmmit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/btn_cancle"
+                            android:text="@string/layout_activity_order_complaint_details9"
+                            android:textColor="@color/nc_text_dark"
+                            android:textSize="@dimen/dp14" />
+
+                        <net.shopnc.b2b2c.android.custom.MyGridView
+                            android:id="@+id/gvPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@id/tvSubmmit"
+                            android:layout_toRightOf="@id/tvSupplementary"
+                            android:horizontalSpacing="4dp"
+                            android:listSelector="#00000000"
+                            android:numColumns="3"
+                            android:scrollbars="none"
+                            android:stretchMode="columnWidth"
+                            android:verticalSpacing="2dp"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llSellerInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/layout_activity_order_complaint_details10"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/layout_activity_order_complaint_details11"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvAccusedTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                        <View style="@style/NCLine" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/layout_activity_order_complaint_details12"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvAccusedContent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+
+                        <View style="@style/NCLine" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/layout_activity_order_complaint_details13"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <com.google.android.flexbox.FlexboxLayout
+                                android:id="@+id/fblImagesSeller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:alignContent="flex_start"
+                                app:flexWrap="wrap" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTalk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/layout_activity_order_complaint_details14"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvTalk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/layout_activity_order_complaint_details15"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTalkAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/layout_activity_order_complaint_details16"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <EditText
+                                android:id="@+id/etTalkAdd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:gravity="top"
+                                android:minHeight="50dp"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvTalkAdd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:background="@drawable/btn_cancle"
+                                android:text="@string/layout_activity_order_complaint_details17"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llArbitrament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/layout_activity_order_complaint_details18"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/nc_white"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/layout_activity_order_complaint_details19"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvArbitrationTime"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+
+                        <View style="@style/NCLine" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/layout_activity_order_complaint_details20"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                            <TextView
+                                android:id="@+id/tvArbitrationOpinion"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:textColor="@color/nc_text_dark"
+                                android:textSize="@dimen/dp14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSubmitArbitration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/nc_red_dark"
+                    android:text="@string/layout_activity_order_complaint_details21"
+                    android:textColor="@color/nc_white" />
+            </LinearLayout>
+        </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+    </LinearLayout>
+</RelativeLayout>

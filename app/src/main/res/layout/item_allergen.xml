@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/tvTag"
+    android:layout_height="@dimen/dimen_27dp"
+    android:layout_marginRight="@dimen/dimen_10dp"
+    android:gravity="center"
+    android:paddingLeft="@dimen/dimen_14dp"
+    android:paddingRight="@dimen/dimen_14dp"
+    android:background="@drawable/bg_texttag"
+    android:textColor="@drawable/sel_tv_white"
+    android:layout_marginBottom="@dimen/dimen_8dp">
+
+</TextView>

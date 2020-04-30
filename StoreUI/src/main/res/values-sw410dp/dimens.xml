@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="home_image_cycle_height">179dp</dimen>
+    <dimen name="vp_height">350dp</dimen>
+</resources>

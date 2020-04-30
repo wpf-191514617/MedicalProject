@@ -63,6 +63,8 @@ public abstract class OnJsonCallBack<M> extends OnHttpCallBack<M> {
                     response.data = jsonObject.getString("data");
                 } else if (key.equals("time")) {
                     response.time = jsonObject.getLong("time");
+                } else if (key.equals("sessionId")){
+                    response.sessionId = jsonObject.getString("sessionId");
                 }
             }
         } catch (Exception e) {

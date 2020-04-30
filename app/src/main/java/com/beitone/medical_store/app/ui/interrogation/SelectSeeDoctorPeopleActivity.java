@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.ui.doctor.DoctorListActivity;
 import com.beitone.medical_store.app.util.TestUtil;
 import com.beitone.medical_store.app.widget.AppButton;
 
@@ -28,6 +29,10 @@ public class SelectSeeDoctorPeopleActivity extends BaseActivity {
     AppButton btnNext;
     private SelectArchivesListAdapter mSelectArchivesListAdapter;
 
+    private boolean isSelectPeople;
+
+    public static final String KEY_SELECT = "selectPeople";
+
     @Override
     protected int getContentViewLayoutId() {
         return R.layout.activity_select_seedocpeople;
@@ -43,6 +48,11 @@ public class SelectSeeDoctorPeopleActivity extends BaseActivity {
         mSelectArchivesListAdapter.setData(TestUtil.getTestListData());
     }
 
+    @Override
+    protected void getBundleExtras(Bundle extras) {
+        super.getBundleExtras(extras);
+        isSelectPeople = extras.getBoolean(KEY_SELECT, false);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -64,6 +74,11 @@ public class SelectSeeDoctorPeopleActivity extends BaseActivity {
     @OnClick(R.id.btnNext)
     public void onViewClicked() {
         if (mSelectArchivesListAdapter.getCheckedPosition() != -1) {
+            if (isSelectPeople) {
+                setResult(RESULT_OK);
+                finish();
+                return;
+            }
             mSelectArchivesListAdapter.getItem(mSelectArchivesListAdapter.getCheckedPosition());
             jumpTo(DoctorListActivity.class);
         } else {

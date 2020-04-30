@@ -1,2 +1,3 @@
 rootProject.name='MedicalProject'
 include ':app', ':httplibrary', ':beitonelibrary'
+include ':StoreUI'

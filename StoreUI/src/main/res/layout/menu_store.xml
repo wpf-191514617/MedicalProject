@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:divider="@drawable/horizontal_line"
+    android:showDividers="middle"
+    android:background="@color/text_gray" >
+
+    <TextView
+        android:id="@+id/textview_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/home_w"
+        android:text="@string/layout_menu_store0"
+        android:layout_margin="12dp"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"/>
+
+
+    <TextView
+        android:id="@+id/textview_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search_w_meitu_4"
+        android:text="@string/layout_menu_store1"
+        android:drawablePadding="4dp"
+        android:layout_margin="12dp"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"/>
+
+
+    <TextView
+        android:id="@+id/textview_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/cart_w_meitu_2"
+        android:text="@string/layout_menu_store2"
+        android:layout_margin="12dp"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"/>
+
+
+    <TextView
+        android:id="@+id/textview_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/message_w_meitu_3"
+        android:text="@string/layout_menu_store3"
+        android:layout_margin="12dp"
+        android:drawablePadding="4dp"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/nc_bg_border_top_and_bottom"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/imID"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:drawableTop="@drawable/nc_icon_kefu"
+        android:gravity="center"
+        android:text="@string/layout_app_common_goods_detail_button0"
+        android:textColor="@color/nc_text"
+        android:textSize="@dimen/tv12sp" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/nc_border"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvShowStore"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:drawableTop="@drawable/nc_icon_store"
+        android:gravity="center"
+        android:text="@string/layout_app_common_goods_detail_button1"
+        android:textColor="@color/nc_text"
+        android:textSize="12dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/nc_border"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/lvFav"
+        android:layout_width="60dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvFav"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/fav_goods_selector"
+            android:gravity="center"
+            android:text="@string/layout_app_common_goods_detail_button2"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/nc_border"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="match_parent">
+
+        <!--<TextView-->
+            <!--android:id="@+id/tvCount"-->
+            <!--android:layout_width="16dp"-->
+            <!--android:layout_height="16dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@drawable/cart_round_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:text="0"-->
+            <!--android:textColor="@color/app_white"-->
+            <!--android:textSize="12sp"-->
+            <!--android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/showCartLayoutID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:drawableTop="@drawable/nc_icon_cart"
+            android:gravity="center"
+            android:text="@string/layout_app_common_goods_detail_button3"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/addCartID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@color/bottom_bar_yellow"
+        android:text="@string/layout_app_common_goods_detail_button4"
+        android:textColor="@color/nc_white"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/buyStepID"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@color/bottom_bar_red"
+        android:padding="10dip"
+        android:text="@string/layout_app_common_goods_detail_button5"
+        android:textColor="@color/nc_white"
+        android:textSize="14dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnArrivalNotice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@color/arrive_notice"
+        android:text="@string/layout_app_common_goods_detail_button6"
+        android:textColor="@color/nc_white"
+        android:textSize="14dp"
+        android:visibility="gone" />
+
+</LinearLayout>

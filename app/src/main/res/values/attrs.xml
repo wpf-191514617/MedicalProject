@@ -3,6 +3,10 @@
     <declare-styleable name="AppButton">
         <attr name="btnText" format="string" />
         <attr name="btnEnable" format="boolean" />
+        <attr name="btnStyle" format="enum">
+            <enum name="def" value="0"/>
+            <enum name="blue" value="1"/>
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="AppCheckBox">

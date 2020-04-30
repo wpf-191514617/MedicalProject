@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_white"
+    android:orientation="vertical"
+    android:paddingBottom="40dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/layout_cart_conforms_popupwindow0"
+            android:textColor="@color/nc_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/tvOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:src="@drawable/nc_icon_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>

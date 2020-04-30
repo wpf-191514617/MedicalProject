@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_35dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="有号提醒我"
+            android:textColor="#fffea50b"
+            android:textSize="12sp"/>
+
+
+        <TextView
+            android:id="@+id/tvRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="刷新"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:paddingRight="@dimen/dimen_16dp"
+            android:textColor="#ff15d2c3"
+            android:gravity="center"
+            android:textSize="12sp"
+            />
+
+    </LinearLayout>
+
+
+    <include layout="@layout/line"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShift"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include layout="@layout/line"/>
+
+</LinearLayout>

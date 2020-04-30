@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llContract"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/service_promise_gray"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tvCtItemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/tv14sp" />
+
+</LinearLayout>

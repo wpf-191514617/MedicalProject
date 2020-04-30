@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/etMsg"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_base" />
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/dp10"
+            android:drawableLeft="@drawable/nc_icon_store"
+            android:drawablePadding="@dimen/dp5"
+            android:drawableRight="@drawable/nc_icon_arrow_right"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv16sp" />
+
+        <include layout="@layout/listview_order_spu_item" />
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrvVirtualRefund"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCommit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nc_bg">
+
+        <Button
+            android:id="@+id/btnCommit"
+            style="@style/NCCornerButtonMain"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/layout_activity_authentication_step29" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rlCommit"
+        android:layout_margin="6dp"
+        android:background="@drawable/spec_btn_select_false"
+        android:hint="@string/input_refund_reason"
+        android:textColor="@color/nc_text_dark"
+        android:textSize="@dimen/dp12" />
+
+</RelativeLayout>

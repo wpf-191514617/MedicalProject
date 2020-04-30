@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_invoice0"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etInvoiceTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@null"
+            android:hint="@string/layout_activity_invoice1"
+            android:text="@string/layout_activity_invoice2"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp" />
+    </LinearLayout>
+
+    <TextView style="@style/NCLine" />
+
+    <LinearLayout
+        android:id="@+id/rvInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_invoice3"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etTaxpayerNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@null"
+            android:hint="@string/layout_activity_invoice4"
+            android:inputType="number"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp" />
+    </LinearLayout>
+
+    <TextView style="@style/NCLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/layout_activity_invoice5"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvInvoiceContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@null"
+            android:text="@string/layout_activity_invoice6"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp" />
+    </LinearLayout>
+
+    <TextView style="@style/NCLine" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            style="@style/InvoiceSelectButton"
+            android:checked="true"
+            android:text="@string/layout_activity_invoice7" />
+
+        <RadioButton
+            android:id="@+id/rbNeed"
+            style="@style/InvoiceSelectButton"
+            android:text="@string/layout_activity_invoice8" />
+
+    </RadioGroup>
+
+
+</LinearLayout>

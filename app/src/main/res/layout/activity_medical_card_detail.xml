@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <include layout="@layout/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingTop="@dimen/dimen_20dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_22dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="卢嘉成"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_15dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="未认证"
+                android:textColor="#ffb4b4b4"
+                android:textSize="11sp"
+                android:background="@drawable/bg_store_gray_3"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:text="身份证：5**************8"
+            android:textColor="#ff858585"
+            android:textSize="14sp"
+            />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_78dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="就诊卡"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutPersonCard"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvPersonCardNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4188976"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvPersonCardChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="切换"
+                        android:paddingLeft="@dimen/dimen_9dp"
+                        android:paddingTop="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:textColor="#ff15d2c3"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvBindPerson"
+                    android:layout_width="@dimen/dimen_64dp"
+                    android:layout_height="@dimen/dimen_23dp"
+                    android:background="@drawable/bg_radiu21"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:gravity="center"
+                    android:text="去绑定"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="@dimen/dimen_39dp"
+            android:background="@color/grayDE"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="住院号"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutHospitalized"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvHospitalizedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4188976"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvHospitalizedChange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="切换"
+                        android:paddingLeft="@dimen/dimen_9dp"
+                        android:paddingTop="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_10dp"
+                        android:textColor="#ff15d2c3"
+                        android:textSize="14sp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvBindHospitalized"
+                    android:layout_width="@dimen/dimen_64dp"
+                    android:layout_height="@dimen/dimen_23dp"
+                    android:background="@drawable/bg_radiu21"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:gravity="center"
+                    android:text="去绑定"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="性别"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/sp_14" />
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbMan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="男"/>
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbWomen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                app:text="女"
+                android:layout_marginLeft="@dimen/dimen_15dp"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="出生日期"
+            app:inputHnit="请选择"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+        <include layout="@layout/line"/>
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="手机号码"
+            app:inputHnit="请输入手机号码"
+            app:inputGravity="right"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            app:inputType="phone"
+            />
+
+        <include layout="@layout/line"/>
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="所在城市"
+            app:inputHnit="请选择所在城市"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+
+        <include layout="@layout/line"/>
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="详细地址"
+            app:inputHnit="请填写详细地址"
+            app:inputGravity="right"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+    </LinearLayout>
+
+
+    <com.beitone.medical_store.app.widget.AppButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_22dp"
+        android:text="保存"/>
+
+
+    <TextView
+        android:id="@+id/btnRemove"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:gravity="center"
+        android:text="删除就诊人"
+        android:textColor="#fffe7146"
+        android:textSize="16sp"
+        android:background="@drawable/bg_white_radiu45"/>
+
+
+</LinearLayout>

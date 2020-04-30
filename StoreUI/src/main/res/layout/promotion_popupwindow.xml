@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_white"
+    android:orientation="vertical"
+    android:paddingBottom="40dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/layout_promotion_popupwindow0"
+            android:textColor="@color/nc_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/tvOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:src="@drawable/nc_icon_close" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLimitDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp4"
+                android:text="@string/layout_fragment_gooddetails2"
+                android:textColor="@color/bottom_bar_red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLimitDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:singleLine="true"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSeckill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp4"
+                android:text="@string/layout_fragment_gooddetails280"
+                android:textColor="@color/bottom_bar_red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSeckill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:singleLine="true"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/llStoreVIPDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp4"
+                android:text="@string/layout_fragment_gooddetails281"
+                android:textColor="@color/bottom_bar_red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tvStoreVIPDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:singleLine="true"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp4"
+                android:text="@string/layout_promotion_popupwindow2"
+                android:textColor="@color/bottom_bar_red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:drawableRight="@drawable/nc_icon_arrow_right"
+            android:singleLine="true"
+            android:textColor="@color/nc_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGiftContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp8">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp4"
+                android:text="@string/layout_promotion_popupwindow3"
+                android:textColor="@color/bottom_bar_red"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDiscountContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_one_top_line"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/discount_stroke_bg"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp4"
+                android:text="@string/layout_promotion_popupwindow4"
+                android:textColor="@color/bottom_bar_red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

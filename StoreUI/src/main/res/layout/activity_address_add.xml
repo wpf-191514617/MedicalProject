@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_address_add0" />
+
+            <EditText
+                android:id="@+id/editAddressName"
+                style="@style/NCFormEdit"
+                android:hint="@string/layout_activity_address_add1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_address_add2" />
+
+            <EditText
+                android:id="@+id/editAddressMobPhone"
+                style="@style/NCFormEdit"
+                android:inputType="number"
+                android:hint="@string/layout_activity_address_add3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_address_add4" />
+
+            <TextView
+                android:id="@+id/editAddressInfo"
+                style="@style/NCFormEdit"
+                android:gravity="center_vertical"
+                android:hint="@string/layout_activity_address_add5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_address_add6" />
+
+            <EditText
+                android:id="@+id/editJieDaoAddress"
+                style="@style/NCFormEdit"
+                android:hint="@string/layout_activity_address_add7" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/NCFormText"
+                android:text="@string/layout_activity_address_add8" />
+
+            <ImageButton
+                android:id="@+id/btnDefaultAddress"
+                android:layout_width="32dp"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:src="@drawable/nc_check_address" />
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAdd"
+        style="@style/NCCornerButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/nc_btn_corner_bg_selected"
+        android:textColor="@drawable/nc_btn_text_color_selected"
+        android:text="@string/layout_activity_address_add9" />
+
+</LinearLayout>

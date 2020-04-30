@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".android.ui.order.OrderReturnGoodActivity">
+
+    <include layout="@layout/activity_base"></include>
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tvStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="42dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="60dp"
+                    android:drawableLeft="@drawable/nc_icon_store"
+                    android:drawableRight="@drawable/nc_icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/layout_activity_order_complaint_good0"
+                    android:textColor="@color/nc_text_dark"
+                    android:textSize="@dimen/dp16" />
+
+                <View style="@style/NCLine"></View>
+
+                <include layout="@layout/listview_order_spu_item"></include>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/shape_corners_black"
+                android:padding="5dp"
+                android:text="@string/order_complaint_good"
+                android:textColor="@color/nc_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:id="@+id/llReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_complaint_good1"
+                        android:textSize="@dimen/dp14" />
+
+                    <TextView
+                        android:id="@+id/tvReason"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/layout_activity_order_complaint_good2"
+                        android:textSize="@dimen/dp14" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="6dp"
+                        android:src="@drawable/arrow_down_b" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/NCLine"
+                    android:visibility="gone"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/layout_activity_order_complaint_good3"
+                        android:textSize="@dimen/dp14" />
+
+                    <EditText
+                        android:id="@+id/etRefundPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/nc_white"
+                        android:hint="@string/layout_activity_order_complaint_good4"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/nc_text_dark"
+                        android:textColorHint="@color/nc_text"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMaxPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="Y9612"
+                            android:textColor="@color/text_green"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_good5"
+                            android:textSize="@dimen/dp12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    style="@style/NCLine"
+                    android:visibility="gone"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/layout_activity_order_complaint_good6"
+                        android:textSize="@dimen/dp14" />
+
+                    <EditText
+                        android:id="@+id/etRefundNum"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/nc_white"
+                        android:hint="@string/layout_activity_order_complaint_good7"
+                        android:inputType="number"
+                        android:textColor="@color/nc_text_dark"
+                        android:textColorHint="@color/nc_text"
+                        android:textSize="@dimen/dp14" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMaxNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="@string/layout_activity_order_complaint_good8"
+                            android:textColor="@color/text_green"
+                            android:textSize="@dimen/dp14" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/layout_activity_order_complaint_good9"
+                            android:textSize="@dimen/dp12" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_complaint_good10"
+                        android:textSize="@dimen/dp14" />
+
+                    <EditText
+                        android:id="@+id/etBuyerMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/nc_white"
+                        android:hint="@string/layout_activity_order_complaint_good11"
+                        android:textColor="@color/nc_text_dark"
+                        android:textColorHint="@color/nc_text"
+                        android:textSize="@dimen/dp14" />
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_complaint_good12"
+                        android:textSize="@dimen/dp14" />
+
+                    <net.shopnc.b2b2c.android.custom.MyGridView
+                        android:id="@+id/gvPhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:columnWidth="48dp"
+                        android:horizontalSpacing="4dp"
+                        android:listSelector="#00000000"
+                        android:numColumns="5"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="2dp"
+                        android:visibility="visible">
+
+                    </net.shopnc.b2b2c.android.custom.MyGridView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCommit"
+                style="@style/NCCornerButtonMain"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/layout_activity_order_complaint_good13" />
+
+        </LinearLayout>
+
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+
+</LinearLayout>

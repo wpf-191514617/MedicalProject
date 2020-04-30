@@ -7,7 +7,7 @@ import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 public class ShopCartFragment extends BaseFragment {
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.fragment_shopcart;
+        return R.layout.fragment_cart;
     }
 
     @Override

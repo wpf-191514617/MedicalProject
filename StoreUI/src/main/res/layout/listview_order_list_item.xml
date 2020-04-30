@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="14dp">
+
+    <LinearLayout
+        android:id="@+id/llStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llStore"
+        android:background="@color/nc_bg">
+
+        <Button
+            android:id="@+id/btnPayOrder"
+            style="@style/NCCornerButtonMain"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/layout_listview_order_list_item0" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

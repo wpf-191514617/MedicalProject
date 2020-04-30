@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_20dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowBackColor="@color/white"
+        android:layout_marginLeft="@dimen/dimen_11dp"
+        android:layout_marginRight="@dimen/dimen_11dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        app:hl_shadowLimit="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_store_de"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:text="请输入关键字搜索"
+                android:textColor="#ffb4b4b4"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </com.lihang.ShadowLayout>
+
+
+    <FrameLayout
+        android:id="@+id/flDiseaseContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"/>
+
+</LinearLayout>

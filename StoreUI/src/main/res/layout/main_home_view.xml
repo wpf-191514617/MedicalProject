@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg">
+
+    <include layout="@layout/layout_no_network" />
+
+    <net.shopnc.b2b2c.android.xrefresh.XRefreshView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/xrefreshview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_bg"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!--自定义滑动的ScrollView-->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/nc_bg"
+            android:scrollbars="none">
+
+            <!--第一模块-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/head"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_image_cycle_height">
+                    <!--图片轮播-->
+                    <net.shopnc.b2b2c.android.circlelibrary.ImageCycleView
+                        android:id="@+id/cycleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true" />
+                </RelativeLayout>
+
+                <!--主体-->
+                <LinearLayout
+                    android:id="@+id/homeViewID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/head"
+                    android:background="@color/nc_white"
+                    android:orientation="vertical"
+                    tools:ignore="NotSibling" />
+
+                <!--搜索框-->
+                <include
+                    android:id="@+id/homeSearch"
+                    layout="@layout/home_search_view" />
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </net.shopnc.b2b2c.android.xrefresh.XRefreshView>
+
+    <Button
+        android:id="@+id/top_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/top_btn_bg"
+        android:gravity="right"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!--要显示的搜索框-->
+    <!--<include
+        android:visibility="gone"
+        layout="@layout/home_search_view" />-->
+
+    <LinearLayout
+        android:id="@+id/llStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/layout_statusbar_background"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/homeSearchRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llScanDed"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivRichScan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/nc_icon_camera_black" />
+
+                    <TextView
+                        android:id="@+id/tvRichScan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_main_home_view0"
+                        android:textColor="@color/nc_black"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSearchBgRed"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_round_gray"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSearchRed"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/nc_icon_search" />
+
+                    <TextView
+                        android:id="@+id/tvSearchRed"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColorHint="@color/nc_text" />
+
+                    <Button
+                        android:id="@+id/btnCameraD"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/nc_icon_camera_b"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llImDed"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlUnredTopFlag"
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/nc_page_circle_off"
+                            android:padding="1dp"></View>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:background="@drawable/nc_page_circle_on"></View>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivMessage"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/nc_icon_im_black" />
+
+                        <View
+                            android:id="@+id/vhintRed"
+                            android:layout_width="@dimen/dp5"
+                            android:layout_height="@dimen/dp5"
+                            android:layout_alignTop="@id/ivMessage"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_toRightOf="@id/ivMessage"
+                            android:background="@drawable/nc_red_white_circle"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_main_home_view1"
+                        android:textColor="@color/nc_black"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/NCLine" />
+    </LinearLayout>
+
+
+</RelativeLayout>

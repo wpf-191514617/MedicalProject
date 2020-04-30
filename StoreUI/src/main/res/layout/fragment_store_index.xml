@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_bg"
+        android:orientation="vertical">
+
+        <!--店铺图片轮播-->
+
+        <RelativeLayout
+            android:id="@+id/rlStoreHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_image_cycle_height"
+            android:visibility="gone">
+
+            <net.shopnc.b2b2c.android.circlelibrary.ImageCycleView
+                android:id="@+id/banner_main_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/storeHomeViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_bg"
+            android:orientation="vertical"
+            tools:ignore="NotSibling" />
+
+        <!--第一部分:店铺排行-->
+        <LinearLayout
+            android:id="@+id/llRank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:text="@string/layout_fragment_store_index0"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btnCollectOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/nc_tab_button_bg"
+                        android:button="@null"
+                        android:text="@string/layout_fragment_store_index1"
+                        android:textColor="@drawable/nc_tab_button_text_color"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/btnSaleOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/nc_tab_button_bg"
+                        android:button="@null"
+                        android:text="@string/layout_fragment_store_index2"
+                        android:textColor="@drawable/nc_tab_button_text_color"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView style="@style/NCLine" />
+
+            <!--排行商品展示-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:id="@+id/imgBig"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <!--阴影区域显示-->
+
+
+                    <RelativeLayout
+                        android:id="@+id/ret1"
+                        android:layout_width="match_parent"
+                        android:layout_height="26dp"
+                        android:layout_alignBottom="@id/imgBig"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/nc_background_transport_light">
+
+                        <TextView
+                            android:id="@+id/textSaleCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/textMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imgSmallOne"
+                        android:layout_width="100dip"
+                        android:layout_height="90dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <!--阴影区域显示-->
+
+
+                    <RelativeLayout
+                        android:id="@+id/ret2"
+                        android:layout_width="100dip"
+                        android:layout_height="26dp"
+                        android:layout_alignBottom="@id/imgSmallOne"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/nc_background_transport_light">
+
+                        <TextView
+                            android:id="@+id/textSaleCountOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/imgSmallTwo"
+                        android:layout_width="100dip"
+                        android:layout_height="90dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/imgSmallOne"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/ret3"
+                        android:layout_width="100dip"
+                        android:layout_height="26dp"
+                        android:layout_alignBottom="@id/imgSmallTwo"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/nc_background_transport_light">
+
+                        <TextView
+                            android:id="@+id/textSaleCountTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView style="@style/NCLine" />
+
+        <!--第二部分：店铺推荐-->
+
+        <LinearLayout
+            android:id="@+id/llReco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:text="@string/layout_fragment_store_index3"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <net.shopnc.b2b2c.android.custom.MyGridView
+                android:id="@+id/sotreGoodsGridViewID"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:horizontalSpacing="4dp"
+                android:listSelector="@null"
+                android:numColumns="2"
+                android:verticalSpacing="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

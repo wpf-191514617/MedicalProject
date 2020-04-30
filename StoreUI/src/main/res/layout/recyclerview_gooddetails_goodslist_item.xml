@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_bg">
+
+    <TextView
+        android:id="@+id/tvGoodId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/dp14"
+        />
+
+    <EditText
+        android:id="@+id/etNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="@string/layout_recyclerview_gooddetails_goodslist_item0"
+        android:numeric="integer"
+        style="@style/dp14"
+        />
+
+</LinearLayout>

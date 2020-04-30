@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.promotion.NewRepoActivity">
+
+    <include layout="@layout/activity_base"/>
+
+    <LinearLayout
+        android:background="@color/app_white"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layout_activity_new_repo0"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:background="@null"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/nc_btn_corner_bg_selected"
+        android:text="@string/layout_activity_new_repo1"
+        android:textColor="@drawable/nc_btn_text_color_selected"/>
+</LinearLayout>

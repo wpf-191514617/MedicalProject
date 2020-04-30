@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/detail_recycler_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/detail_recycler_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="1000dp"
+        android:minHeight="300dp"
+        android:scaleType="centerInside"/>
+
+</FrameLayout>

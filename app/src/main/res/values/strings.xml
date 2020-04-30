@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MedicalProject</string>
     <string-array name="relations">
-        <item>自己</item>
+        <item>本人</item>
         <item>父母</item>
         <item>子女</item>
         <item>爱人</item>
@@ -9,4 +9,14 @@
     </string-array>
     <string name="protocol_hnit">已阅读并同意《用户服务协议》和《隐私协议》</string>
     <string name="protocol_hnit_dialog">为保障您的个人信息安全，使用登录功能需要您先阅读并同意《用户服务协议》和《隐私协议》</string>
+    <string-array name="departmentnames">
+        <item>耳鼻喉科</item>
+        <item>儿科</item>
+        <item>妇科</item>
+        <item>中医科</item>
+        <item>外科</item>
+        <item>皮肤科</item>
+        <item>内科</item>
+        <item>更多科室</item>
+    </string-array>
 </resources>

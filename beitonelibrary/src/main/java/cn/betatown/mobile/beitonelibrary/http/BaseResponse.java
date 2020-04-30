@@ -8,6 +8,8 @@ public class BaseResponse<T> {
 
     public long time;
 
+    public String sessionId;
+
     public T data;
 
 

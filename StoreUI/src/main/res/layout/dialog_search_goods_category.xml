@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <RelativeLayout
+        android:id="@+id/rlCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:padding="@dimen/dp5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp10"
+            android:text="@string/layout_dialog_search_goods_category0"
+            android:textColor="@color/nc_text_dark"
+            android:textSize="@dimen/tv14sp" />
+
+        <ImageView
+            android:id="@+id/ivCategory"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/ok" />
+
+    </RelativeLayout>
+
+    <View style="@style/NCLine" />
+
+    <ExpandableListView
+        android:id="@+id/elvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/nc_text"
+        android:dividerHeight="1px" />
+
+
+</LinearLayout>

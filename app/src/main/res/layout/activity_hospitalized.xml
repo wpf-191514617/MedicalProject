@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <com.beitone.medical_store.app.view.VisitingPeopleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_5dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowBackColor="@color/white"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginLeft="@dimen/dimen_11dp"
+        android:layout_marginRight="@dimen/dimen_11dp"
+        app:hl_shadowLimit="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_16dp"
+            android:paddingBottom="@dimen/dimen_18dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="患者信息："
+                    android:textColor="#ff858585"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姚泽锋  男  33岁"
+                    android:textColor="@color/gray33"
+                    android:textSize="14sp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出院时间："
+                    android:textColor="#ff858585"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019-08-10 15:30:22"
+                    android:textColor="@color/gray33"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预交金："
+                    android:textColor="#ff858585"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000元"
+                    android:textColor="@color/gray33"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_6dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结算金额："
+                    android:textColor="#ff858585"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5000元"
+                    android:textColor="#FE7047"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+
+
+    <com.beitone.medical_store.app.widget.AppButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击充值"
+        android:layout_margin="@dimen/dimen_16dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_39dp"
+        android:paddingLeft="@dimen/dimen_16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="费用清单"
+            android:textColor="#ff333333"
+            android:layout_marginBottom="@dimen/dimen_17dp"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="点击查看费用明细＞"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingRight="@dimen/dimen_16dp"
+            android:gravity="bottom"
+            android:textColor="#ff15d2c3"
+            android:textSize="14sp"
+            android:paddingBottom="@dimen/dimen_17dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dimen_23dp"
+        android:paddingBottom="@dimen/dimen_30dp"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:text="序号"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="费用类别"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="@dimen/dimen_80dp"
+                android:layout_height="wrap_content"
+                android:text="金额"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHospitalized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:overScrollMode="never"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

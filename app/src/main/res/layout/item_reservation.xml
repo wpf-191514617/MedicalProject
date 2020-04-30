@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_10dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowBackColor="@color/white"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginLeft="@dimen/dimen_11dp"
+        android:layout_marginRight="@dimen/dimen_11dp"
+        app:hl_shadowLimit="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_42dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray33"
+                android:layout_marginLeft="@dimen/dimen_12dp"
+                android:text="预约挂号"/>
+
+            <TextView
+                android:id="@+id/tvReservationTag"
+                android:layout_width="@dimen/dimen_56dp"
+                android:layout_height="@dimen/dimen_18dp"
+                android:gravity="center"
+                android:background="@drawable/bg_reservation_1"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/white"
+                android:text="待就诊"/>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_18dp"
+            android:paddingLeft="@dimen/dimen_12dp"
+            android:paddingRight="@dimen/dimen_12dp"
+            android:paddingBottom="@dimen/dimen_24dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/dimen_43dp"
+                android:layout_height="@dimen/dimen_43dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_13dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张医生"
+                        android:textColor="#ff333333"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="呼吸内科 主治医师"
+                        android:textColor="#ff858585"
+                        android:layout_marginLeft="@dimen/dimen_12dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_9dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天津医科大学总医院"
+                        android:textColor="#ff858585"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_8dp"
+                        android:text="三甲"
+                        android:textColor="#FEA50B"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="就诊人：卢嘉成   预约时间：2020.02.03 上午"
+                    android:textColor="#ff858585"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+
+</FrameLayout>

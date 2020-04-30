@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_white"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/btnSkuSelect"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="10dp"
+            android:src="@drawable/nc_check" />
+
+        <!--规格显示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp">
+
+            <!--显示规格和价钱-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/skuSpec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:padding="3dp"
+                    android:text="@string/layout_cart_sku_list_item_finish0"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv12sp" />
+
+                <TextView
+                    android:id="@+id/skuPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/layout_cart_sku_list_item_finish1"
+                    android:textColor="@color/nc_text"
+                    android:textSize="@dimen/tv12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvWholesaleHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:text="10个起批"
+                    android:textColor="@color/nc_red"
+                    android:textSize="@dimen/tv14sp"
+                    android:visibility="gone" />
+
+                <!--数量增减-->
+                <include
+                    android:id="@+id/layoutCount"
+                    layout="@layout/app_common_add_and_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:background="@color/nc_bg"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        android:visibility="gone"></LinearLayout>
+
+</LinearLayout>

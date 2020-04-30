@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ImageView
+        android:layout_width="204dp"
+        android:layout_height="@dimen/dimen_54dp"
+        android:layout_marginTop="@dimen/dimen_27dp"
+        android:src="@drawable/bg_hospital_logo" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:paddingLeft="@dimen/dimen_31dp"
+        android:paddingRight="@dimen/dimen_31dp">
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="姓名"
+            app:inputHnit="请输入就诊人姓名"/>
+
+
+        <include layout="@layout/line"/>
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="手机号码"
+            app:inputHnit="请输入手机号码"
+            app:inputType="phone"/>
+
+
+        <include layout="@layout/line"/>
+
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputIDCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="身份证号码"
+            app:inputHnit="请输入身份证号码"
+            app:inputType="phone"/>
+
+
+
+        <include layout="@layout/line"/>
+
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputMembership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="成员关系"
+            app:inputHnit="本人"
+            app:inputSelect="true"/>
+
+
+
+        <include layout="@layout/line"/>
+
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputDetailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="详细地址"
+            app:inputHnit="请填写详细地址"/>
+
+        <include layout="@layout/line"/>
+
+
+
+    </LinearLayout>
+
+
+    <com.beitone.medical_store.app.widget.AppButton
+        android:id="@+id/btnDeFine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="@dimen/dimen_32dp"
+        android:layout_marginBottom="@dimen/dimen_22dp"
+        android:layout_marginRight="@dimen/dimen_32dp"
+        android:text="确定"/>
+
+
+</LinearLayout>

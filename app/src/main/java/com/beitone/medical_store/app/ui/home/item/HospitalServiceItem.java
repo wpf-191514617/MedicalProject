@@ -1,6 +1,7 @@
 package com.beitone.medical_store.app.ui.home.item;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.ui.hospital.HospitalServiceActivity;
+import com.beitone.medical_store.app.ui.hospital.payment.PaymentListActivity;
+import com.beitone.medical_store.app.ui.hospital.report.ReportHomeActivity;
+import com.beitone.medical_store.app.ui.hospital.reservation.DoctorListActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -59,16 +64,22 @@ public class HospitalServiceItem extends LinearLayout {
             case R.id.tvChangeHospital:
                 break;
             case R.id.tvToHospitalHome:
+                getContext().startActivity(new Intent(getContext() , HospitalServiceActivity.class));
                 break;
             case R.id.layoutRegistered:
+                getContext().startActivity(new Intent(getContext() , DoctorListActivity.class));
                 break;
             case R.id.layoutPayment:
+                getContext().startActivity(new Intent(getContext() , PaymentListActivity.class));
                 break;
             case R.id.layoutCheckup:
                 break;
             case R.id.layoutInspection:
                 break;
             case R.id.layoutReportCard:
+                getContext().startActivity(new Intent(getContext() , ReportHomeActivity.class));
+                break;
+            default:
                 break;
         }
     }

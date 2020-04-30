@@ -18,7 +18,7 @@ import cn.betatown.mobile.beitonelibrary.viewcontroller.VaryViewHelperController
 
 abstract class BaseAppcomtActivity extends AppCompatActivity {
 
-    private VaryViewHelperController mVaryViewHelperController = null;
+    protected VaryViewHelperController mVaryViewHelperController = null;
 
     private boolean isJumpTo = false;
 
@@ -197,14 +197,14 @@ abstract class BaseAppcomtActivity extends AppCompatActivity {
         if (bundle != null) {
             intent.putExtras(bundle);
         }
+        isJumpTo = false;
         startActivity(intent);
-        baseHandler.postDelayed(new Runnable() {
+       /* baseHandler.postDelayed(new Runnable() {
             @Override
-            public void run() {
-                isJumpTo = false;
+            public void run() {*/
                 finish();
-            }
-        }, 800);
+            /*}
+        }, 0);*/
 
     }
 

@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/selector_activity_border"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/textMSName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="#ED5564"
+            android:padding="2dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textMSTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:text=""
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+
+        <TextView style="@style/NCLine" />
+
+        <TextView
+            android:id="@+id/textMSRemark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="#D870AD"
+            android:padding="3dp"
+            android:textColor="@color/nc_white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textMSSubRemark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:text=""
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/llGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"></LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

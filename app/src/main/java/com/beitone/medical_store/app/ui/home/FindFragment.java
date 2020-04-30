@@ -7,7 +7,7 @@ import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 public class FindFragment extends BaseFragment {
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.fragment_find;
+        return R.layout.fragment_discover;
     }
 
     @Override

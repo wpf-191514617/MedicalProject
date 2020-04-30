@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCommit"
+        android:orientation="vertical">
+
+        <include layout="@layout/activity_base" />
+
+        <include layout="@layout/tab_choose_second" />
+
+        <LinearLayout
+            android:id="@+id/llUsableCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUsableCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_yellow_light"
+                android:padding="@dimen/dp8"
+                android:text="@string/coupon_choose"
+                android:textColor="@color/nc_black"
+                android:textSize="@dimen/tv14sp" />
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/xrvUsableCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/xrvDisableCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/activity_base_empty" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/arrive_notice"
+        android:padding="@dimen/dp10"
+        android:text="@string/sure"
+        android:textColor="@color/nc_white"
+        android:textSize="@dimen/tv14sp" />
+
+</RelativeLayout>

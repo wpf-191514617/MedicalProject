@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nc_icon_back"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/layout_address_select_dialog0"
+            android:textColor="@color/nc_text"
+            android:textSize="@dimen/tv16sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/nc_icon_close" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btnOtherAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/nc_red"
+            android:padding="@dimen/dp10"
+            android:text="@string/layout_address_select_dialog1"
+            android:textColor="@color/nc_white"
+            android:textSize="@dimen/tv14sp" />
+
+        <ListView
+            android:id="@+id/lvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnOtherAddress"
+            android:divider="@null" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llAddressChoose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp4">
+
+            <TextView
+                android:id="@+id/tvProvince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@drawable/nc_tab_text_bg"
+                android:paddingBottom="@dimen/dp8"
+                android:paddingTop="@dimen/dp4"
+                android:text="@string/layout_address_select_dialog2"
+                android:textColor="@drawable/rec_text_color_selector"
+                android:textSize="@dimen/tv14sp" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@drawable/nc_tab_text_bg"
+                android:paddingBottom="@dimen/dp8"
+                android:paddingTop="@dimen/dp4"
+                android:text="@string/layout_address_select_dialog3"
+                android:textColor="@drawable/rec_text_color_selector"
+                android:textSize="@dimen/tv14sp" />
+
+            <TextView
+                android:id="@+id/tvArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@drawable/nc_tab_text_bg"
+                android:paddingBottom="@dimen/dp8"
+                android:paddingTop="@dimen/dp4"
+                android:text="@string/layout_address_select_dialog4"
+                android:textColor="@drawable/rec_text_color_selector"
+                android:textSize="@dimen/tv14sp" />
+        </LinearLayout>
+
+        <View style="@style/NCLine" />
+
+        <View style="@style/NCLine" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

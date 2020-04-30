@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dimen_15dp"
+    android:paddingRight="@dimen/dimen_15dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_22dp"
+        android:paddingBottom="@dimen/dimen_22dp">
+
+
+        <ImageView
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:src="@color/grayf5"/>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="康美智慧药房"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无评分  月销118"
+                android:textColor="#ff858585"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/dimen_7dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起送¥50  配送¥12"
+                android:textColor="#ff858585"
+                android:textSize="12sp"
+                android:layout_marginTop="@dimen/dimen_3dp"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="70分钟"
+            android:gravity="center_vertical"
+            android:textColor="#ff333333"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="8Km"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:textColor="#ff333333"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/line"/>
+
+</LinearLayout>

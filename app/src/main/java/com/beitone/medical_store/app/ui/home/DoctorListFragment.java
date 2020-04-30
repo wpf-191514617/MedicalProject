@@ -1,12 +1,17 @@
 package com.beitone.medical_store.app.ui.home;
 
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.ui.doctor.DoctorHomeActivity;
 import com.beitone.medical_store.app.util.TestUtil;
 
+import cn.betatown.mobile.beitonelibrary.adapter.listener.OnRecyclerItemClickListener;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseRecyclerAdapter;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseViewHolderHelper;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
@@ -27,6 +32,12 @@ public class DoctorListFragment extends BaseFragment {
         DoctorListAdapter listAdapter = new DoctorListAdapter(mRvList);
         mRvList.setAdapter(listAdapter);
         listAdapter.setData(TestUtil.getTestListData());
+        listAdapter.setOnRVItemClickListener(new OnRecyclerItemClickListener() {
+            @Override
+            public void onItemClick(ViewGroup parent, View itemView, int position) {
+                jumpTo(DoctorHomeActivity.class);
+            }
+        });
     }
 
 

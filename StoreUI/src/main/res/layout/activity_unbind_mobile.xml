@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_bg_dark"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/layout_activity_unbind_mobile0"
+            android:textColor="@color/nc_text" />
+
+        <TextView
+            android:id="@+id/tvMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/nc_black" />
+    </LinearLayout>
+
+    <TextView style="@style/NCLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:layout_width="70dp"
+            android:text="@string/layout_activity_unbind_mobile1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <net.shopnc.b2b2c.android.custom.edittext.EditTextForDelete
+                android:id="@+id/etCode"
+                style="@style/NCFormEdit"
+                android:paddingRight="@dimen/dp10"
+                android:layout_toLeftOf="@+id/ivCode"
+                android:hint="@string/layout_activity_unbind_mobile2" />
+
+            <ImageView
+                android:id="@+id/ivCode"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+
+        <TextView style="@style/NCLine" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/nc_white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/NCFormText"
+            android:layout_width="70dp"
+            android:text="@string/layout_activity_unbind_mobile3" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nc_bg_border_bottom">
+
+            <net.shopnc.b2b2c.android.custom.edittext.EditTextForDelete
+                android:id="@+id/etSmsCaptcha"
+                style="@style/NCFormEditNoBorder"
+                android:paddingRight="@dimen/dp10"
+                android:layout_alignParentLeft="true"
+                android:hint="@string/layout_activity_unbind_mobile4" />
+
+            <Button
+                android:id="@+id/btnGetSmsCaptcha"
+                style="@style/NCTextButtonSmall"
+                android:layout_width="110dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="btnGetSmsCaptchaClick"
+                android:text="@string/layout_activity_unbind_mobile5"
+                android:textColor="@color/nc_blue" />
+        </RelativeLayout>
+
+        <TextView style="@style/NCLine" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/NCCornerButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="btnSubmitClick"
+        android:text="@string/layout_activity_unbind_mobile6" />
+    <TextView
+        android:id="@+id/tvUnbind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/layout_activity_unbind_mobile7"
+        android:textSize="12sp"
+        android:textColor="@color/nc_red"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:text="@string/layout_activity_unbind_mobile8"
+        android:textSize="12sp" />
+</LinearLayout>
+

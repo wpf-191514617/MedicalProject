@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nc_white">
+
+    <FrameLayout
+        android:id="@+id/tvOut"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center_vertical"
+            android:padding="10dp"
+            android:src="@drawable/nc_icon_close" />
+    </FrameLayout>
+
+    <net.shopnc.b2b2c.android.circlelibrary.ImageCycleView
+        android:id="@+id/icvImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvOut"
+        android:layout_margin="10dp" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llGuessLike"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/rlGuessLike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/guess_like" />
+    </RelativeLayout>
+
+    <net.shopnc.b2b2c.android.custom.MyGridView
+        android:id="@+id/gvGuessLike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nc_bg"
+        android:horizontalSpacing="@dimen/dp4"
+        android:numColumns="2" />
+
+</LinearLayout>

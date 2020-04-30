@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_5dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowBackColor="@color/white"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginLeft="@dimen/dimen_11dp"
+        android:layout_marginRight="@dimen/dimen_11dp"
+        app:hl_shadowLimit="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen_17dp"
+            android:paddingBottom="@dimen/dimen_17dp"
+            android:paddingLeft="@dimen/dimen_17dp"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dimen_12dp">
+
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="缴纳金额："
+                        android:textColor="#ff858585"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500元"
+                        android:textColor="@color/gray33"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收款人："
+                        android:textColor="#ff858585"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="曾仙伟"
+                        android:textColor="@color/gray33"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收款时间："
+                        android:textColor="#ff858585"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2019-08-10 15:30:22"
+                        android:textColor="@color/gray33"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="@dimen/dimen_55dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:background="@drawable/bg_blue_radiu25"
+                android:gravity="center"
+                android:text="有效"
+                android:textColor="#ff649bf5"
+                android:textSize="14sp"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </com.lihang.ShadowLayout>
+
+
+</FrameLayout>

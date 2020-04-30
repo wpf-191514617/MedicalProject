@@ -23,44 +23,164 @@
         android:textSize="@dimen/sp_14" />
 
 
-    <EditText
-        android:id="@+id/etSubmitQuestion"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_200dp"
-        android:background="@null"
-        android:gravity="left|top"
-        android:textSize="@dimen/sp_14"
-        android:layout_marginLeft="@dimen/dimen_15dp"
-        android:layout_marginRight="@dimen/dimen_15dp"
-        android:layout_marginTop="@dimen/dimen_12dp"
-        android:lineSpacingExtra="@dimen/dimen_5dp"
-        android:textColorHint="@color/grayb4"
-        android:hint="请用10~500字详细描述您的症症状、疾病和身体状况，否则可能无法获得医生的详细解答。请勿透露您的真实姓名或联系方式"
-        android:textColor="@color/gray66"/>
+        android:layout_height="@dimen/dimen_0dp"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:overScrollMode="never">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dimen_15dp"
-        android:layout_marginTop="@dimen/dimen_12dp"
-        android:layout_marginRight="@dimen/dimen_15dp"
-        android:layout_marginBottom="@dimen/dimen_10dp"
-        android:lineSpacingExtra="@dimen/dimen_8dp"
-        android:text="上传相关图片（检查单、CT、病历、患处、药品等），慧医家会确保您的隐私安全"
-        android:textColor="@color/grayb4"
-        android:textSize="@dimen/sp_14" />
-
-
-    <com.beitone.medical_store.app.widget.SelectImageLayout
-        android:id="@+id/gridImgLayout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/dp_15"
-        android:layout_marginRight="@dimen/dp_15"
-        android:scrollbars="none"
-        app:colCount="3"
-        app:maxSelectCount="9"
-        app:spacing="@dimen/dimen_13dp" />
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:paddingBottom="@dimen/dimen_12dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="是否有过敏史"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/sp_14" />
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbHave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="有"/>
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbNoHave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                app:text="无"
+                android:layout_marginLeft="@dimen/dimen_15dp"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputAllergens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="过敏源"
+            app:inputHnit="请输入过敏源"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            />
+
+        <include layout="@layout/line"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="本次为"
+                android:textColor="@color/gray33"
+                android:textSize="@dimen/sp_14" />
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbFirstTreat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="初诊"/>
+
+            <com.beitone.medical_store.app.widget.AppCheckBox
+                android:id="@+id/cbSecondTreat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                app:text="复诊"
+                android:layout_marginLeft="@dimen/dimen_15dp"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="病情描述"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:textColor="#ff333333"
+            android:textSize="14sp"
+            />
+
+
+        <EditText
+            android:id="@+id/etSubmitQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_150dp"
+            android:layout_marginTop="@dimen/dimen_18dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="请用10~500字详细描述您的症症状、疾病和身体状况，否则可能无法获得医生的详细解答。请勿透露您的真实姓名或联系方式"
+            android:lineSpacingExtra="@dimen/dimen_5dp"
+            android:textColor="@color/gray66"
+            android:textColorHint="@color/grayb4"
+            android:textSize="@dimen/sp_14"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:lineSpacingExtra="@dimen/dimen_8dp"
+            android:text="上传相关图片（检查单、CT、病历、患处、药品等），慧医家会确保您的隐私安全"
+            android:textColor="@color/grayb4"
+            android:textSize="@dimen/sp_14" />
+
+
+        <com.beitone.medical_store.app.widget.SelectImageLayout
+            android:id="@+id/gridImgLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            app:colCount="3"
+            app:maxSelectCount="9"
+            app:spacing="@dimen/dimen_13dp" />
+
+
+
+
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"
+        android:text="下一步"/>
+
 
 </LinearLayout>

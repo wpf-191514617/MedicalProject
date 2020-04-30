@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="glide_tag" type="id" />
+    <item name="banner_pointContainerId" type="id" />
+    <item name="home_page_id1" type="id" />
+    <item name="evaluate_image1" type="id" />
+    <item name="evaluate_image2" type="id" />
+    <item name="evaluate_image3" type="id" />
+    <item name="evaluate_image4" type="id" />
+    <item name="evaluate_image5" type="id" />
+    <item name="pageOne" type="id" />
+</resources>

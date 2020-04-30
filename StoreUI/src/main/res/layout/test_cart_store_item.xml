@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nc_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/btnSelectStore"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:src="@drawable/nc_check" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/storeicon"
+            />
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            style="@style/dp18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/layout_test_cart_store_item0"
+            android:textColor="@color/nc_black"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSpus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+
+    <TextView
+        android:id="@+id/tvSpu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

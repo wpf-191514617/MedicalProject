@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <net.shopnc.b2b2c.android.xrefresh.XScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nc_bg"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/tvRequestName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/my_refund_info"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRefundGoods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/refund_goods"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvRefundGoodsContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRefundState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/refund_state"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvRefundStateContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvApplyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apply_time"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvApplyTimeContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_refund_money_details3"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvReasonName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_refund_money_details2"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvReasonInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvVirtualCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/virtual_code"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvVirtualCodeContent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/platform_refund_audit"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dispose_remark"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvDisposeRemark"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View style="@style/NCLine"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dispose_time"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvDisposeTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/refund_details"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/refund_price"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvRefundPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRefundDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/layout_activity_order_refund_money_details13"
+                android:textColor="@color/nc_text_dark"
+                android:textSize="@dimen/dp14"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/llRefundDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/nc_white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_refund_money_details14"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvPaymentName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/NCLine"
+                    android:visibility="gone"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_refund_money_details15"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvPaymentAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/NCLine"
+                    android:visibility="gone"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/layout_activity_order_refund_money_details16"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+
+                    <TextView
+                        android:id="@+id/tvPdAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12498390712"
+                        android:textColor="@color/nc_text_dark"
+                        android:textSize="@dimen/dp14"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </net.shopnc.b2b2c.android.xrefresh.XScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nc_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/nc_bg_dark"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp4">
+
+            <TextView
+                android:id="@+id/tvRefundCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp4"
+                android:background="@drawable/btn_cancle"
+                android:text="@string/layout_recyclerview_refund_list_item2_1"
+                android:textColor="@color/nc_text"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

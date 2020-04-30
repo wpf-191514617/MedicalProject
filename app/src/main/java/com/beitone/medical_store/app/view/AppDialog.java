@@ -55,7 +55,10 @@ public class AppDialog extends Dialog {
             tvMsg.setHighlightColor(Color.TRANSPARENT);
             tvMsg.setVisibility(View.VISIBLE);
         } else {
-            tvMsg.setVisibility(View.GONE);
+            if (TextUtils.isEmpty(mBuilder.message))
+                tvMsg.setVisibility(View.GONE);
+            else
+                tvMsg.setVisibility(View.VISIBLE);
         }
 
         TextView tvNative = contentView.findViewById(R.id.tvNative);

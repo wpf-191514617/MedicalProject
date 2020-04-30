@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/nc_white"
+    android:orientation="vertical"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/layout_voucher_dialog0"
+            android:textColor="@color/nc_text"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/tvOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:src="@drawable/nc_icon_close" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvStoreDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:paddingBottom="2dp"
+        android:paddingTop="10dp"
+        android:text="@string/layout_voucher_dialog1" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/nc_bg"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:padding="10dp"
+        android:scrollbars="none" />
+
+    <include
+        layout="@layout/activity_base_empty"
+        android:visibility="gone" />
+
+</LinearLayout>

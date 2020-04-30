@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.shopnc.b2b2c.android.ui.order.AlipayWebActivity">
+
+    <include layout="@layout/activity_base" />
+
+    <WebView
+        android:id="@+id/wvPay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp" />
+
+    <net.shopnc.b2b2c.android.custom.RoundProgressBar
+        android:id="@+id/roundProgressBarID"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android_custom:roundColor="@color/green"
+        android_custom:roundProgressColor="@color/white"
+        android_custom:roundWidth="10dip"
+        android_custom:textColor="@color/black"
+        android_custom:textSize="18sp" />
+
+</RelativeLayout>

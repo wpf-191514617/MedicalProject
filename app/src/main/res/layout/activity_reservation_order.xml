@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <include layout="@layout/item_doctor_head"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:background="@color/white">
+
+        <include layout="@layout/line"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_17dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊日期："
+                android:textColor="#ff858585"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-11-24"
+                android:textColor="@color/gray33"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊时间："
+                android:textColor="#ff858585"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="周日上午 09:00-09:30"
+                android:textColor="@color/gray33"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="挂号费用："
+                android:textColor="#ff858585"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0元（无）"
+                android:textColor="@color/gray33"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/dimen_16dp">
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputAllergens"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="选择就诊人"
+            app:inputHnit="请选择就诊人"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            />
+
+        <include layout="@layout/line"/>
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="短信接收号码"
+            app:inputHnit="请选择"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            />
+
+        <include layout="@layout/line"/>
+
+
+
+        <com.beitone.medical_store.app.widget.InputLayout
+            android:id="@+id/inputDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="疾病"
+            app:inputHnit="请选择"
+            app:inputGravity="right"
+            app:inputSelect="true"
+            />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"/>
+
+
+    <TextView
+        android:id="@+id/tvReservation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@drawable/bg_radiu21"
+        android:text="确定预约"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+
+</LinearLayout>

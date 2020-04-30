@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius="@dimen/dimen_10dp"
+        app:hl_shadowColor="#337F7F7F"
+        app:hl_shadowBackColor="@color/white"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginLeft="@dimen/dimen_11dp"
+        android:layout_marginRight="@dimen/dimen_11dp"
+        app:hl_shadowLimit="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_108dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingRight="@dimen/dimen_15dp"
+                android:gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/dimen_43dp"
+                android:layout_height="@dimen/dimen_43dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_16dp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:paddingLeft="@dimen/dimen_5dp"
+                    android:paddingRight="@dimen/dimen_5dp"
+                    android:text="预约门诊"
+                    android:textSize="@dimen/sp_9"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_blue_radius16"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张医生"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="主治医师"
+                        android:textColor="#ff999999"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/dimen_11dp"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="三甲"
+                        android:textColor="#FEA50B"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/dimen_3dp"/>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="东莞市东华医院  消化内科"
+                    android:textColor="#ff999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_9dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="就诊人：卢嘉成"
+                    android:textColor="#ff999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_4dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最近就诊时间：2020.02.19"
+                    android:textColor="#ff999999"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_4dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="@dimen/dimen_70dp"
+                android:background="@color/grayDE"/>
+
+            <LinearLayout
+                android:id="@+id/layoutReferral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen_24dp"
+                android:paddingRight="@dimen/dimen_24dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_referral"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="复诊"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_8dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.lihang.ShadowLayout>
+
+</FrameLayout>

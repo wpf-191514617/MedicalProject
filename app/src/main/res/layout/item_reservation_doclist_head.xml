@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <net.shopnc.b2b2c.android.custom.MyGridView
+        android:id="@+id/gridReservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:listSelector="@android:color/transparent"
+        android:verticalSpacing="@dimen/dimen_0dp"
+        android:numColumns="4"
+        android:layout_marginRight="@dimen/dimen_16dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_8dp"
+        android:background="@color/grayf5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimen_16dp"
+            android:paddingLeft="@dimen/dimen_16dp"
+            android:background="@color/white"
+            android:text="推荐医生"
+            android:textColor="#ff333333"
+            android:textSize="16sp"/>
+
+
+</LinearLayout>

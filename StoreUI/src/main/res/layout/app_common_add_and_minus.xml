@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@drawable/ract_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAppCommonMinus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/left_round_btn"
+            android:gravity="center"
+            android:text="—"
+            android:textColor="@color/nc_text" />
+
+        <EditText
+            android:id="@+id/tvAppCommonCount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="1"
+            android:textColor="@color/nc_text_dark" />
+
+        <Button
+            android:id="@+id/btnAppCommonAdd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/right_round_edittext"
+            android:text="+"
+            android:textColor="@color/nc_text" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvBatchNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/layout_app_common_add_and_minus0"
+        android:textColor="@color/nc_orange"
+        android:textSize="@dimen/dp10"
+        android:visibility="gone" />
+</LinearLayout>
