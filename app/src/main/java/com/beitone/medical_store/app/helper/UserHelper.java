@@ -79,8 +79,7 @@ public class UserHelper {
     }
 
     public boolean isLogin(Context context) {
-        if (!StringUtil.isEmpty(getUserId(context)) &&
-                !StringUtil.isEmpty(getUserToken(context))) {
+        if (!StringUtil.isEmpty(getUserId(context))) {
             return true;
         }
         return false;

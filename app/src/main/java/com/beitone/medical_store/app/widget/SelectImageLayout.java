@@ -115,6 +115,17 @@ public class SelectImageLayout extends LinearLayout {
         mFeedGridAdapter.setData(entities);
     }
 
+
+    public List<String> getImageFiles(){
+        List<SelectImageEntity> entities = mFeedGridAdapter.getDataFilter();
+        List<String> stringList = new ArrayList<>();
+        for (SelectImageEntity entity : entities) {
+            stringList.add(entity.imagePath);
+        }
+        return stringList;
+    }
+
+
     public void addImageFiles(List<File> imgs){
         List<String> images = new ArrayList<>();
         for (File img : imgs) {

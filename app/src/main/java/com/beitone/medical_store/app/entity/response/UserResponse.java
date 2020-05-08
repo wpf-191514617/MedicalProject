@@ -6,156 +6,42 @@ public class UserResponse {
 
 
     /**
-     * userId : 5477728426887373
-     * userName : u868341
-     * tenantId : 000001
-     * memberId : 5477728426887373
-     * memberName : u868341
-     * roleIds : ["3"]
-     * deptIds : null
-     * token : eyJhbGciOiJIUzUxMiJ9
-     * .eyJpc3MiOiJaS1lTIiwic3ViIjoiNTQ3NzcyODQyNjg4NzM3MyIsImlhdCI6MTU4NTcyNzY1OCwiZXhwIjoxNTg2MzMyNDU4fQ.x7-E0osaMoFV9DCu19oplhtW478Nep80zAxbYdWCCO7UjVC1t6LN5696__owQKu5HcMxGQZfJGNag1kwc6yHyg
-     * desc : null
-     * userInfo : {"tenantId":"000001","userId":"5477728426887373","userName":"u868341",
-     * "nickName":"u868341","avatar":null,"email":null,"phone":"15529000512","birthday":null,
-     * "roleId":"3","deptId":null,"roleName":null,"deptName":null,"createUser":null,
-     * "createTime":"2020-04-01 15:54:18","updateUser":null,"updateTime":"2020-04-01 15:54:18",
-     * "status":null,"isDeleted":false,"idCard":null,"sex":null,"payOpenId":null,"province":null,
-     * "city":null,"country":null,"unionid":null}
-     */
-
-    private String userId;
-    private String userName;
-    private String tenantId;
-    private String memberId;
-    private String memberName;
-    private String deptIds;
-    private String token;
-    private String desc;
-    private UserInfoBean userInfo;
-    private List<String> roleIds;
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getTenantId() {
-        return tenantId;
-    }
-
-    public void setTenantId(String tenantId) {
-        this.tenantId = tenantId;
-    }
-
-    public String getMemberId() {
-        return memberId;
-    }
-
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
-    }
-
-    public String getMemberName() {
-        return memberName;
-    }
-
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
-    }
-
-    public String getDeptIds() {
-        return deptIds;
-    }
-
-    public void setDeptIds(String deptIds) {
-        this.deptIds = deptIds;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public UserInfoBean getUserInfo() {
-        return userInfo;
-    }
-
-    public void setUserInfo(UserInfoBean userInfo) {
-        this.userInfo = userInfo;
-    }
-
-    public List<String> getRoleIds() {
-        return roleIds;
-    }
-
-    public void setRoleIds(List<String> roleIds) {
-        this.roleIds = roleIds;
-    }
-
-    public static class UserInfoBean {
-        /**
-         * tenantId : 000001
-         * userId : 5477728426887373
-         * userName : u868341
-         * nickName : u868341
+     * userId : 7181776633762244
+     * userName : u343385
+     * nickName : u343385
+     * real_name : null
          * avatar : null
          * email : null
-         * phone : 15529000512
+     * phone : 15691003913
          * birthday : null
-         * roleId : 3
-         * deptId : null
-         * roleName : null
-         * deptName : null
          * createUser : null
-         * createTime : 2020-04-01 15:54:18
+     * createTime : 2020-05-07 10:07:08
          * updateUser : null
-         * updateTime : 2020-04-01 15:54:18
+     * updateTime : 2020-05-07 10:07:08
          * status : null
          * isDeleted : false
          * idCard : null
          * sex : null
-         * payOpenId : null
          * province : null
          * city : null
          * country : null
-         * unionid : null
+     * roles : [{"id":"3","parentId":"0","tenantId":"000001","roleName":"普通用户","sort":0,
+     * "roleAlias":"user","isDeleted":0,"isDefault":1,"parentName":null}]
+     * depts : []
+     * tenants : [{"tenantId":"000001","tenantName":"系统默认租户","contactNumber":"","address":"",
+     * "createUser":"","createTime":"2020-02-28 19:16:56","updateUser":null,
+     * "updateTime":"2020-02-28 19:17:05","status":1,"isDeleted":0,"postalCode":"",
+     * "images":"","grade":"","introduce":"","linkman":"admin","isDefault":1}]
          */
 
-        private String tenantId;
         private String userId;
         private String userName;
         private String nickName;
+    private Object real_name;
         private Object avatar;
         private Object email;
         private String phone;
         private Object birthday;
-        private String roleId;
-        private Object deptId;
-        private Object roleName;
-        private Object deptName;
         private Object createUser;
         private String createTime;
         private Object updateUser;
@@ -164,19 +50,12 @@ public class UserResponse {
         private boolean isDeleted;
         private Object idCard;
         private Object sex;
-        private Object payOpenId;
         private Object province;
         private Object city;
         private Object country;
-        private Object unionid;
-
-        public String getTenantId() {
-            return tenantId;
-        }
-
-        public void setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-        }
+    private List<RolesBean> roles;
+    private List<?> depts;
+    private List<TenantsBean> tenants;
 
         public String getUserId() {
             return userId;
@@ -201,6 +80,14 @@ public class UserResponse {
         public void setNickName(String nickName) {
             this.nickName = nickName;
         }
+
+    public Object getReal_name() {
+        return real_name;
+    }
+
+    public void setReal_name(Object real_name) {
+        this.real_name = real_name;
+    }
 
         public Object getAvatar() {
             return avatar;
@@ -232,38 +119,6 @@ public class UserResponse {
 
         public void setBirthday(Object birthday) {
             this.birthday = birthday;
-        }
-
-        public String getRoleId() {
-            return roleId;
-        }
-
-        public void setRoleId(String roleId) {
-            this.roleId = roleId;
-        }
-
-        public Object getDeptId() {
-            return deptId;
-        }
-
-        public void setDeptId(Object deptId) {
-            this.deptId = deptId;
-        }
-
-        public Object getRoleName() {
-            return roleName;
-        }
-
-        public void setRoleName(Object roleName) {
-            this.roleName = roleName;
-        }
-
-        public Object getDeptName() {
-            return deptName;
-        }
-
-        public void setDeptName(Object deptName) {
-            this.deptName = deptName;
         }
 
         public Object getCreateUser() {
@@ -330,14 +185,6 @@ public class UserResponse {
             this.sex = sex;
         }
 
-        public Object getPayOpenId() {
-            return payOpenId;
-        }
-
-        public void setPayOpenId(Object payOpenId) {
-            this.payOpenId = payOpenId;
-        }
-
         public Object getProvince() {
             return province;
         }
@@ -362,12 +209,290 @@ public class UserResponse {
             this.country = country;
         }
 
-        public Object getUnionid() {
-            return unionid;
+    public List<RolesBean> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<RolesBean> roles) {
+        this.roles = roles;
+    }
+
+    public List<?> getDepts() {
+        return depts;
+    }
+
+    public void setDepts(List<?> depts) {
+        this.depts = depts;
+    }
+
+    public List<TenantsBean> getTenants() {
+        return tenants;
+    }
+
+    public void setTenants(List<TenantsBean> tenants) {
+        this.tenants = tenants;
+    }
+
+    public static class RolesBean {
+        /**
+         * id : 3
+         * parentId : 0
+         * tenantId : 000001
+         * roleName : 普通用户
+         * sort : 0
+         * roleAlias : user
+         * isDeleted : 0
+         * isDefault : 1
+         * parentName : null
+         */
+
+        private String id;
+        private String parentId;
+        private String tenantId;
+        private String roleName;
+        private int sort;
+        private String roleAlias;
+        private int isDeleted;
+        private int isDefault;
+        private Object parentName;
+
+        public String getId() {
+            return id;
         }
 
-        public void setUnionid(Object unionid) {
-            this.unionid = unionid;
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getParentId() {
+            return parentId;
+        }
+
+        public void setParentId(String parentId) {
+            this.parentId = parentId;
+        }
+
+        public String getTenantId() {
+            return tenantId;
+        }
+
+        public void setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+        }
+
+        public String getRoleName() {
+            return roleName;
+        }
+
+        public void setRoleName(String roleName) {
+            this.roleName = roleName;
+        }
+
+        public int getSort() {
+            return sort;
+        }
+
+        public void setSort(int sort) {
+            this.sort = sort;
+        }
+
+        public String getRoleAlias() {
+            return roleAlias;
+        }
+
+        public void setRoleAlias(String roleAlias) {
+            this.roleAlias = roleAlias;
+        }
+
+        public int getIsDeleted() {
+            return isDeleted;
+        }
+
+        public void setIsDeleted(int isDeleted) {
+            this.isDeleted = isDeleted;
+        }
+
+        public int getIsDefault() {
+            return isDefault;
+        }
+
+        public void setIsDefault(int isDefault) {
+            this.isDefault = isDefault;
+        }
+
+        public Object getParentName() {
+            return parentName;
+        }
+
+        public void setParentName(Object parentName) {
+            this.parentName = parentName;
         }
     }
+
+    public static class TenantsBean {
+        /**
+         * tenantId : 000001
+         * tenantName : 系统默认租户
+         * contactNumber :
+         * address :
+         * createUser :
+         * createTime : 2020-02-28 19:16:56
+         * updateUser : null
+         * updateTime : 2020-02-28 19:17:05
+         * status : 1
+         * isDeleted : 0
+         * postalCode :
+         * images :
+         * grade :
+         * introduce :
+         * linkman : admin
+         * isDefault : 1
+         */
+
+        private String tenantId;
+        private String tenantName;
+        private String contactNumber;
+        private String address;
+        private String createUser;
+        private String createTime;
+        private Object updateUser;
+        private String updateTime;
+        private int status;
+        private int isDeleted;
+        private String postalCode;
+        private String images;
+        private String grade;
+        private String introduce;
+        private String linkman;
+        private int isDefault;
+
+        public String getTenantId() {
+            return tenantId;
+        }
+
+        public void setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+        }
+
+        public String getTenantName() {
+            return tenantName;
+        }
+
+        public void setTenantName(String tenantName) {
+            this.tenantName = tenantName;
+        }
+
+        public String getContactNumber() {
+            return contactNumber;
+        }
+
+        public void setContactNumber(String contactNumber) {
+            this.contactNumber = contactNumber;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
+        public String getCreateUser() {
+            return createUser;
+        }
+
+        public void setCreateUser(String createUser) {
+            this.createUser = createUser;
+        }
+
+        public String getCreateTime() {
+            return createTime;
+        }
+
+        public void setCreateTime(String createTime) {
+            this.createTime = createTime;
+        }
+
+        public Object getUpdateUser() {
+            return updateUser;
+        }
+
+        public void setUpdateUser(Object updateUser) {
+            this.updateUser = updateUser;
+        }
+
+        public String getUpdateTime() {
+            return updateTime;
+        }
+
+        public void setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+        }
+
+        public int getStatus() {
+            return status;
+        }
+
+        public void setStatus(int status) {
+            this.status = status;
+        }
+
+        public int getIsDeleted() {
+            return isDeleted;
+        }
+
+        public void setIsDeleted(int isDeleted) {
+            this.isDeleted = isDeleted;
+        }
+
+        public String getPostalCode() {
+            return postalCode;
+        }
+
+        public void setPostalCode(String postalCode) {
+            this.postalCode = postalCode;
+        }
+
+        public String getImages() {
+            return images;
+        }
+
+        public void setImages(String images) {
+            this.images = images;
+        }
+
+        public String getGrade() {
+            return grade;
+        }
+
+        public void setGrade(String grade) {
+            this.grade = grade;
+        }
+
+        public String getIntroduce() {
+            return introduce;
+        }
+
+        public void setIntroduce(String introduce) {
+            this.introduce = introduce;
+        }
+
+        public String getLinkman() {
+            return linkman;
+        }
+
+        public void setLinkman(String linkman) {
+            this.linkman = linkman;
+        }
+
+        public int getIsDefault() {
+            return isDefault;
+        }
+
+        public void setIsDefault(int isDefault) {
+            this.isDefault = isDefault;
+        }
+    }
+
 }

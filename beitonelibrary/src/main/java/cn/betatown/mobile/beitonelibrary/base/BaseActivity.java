@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
+import com.android.tu.loadingdialog.LoadingDialog;
+
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
@@ -23,6 +25,24 @@ public abstract class BaseActivity extends BaseAppcomtActivity implements BaseVi
     protected TextView tvTitle;
 
     public final String TAG = getClass().getSimpleName();
+
+    private LoadingDialog mLoadingDailog;
+
+    protected void showLoadingDialog() {
+        if (mLoadingDailog == null) {
+            LoadingDialog.Builder loadingBuilder = new LoadingDialog.Builder(this)
+                    .setShowMessage(false)
+                    .setCancelable(false);
+            mLoadingDailog = loadingBuilder.create();
+        }
+        mLoadingDailog.show();
+    }
+
+    protected void onDismissLoading() {
+        if (mLoadingDailog != null && mLoadingDailog.isShowing()) {
+            mLoadingDailog.dismiss();
+        }
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

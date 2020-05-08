@@ -182,9 +182,8 @@ public class BmMainNavigateTabBar extends LinearLayout implements View.OnClickLi
         Object object = v.getTag();
         if (object != null && object instanceof ViewHolder) {
             ViewHolder holder = (ViewHolder) v.getTag();
-            showFragment(holder);
-            if (mTabSelectListener != null) {
-                mTabSelectListener.onTabSelected(holder);
+            if(mTabSelectListener != null && mTabSelectListener.onTabSelected(holder)){
+                showFragment(holder);
             }
         }
     }
@@ -361,7 +360,7 @@ public class BmMainNavigateTabBar extends LinearLayout implements View.OnClickLi
 
 
     public interface OnTabSelectedListener {
-        void onTabSelected(ViewHolder holder);
+        boolean onTabSelected(ViewHolder holder);
     }
 
     public void setTabSelectListener(OnTabSelectedListener tabSelectListener) {

@@ -98,8 +98,8 @@ public class AccountActivity extends BaseActivity {
 
     private FindPasswordFragment.Callback findPasswordCallback = new FindPasswordFragment.Callback() {
         @Override
-        public void onFindNext(String phone) {
-            mSetPasswordFragment.registerAndSetPassword(null , null);
+        public void onFindNext(String phone, String code) {
+            mSetPasswordFragment.registerAndSetPassword(phone , code);
             mSetPasswordFragment.setFromFindPassword(true);
             switchFragment(mSetPasswordFragment).commitAllowingStateLoss();
         }

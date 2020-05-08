@@ -11,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
-import com.beitone.medical_store.app.entity.response.UserResponse;
-import com.beitone.medical_store.app.helper.UserHelper;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
@@ -21,7 +19,6 @@ import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
-import cn.betatown.mobile.beitonelibrary.util.Trace;
 
 public class SetPasswordFragment extends BaseFragment {
     @BindView(R.id.tvSetPhone)
@@ -104,18 +101,65 @@ public class SetPasswordFragment extends BaseFragment {
                 }
 
                 if (!TextUtils.isEmpty(phone) && !TextUtils.isEmpty(authCode)) {
-                    registerByPhone();
-                    return;
+                    if (isFromFindPassword) {
+                        findPassword();
+                    } else {
+                        registerByPhone();
+                    }
                 }
-                /*if (mCallback != null){
-                    mCallback.onSetPasswordDone(isFromFindPassword);
-                }*/
                 break;
         }
     }
 
+    private void findPassword() {
+        AccountProvider.findPassword(getActivity(), phone, authCode,
+                etPassword.getText().toString(), new OnJsonCallBack() {
+                    @Override
+                    public void onResult(Object data) {
+                        if (mCallback != null) {
+                            mCallback.onSetPasswordDone(true);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String msg) {
+                        super.onError(msg);
+                        showToast(msg);
+                    }
+
+                    @Override
+                    public void onFailed(String msg) {
+                        super.onFailed(msg);
+                        showToast(msg);
+                    }
+
+                });
+    }
+
+
     private void registerByPhone() {
-        AccountProvider.registerAccountByPhone(this, phone, authCode,
+        AccountProvider.setLoginPassword(getActivity(), etPassword.getText().toString(),
+                new OnJsonCallBack() {
+                    @Override
+                    public void onResult(Object data) {
+                        if (mCallback != null) {
+                            mCallback.onSetPasswordDone(false);
+                        }
+                    }
+
+                    @Override
+                    public void onError(String msg) {
+                        super.onError(msg);
+                        showToast(msg);
+                    }
+
+                    @Override
+                    public void onFailed(String msg) {
+                        super.onFailed(msg);
+                        showToast(msg);
+                    }
+                });
+        /*AccountProvider.registerAccountByPhone(this, phone, authCode,
                 etPassword.getText().toString(), new OnJsonCallBack<UserResponse>() {
                     @Override
                     public void onResult(UserResponse data) {
@@ -135,12 +179,13 @@ public class SetPasswordFragment extends BaseFragment {
                         super.onFailed(msg);
                         showToast(msg);
                     }
-                });
+                });*/
     }
 
     public void registerAndSetPassword(String mobile, String authCode) {
         this.phone = mobile;
         this.authCode = authCode;
+        setText(tvSetPhone, "+86 " + mobile);
     }
 
     public interface Callback{

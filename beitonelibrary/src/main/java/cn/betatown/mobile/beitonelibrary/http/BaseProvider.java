@@ -11,16 +11,13 @@ import com.bt.http.callback.BitmapCallback;
 import com.bt.http.callback.StringCallback;
 import com.bt.http.request.RequestCall;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeoutException;
 
-import cn.betatown.mobile.beitonelibrary.adapter.AdapterUtil;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnHttpCallBack;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.GsonUtil;
@@ -32,37 +29,41 @@ public class BaseProvider {
     private static final String TAG = "btHttp";
 
     public static final int LIMIT = 20;
-    private static String BaseUrl = "http://47.113.94.178:7000/platform-auth";
-  //  private static String BaseUrl = "http://test.hyj91.com/inqApi/hyj-inquiry";
+    // private static String BaseUrl = "http://47.113.94.178:7000/platform-auth";
+
 
 
     protected BaseProvider() {
     }
 
-    public static void get(Object tag, String url, OnHttpCallBack onHttpCallBack) {
+    /*public static void get(HttpRequest request, OnHttpCallBack onHttpCallBack) {
+       // request();
+    }*/
+
+    /*public static void get(Object tag, String url, OnHttpCallBack onHttpCallBack) {
         get(tag, url, null, onHttpCallBack);
     }
 
     protected static void get(Object tag, String url, Map<String, String> params,
                               OnHttpCallBack onHttpCallBack) {
         request(tag, OkHttpUtils.get(), url, params, onHttpCallBack);
-    }
+    }*/
 
-    protected static void post(Object tag, String url, OnHttpCallBack onHttpCallBack) {
+    /*protected static void post(Object tag, String url, OnHttpCallBack onHttpCallBack) {
         post(tag, url, null, onHttpCallBack);
     }
 
     protected static void post(Object tag, String url, Map<String, String> params,
                                OnHttpCallBack onHttpCallBack) {
-        request(tag, OkHttpUtils.post(), url, params, onHttpCallBack);
-    }
+       // request(tag, OkHttpUtils.post(), url, params, onHttpCallBack);
+    }*/
 
-    protected static void postString(Object tag, String url, Map<String, String> params,
+    /*protected static void postString(Object tag, String url, Map<String, String> params,
                                      OnHttpCallBack onHttpCallBack) {
-        request(tag, OkHttpUtils.postString(), url, params, onHttpCallBack);
-    }
+       // request(tag, OkHttpUtils.postString(), url, params, onHttpCallBack);
+    }*/
 
-    protected static void postFiles(Object tag, List<File> files, String url,
+   /* protected static void postFiles(Object tag, List<File> files, String url,
                                     Map<String, String> params,
                                     OnHttpCallBack onHttpCallBack) {
         PostFormBuilder formBuilder = OkHttpUtils.post();
@@ -72,19 +73,21 @@ public class BaseProvider {
             }
         }
         request(tag, formBuilder, url, params, onHttpCallBack);
-    }
+    }*/
 
-    private static void request(Object tag, OkHttpRequestBuilder requestBuilder, String url,
-                                Map<String, String> params, OnHttpCallBack onHttpCallBack) {
-        try {
-            if (tag != null) {
-                requestBuilder.tag(tag);
-            }
+    protected static void request(OkHttpRequestBuilder requestBuilder, OnHttpCallBack onHttpCallBack) {
+
+    try {
+          /*  OkHttpRequestBuilder requestBuilder = request.requestBuilder;
             requestBuilder.addHeader("User-Agent" , "android-okhttp");
-            if (TextUtils.isEmpty(url)) {
+            requestBuilder.addHeader("Client-Auth",
+                    "aW5xdWlyeV91aTozM2Y5NDY3OC00NjgwLTVlZDItYTkyZS1iOTk4MzFhOGJlMDM=");
+            if (request.heads != null){
+            }
+            if (TextUtils.isEmpty(request.url)) {
                 throw new IllegalArgumentException("访问 url 不能为空");
             }
-
+            String url = BaseUrl + request.url;
             requestBuilder.url(BaseUrl + url);
 
             if (params != null && params.size() > 0) {
@@ -104,8 +107,8 @@ public class BaseProvider {
                 } else if (requestBuilder instanceof PostStringBuilder) {
                     ((PostStringBuilder) requestBuilder).content(GsonUtil.GsonString(params));
                 }
-            }
-            execute(requestBuilder, onHttpCallBack);
+            }*/
+           execute(requestBuilder, onHttpCallBack);
         } catch (Exception e) {
             e.printStackTrace();
             onHttpCallBack.onError(e.getLocalizedMessage());

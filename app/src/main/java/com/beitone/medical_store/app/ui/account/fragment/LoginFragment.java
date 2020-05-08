@@ -10,14 +10,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.constant.EventCode;
 import com.beitone.medical_store.app.entity.response.UserResponse;
 import com.beitone.medical_store.app.helper.UserHelper;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
+import org.greenrobot.eventbus.EventBus;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
+import cn.betatown.mobile.beitonelibrary.bean.EventData;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 
@@ -139,9 +143,13 @@ public class LoginFragment extends BaseFragment {
         AccountProvider.doLoginByPassword(this, phone, password, new OnJsonCallBack<UserResponse>() {
             @Override
             public void onResult(UserResponse data) {
-                UserHelper.getInstance().putUserInfo(data);
-                if (mCallback != null){
-                    mCallback.loginSuccess();
+                if (data != null) {
+                    UserHelper.getInstance().putUserInfo(data);
+                    UserHelper.getInstance().putUserId(getActivity(), data.getUserId());
+                    EventBus.getDefault().post(new EventData(EventCode.EVENT_LOGIN_SUCCESS));
+                    if (mCallback != null) {
+                        mCallback.loginSuccess();
+                    }
                 }
             }
 
