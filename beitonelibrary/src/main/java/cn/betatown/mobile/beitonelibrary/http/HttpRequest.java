@@ -2,9 +2,13 @@ package cn.betatown.mobile.beitonelibrary.http;
 
 import com.bt.http.OkHttpUtils;
 import com.bt.http.builder.OkHttpRequestBuilder;
+import com.bt.http.builder.PostStringBuilder;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import cn.betatown.mobile.beitonelibrary.util.GsonUtil;
 
 public class HttpRequest {
 
@@ -13,9 +17,11 @@ public class HttpRequest {
     private String url;
     private Map<String, String> head;
     private Map<String, String> query;
-    private Map<String, String> params;
+    private Map<String, Object> params;
 
-    private String BaseUrl = "http://demo.hyj91.com/inqApi/platform-auth";
+    private String BaseUrl = "http://demo.hyj91.com/inqApi";
+
+
 
     private HttpRequest(HttpRequestBuilder builder) {
         this.tag = builder.tag;
@@ -32,15 +38,18 @@ public class HttpRequest {
             case GET:
                 requestBuilder = OkHttpUtils.get();
                 break;
+            case POST_STR:
+                requestBuilder = OkHttpUtils.postString();
+                break;
             default:
                 requestBuilder = OkHttpUtils.post();
                 break;
         }
         requestBuilder.tag(tag);
         // addHead
-        requestBuilder.addHeader("User-Agent" , "android-okhttp");
         requestBuilder.addHeader("Client-Auth",
                 "aW5xdWlyeV91aTozM2Y5NDY3OC00NjgwLTVlZDItYTkyZS1iOTk4MzFhOGJlMDM=");
+        requestBuilder.addHeader("Content-Type","application/json");
         if (head != null){
             requestBuilder.getHeaders().putAll(head);
         }
@@ -54,7 +63,14 @@ public class HttpRequest {
             url = builder.substring(0 , builder.length()-1).toString();
         }
         requestBuilder.url(BaseUrl + url);
-        requestBuilder.getParams().putAll(params);
+        switch (method) {
+            case POST_STR:
+                ((PostStringBuilder) requestBuilder).content(GsonUtil.GsonString(params));
+                break;
+            default:
+                requestBuilder.getParams().putAll(params);
+                break;
+        }
         return requestBuilder;
     }
 
@@ -64,7 +80,7 @@ public class HttpRequest {
         private final String url;
         private Map<String, String> head;
         private Map<String, String> query;
-        private Map<String, String> params;
+        private Map<String, Object> params;
 
         public HttpRequestBuilder(Object tag, HttpRequestMethod method, String url) {
             this.tag = tag;
@@ -77,12 +93,20 @@ public class HttpRequest {
             return this;
         }
 
+        public HttpRequestBuilder addHead(String key , String value){
+            if (this.head == null){
+                this.head = new HashMap<>();
+            }
+            head.put(key,value);
+            return this;
+        }
+
         public HttpRequestBuilder addQueryParams(Map<String, String> query){
             this.query = query;
             return this;
         }
 
-        public HttpRequestBuilder addParams(Map<String, String> params){
+        public HttpRequestBuilder addParams(Map<String, Object> params){
             this.params = params;
             return this;
         }

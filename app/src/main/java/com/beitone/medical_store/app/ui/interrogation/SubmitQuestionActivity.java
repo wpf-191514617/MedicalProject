@@ -175,14 +175,14 @@ public class SubmitQuestionActivity extends BaseActivity {
 
     private void commitDec(List<String> uploadFile) {
         ConditionDesRequest.QueryParams queryParams = new ConditionDesRequest.QueryParams();
+        queryParams.userId = UserHelper.getInstance().getUserId(this);
         queryParams.orderType = "1";
         queryParams.symptom = etSubmitQuestion.getText().toString();
-        queryParams.userId = UserHelper.getInstance().getUserId(this);
         ConditionDesRequest desRequest = new ConditionDesRequest();
         desRequest.queryParams = queryParams;
-        desRequest.allergy = "0";
-        desRequest.imgsList = GsonUtil.GsonString(uploadFile);
-        desRequest.subsequentVisit = subsequentVisit;
+        desRequest.allergy = 0;
+        desRequest.subsequentVisit = 0;
+        desRequest.imgsList = uploadFile;
         QuestionProvider.submitConditionDes(this, desRequest, new OnJsonCallBack() {
             @Override
             public void onResult(Object data) {

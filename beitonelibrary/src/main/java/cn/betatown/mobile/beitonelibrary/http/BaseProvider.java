@@ -173,7 +173,7 @@ public class BaseProvider {
     }
 
 
-    protected static void getBitMap(Object tag, String url, Map<String, String> params,
+    protected static void getBitMap(Object tag, String url, Map<String, Object> params,
                                     BitmapCallback onHttpCallBack) {
         try {
             OkHttpRequestBuilder requestBuilder = OkHttpUtils.post();
@@ -193,7 +193,7 @@ public class BaseProvider {
                     if (params.get(key) == null) {
                         params.put(key, "");
                     } else {
-                        params.put(key, URLEncoder.encode(params.get(key), "UTF-8"));
+                        params.put(key, URLEncoder.encode(params.get(key).toString(), "UTF-8"));
                     }
                 }
 

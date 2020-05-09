@@ -140,16 +140,17 @@ public class LoginFragment extends BaseFragment {
     }
 
     private void doLogin(String phone, String password) {
-        AccountProvider.doLoginByPassword(this, phone, password, new OnJsonCallBack<UserResponse>() {
+        AccountProvider.doLoginByPassword(this, phone, password, new OnJsonCallBack<String>() {
             @Override
-            public void onResult(UserResponse data) {
+            public void onResult(String data) {
                 if (data != null) {
-                    UserHelper.getInstance().putUserInfo(data);
+                    /*UserHelper.getInstance().putUserInfo(data);
+
                     UserHelper.getInstance().putUserId(getActivity(), data.getUserId());
                     EventBus.getDefault().post(new EventData(EventCode.EVENT_LOGIN_SUCCESS));
                     if (mCallback != null) {
                         mCallback.loginSuccess();
-                    }
+                    }*/
                 }
             }
 

@@ -11,6 +11,9 @@ import com.beitone.medical_store.app.ui.home.MessageFragment;
 import com.beitone.medical_store.app.ui.home.MineFragment;
 import com.beitone.medical_store.app.ui.home.ShopCartFragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
@@ -65,9 +68,6 @@ public class MainActivity extends BaseActivity {
                 return true;
             }
         });
-
-
-
     }
 
 

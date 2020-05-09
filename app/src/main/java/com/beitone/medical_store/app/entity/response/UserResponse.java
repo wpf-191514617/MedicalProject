@@ -37,7 +37,7 @@ public class UserResponse {
         private String userId;
         private String userName;
         private String nickName;
-    private Object real_name;
+        private Object real_name;
         private Object avatar;
         private Object email;
         private String phone;
@@ -53,9 +53,9 @@ public class UserResponse {
         private Object province;
         private Object city;
         private Object country;
-    private List<RolesBean> roles;
-    private List<?> depts;
-    private List<TenantsBean> tenants;
+        private List<RolesBean> roles;
+        private List<?> depts;
+        private List<TenantsBean> tenants;
 
         public String getUserId() {
             return userId;

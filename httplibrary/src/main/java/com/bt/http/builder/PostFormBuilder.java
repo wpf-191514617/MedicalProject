@@ -65,14 +65,14 @@ public class PostFormBuilder extends OkHttpRequestBuilder<PostFormBuilder> imple
 
 
     @Override
-    public PostFormBuilder params(Map<String, String> params)
+    public PostFormBuilder params(Map<String, Object> params)
     {
         this.params = params;
         return this;
     }
 
     @Override
-    public PostFormBuilder addParams(String key, String val)
+    public PostFormBuilder addParams(String key, Object val)
     {
         if (this.params == null)
         {

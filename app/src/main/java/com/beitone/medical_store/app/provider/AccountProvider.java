@@ -17,10 +17,10 @@ public class AccountProvider extends BaseProvider {
 
     public static void sendAuthCode(Object tag,String phone , OnJsonCallBack onJsonCallBack){
 
-        Map<String, String> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/auth/getPhoneCode")
+                HttpRequestMethod.POST , "/platform-auth/auth/getPhoneCode")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
@@ -28,13 +28,13 @@ public class AccountProvider extends BaseProvider {
 
     public static void doLoginByAuthCode(Object tag,String phone ,
                                          String authCode, OnJsonCallBack onJsonCallBack){
-        Map<String, String> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
         params.put("isRememberMe" , "true");
         params.put("code" , authCode);
 
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/auth/getTokenByPhoneCode")
+                HttpRequestMethod.POST , "/platform-auth/auth/getTokenByPhoneCode")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
@@ -43,12 +43,12 @@ public class AccountProvider extends BaseProvider {
 
     public static void setLoginPassword(Context tag,
                                         String newPasswd, OnJsonCallBack onJsonCallBack){
-        Map<String, String> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("newPasswd" , newPasswd);
         params.put("userId" , UserHelper.getInstance().getUserId(tag));
 
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/user/update/passwd")
+                HttpRequestMethod.POST , "/platform-auth/user/update/passwd")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
@@ -57,13 +57,13 @@ public class AccountProvider extends BaseProvider {
 
     public static void registerAccountByPhone(Object tag,String phone ,String authCode,
                                               String password, OnJsonCallBack onJsonCallBack){
-        Map<String, String> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
         params.put("password" , password);
         params.put("code" , authCode);
 
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/user/registerByPhone")
+                HttpRequestMethod.POST , "/platform-auth/user/registerByPhone")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
@@ -73,12 +73,12 @@ public class AccountProvider extends BaseProvider {
 
     public static void doLoginByPassword(Object tag, String phone,
                                          String password, OnJsonCallBack onJsonCallBack) {
-        Map<String, String> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("userName" , phone);
         params.put("isRememberMe" , "true");
         params.put("password" , password);
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/auth/getTokenByUserPWD")
+                HttpRequestMethod.POST , "/platform-auth/auth/getTokenByUserPWD")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
@@ -88,13 +88,13 @@ public class AccountProvider extends BaseProvider {
 
     public static void findPassword(Context tag, String phone,String authCode,
                                     String password, OnJsonCallBack onJsonCallBack){
-        Map<String, String> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
         params.put("newPasswd" , password);
         params.put("code" , authCode);
 
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/user/update/passwdByPhone")
+                HttpRequestMethod.POST , "/platform-auth/user/update/passwdByPhone")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);

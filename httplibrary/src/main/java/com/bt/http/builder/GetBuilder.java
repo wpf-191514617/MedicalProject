@@ -26,7 +26,7 @@ public class GetBuilder extends OkHttpRequestBuilder<GetBuilder> implements HasP
         return new GetRequest(url, tag, params, headers,id).build();
     }
 
-    protected String appendParams(String url, Map<String, String> params)
+    protected String appendParams(String url, Map<String, Object> params)
     {
         if (url == null || params == null || params.isEmpty())
         {
@@ -38,21 +38,21 @@ public class GetBuilder extends OkHttpRequestBuilder<GetBuilder> implements HasP
         while (iterator.hasNext())
         {
             String key = iterator.next();
-            builder.appendQueryParameter(key, params.get(key));
+            builder.appendQueryParameter(key, params.get(key).toString());
         }
         return builder.build().toString();
     }
 
 
     @Override
-    public GetBuilder params(Map<String, String> params)
+    public GetBuilder params(Map<String, Object> params)
     {
         this.params = params;
         return this;
     }
 
     @Override
-    public GetBuilder addParams(String key, String val)
+    public GetBuilder addParams(String key, Object val)
     {
         if (this.params == null)
         {

@@ -11,11 +11,11 @@ public class ConditionDesRequest {
 
     public QueryParams queryParams;
 
-    public String  allergy;
+    public int  allergy;
 
-    public String imgsList;
+    public List<String> imgsList;
 
-    public String subsequentVisit;
+    public int subsequentVisit;
 
     public static class QueryParams{
 

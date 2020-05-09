@@ -223,6 +223,7 @@ public class LoginAuthFragment extends BaseFragment {
               if (data != null){
                   UserHelper.getInstance().putUserId(getActivity() , data.getUserId());
                   UserHelper.getInstance().putUserInfo(data.getUserInfo());
+                  UserHelper.getInstance().putUserToken(getActivity() , data.getToken());
                   EventData eventData = new EventData(EventCode.EVENT_LOGIN_SUCCESS);
                   EventBus.getDefault().post(eventData);
                   if (data.isFirst()){

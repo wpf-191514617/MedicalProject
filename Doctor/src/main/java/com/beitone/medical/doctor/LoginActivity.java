@@ -5,7 +5,7 @@ import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
 public class LoginActivity extends BaseActivity {
     @Override
     protected int getContentViewLayoutId() {
-        return 0;
+        return R.layout.activity_login;
     }
 
     @Override
