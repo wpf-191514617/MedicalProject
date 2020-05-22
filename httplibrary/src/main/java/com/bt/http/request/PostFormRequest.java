@@ -23,8 +23,7 @@ import okhttp3.RequestBody;
 public class PostFormRequest extends OkHttpRequest {
     private List<PostFormBuilder.FileInput> files;
 
-    public PostFormRequest(String url, Object tag, Map<String, Object> params,
-                           Map<String, String> headers, List<PostFormBuilder.FileInput> files, int id) {
+    public PostFormRequest(String url, Object tag, Map<String, String> params, Map<String, String> headers, List<PostFormBuilder.FileInput> files, int id) {
         super(url, tag, params, headers, id);
         this.files = files;
     }
@@ -52,7 +51,7 @@ public class PostFormRequest extends OkHttpRequest {
 
     @Override
     protected RequestBody wrapRequestBody(RequestBody requestBody, final Callback callback) {
-        if (callback == null){ return requestBody;}
+        if (callback == null) return requestBody;
         CountingRequestBody countingRequestBody = new CountingRequestBody(requestBody, new CountingRequestBody.Listener() {
             @Override
             public void onRequestProgress(final long bytesWritten, final long contentLength) {
@@ -92,7 +91,7 @@ public class PostFormRequest extends OkHttpRequest {
         if (params != null && !params.isEmpty()) {
             for (String key : params.keySet()) {
                 builder.addPart(Headers.of("Content-Disposition", "form-data; name=\"" + key + "\""),
-                        RequestBody.create(null, params.get(key).toString()));
+                        RequestBody.create(null, params.get(key)));
             }
         }
     }
@@ -100,7 +99,7 @@ public class PostFormRequest extends OkHttpRequest {
     private void addParams(FormBody.Builder builder) {
         if (params != null) {
             for (String key : params.keySet()) {
-                builder.add(key, params.get(key).toString());
+                builder.add(key, params.get(key));
             }
         }
     }

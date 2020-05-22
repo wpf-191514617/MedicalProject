@@ -2,6 +2,7 @@ package com.beitone.medical_store.app.ui.interrogation;
 
 import android.Manifest;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -9,10 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.beitone.medical_store.app.R;
-import com.beitone.medical_store.app.entity.request.ConditionDesRequest;
+import com.beitone.medical_store.app.constant.DoctorKey;
 import com.beitone.medical_store.app.helper.FileUploadHelper;
+import com.beitone.medical_store.app.helper.InquiryHelper;
 import com.beitone.medical_store.app.helper.UserHelper;
-import com.beitone.medical_store.app.provider.QuestionProvider;
+import com.beitone.medical_store.app.httpentity.ConditionDesPostStrRequest;
 import com.beitone.medical_store.app.widget.AppCheckBox;
 import com.beitone.medical_store.app.widget.InputLayout;
 import com.beitone.medical_store.app.widget.SelectImageLayout;
@@ -27,13 +29,13 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.adapter.AdapterUtil;
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
+import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
+import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.permission.Acp;
 import cn.betatown.mobile.beitonelibrary.permission.AcpListener;
 import cn.betatown.mobile.beitonelibrary.permission.AcpOptions;
-import cn.betatown.mobile.beitonelibrary.util.GsonUtil;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
-import cn.betatown.mobile.beitonelibrary.util.Trace;
 
 public class SubmitQuestionActivity extends BaseActivity {
 
@@ -57,7 +59,7 @@ public class SubmitQuestionActivity extends BaseActivity {
     @BindView(R.id.tvNext)
     TextView tvNext;
 
-    private String subsequentVisit = "";
+    private int subsequentVisit = -1;
 
     @Override
     protected int getContentViewLayoutId() {
@@ -133,12 +135,12 @@ public class SubmitQuestionActivity extends BaseActivity {
                 jumpToForResult(AllergensListActivity.class , 1);
                 break;
             case R.id.cbFirstTreat:
-                subsequentVisit = "0";
+                subsequentVisit = 0;
                 cbFirstTreat.setChecked(true);
                 cbSecondTreat.setChecked(false);
                 break;
             case R.id.cbSecondTreat:
-                subsequentVisit = "1";
+                subsequentVisit = 1;
                 cbFirstTreat.setChecked(false);
                 cbSecondTreat.setChecked(true);
                 break;
@@ -149,7 +151,7 @@ public class SubmitQuestionActivity extends BaseActivity {
                     showToast("请输入病情描述");
                     return;
                 }
-                if (StringUtil.isEmpty(subsequentVisit)){
+                if (subsequentVisit == -1) {
                     showToast("请选择是否初诊/复诊");
                     return;
                 }
@@ -158,7 +160,7 @@ public class SubmitQuestionActivity extends BaseActivity {
                 if (AdapterUtil.isListNotEmpty(imagePaths)){
                     compressAndUploadImage(imagePaths);
                 } else {
-                    commitDec(null);
+                    commitDec(new ArrayList<>());
                 }
                 break;
         }
@@ -174,20 +176,26 @@ public class SubmitQuestionActivity extends BaseActivity {
     }
 
     private void commitDec(List<String> uploadFile) {
-        ConditionDesRequest.QueryParams queryParams = new ConditionDesRequest.QueryParams();
+        ConditionDesPostStrRequest.QueryParams queryParams =
+                new ConditionDesPostStrRequest.QueryParams();
         queryParams.userId = UserHelper.getInstance().getUserId(this);
         queryParams.orderType = "1";
         queryParams.symptom = etSubmitQuestion.getText().toString();
-        ConditionDesRequest desRequest = new ConditionDesRequest();
+        ConditionDesPostStrRequest desRequest = new ConditionDesPostStrRequest();
         desRequest.queryParams = queryParams;
         desRequest.allergy = 0;
-        desRequest.subsequentVisit = 0;
+        desRequest.subsequentVisit = subsequentVisit;
         desRequest.imgsList = uploadFile;
-        QuestionProvider.submitConditionDes(this, desRequest, new OnJsonCallBack() {
+
+        BaseProvider.request(new HttpRequest(desRequest).build(this),
+                new OnJsonCallBack<String>() {
             @Override
-            public void onResult(Object data) {
+            public void onResult(String data) {
                 onDismissLoading();
-                Trace.d("submit---" + data);
+                if (!StringUtil.isEmpty(data)) {
+                    InquiryHelper.inputInquirRegisterId(data);
+                    jumpToThenKill(SelectSeeDoctorPeopleActivity.class);
+                }
             }
 
             @Override
@@ -204,6 +212,7 @@ public class SubmitQuestionActivity extends BaseActivity {
                 showToast(msg);
             }
         });
+
     }
 
 }

@@ -15,18 +15,18 @@ import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 public class AccountProvider extends BaseProvider {
 
 
-    public static void sendAuthCode(Object tag,String phone , OnJsonCallBack onJsonCallBack){
+    /*public static void sendAuthCode(Object tag,String phone , OnJsonCallBack onJsonCallBack){
 
         Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
         HttpRequest httpRequest = new HttpRequest.HttpRequestBuilder(tag ,
-                HttpRequestMethod.POST , "/platform-auth/auth/getPhoneCode")
+                HttpRequestMethod.POST , "")
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
-    }
+    }*/
 
-    public static void doLoginByAuthCode(Object tag,String phone ,
+   /* public static void doLoginByAuthCode(Object tag,String phone ,
                                          String authCode, OnJsonCallBack onJsonCallBack){
         Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
@@ -38,10 +38,10 @@ public class AccountProvider extends BaseProvider {
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
-    }
+    }*/
 
 
-    public static void setLoginPassword(Context tag,
+    /*public static void setLoginPassword(Context tag,
                                         String newPasswd, OnJsonCallBack onJsonCallBack){
         Map<String, Object> params = new HashMap<>();
         params.put("newPasswd" , newPasswd);
@@ -52,10 +52,10 @@ public class AccountProvider extends BaseProvider {
                 .addParams(params)
                 .build();
         request(httpRequest.build() , onJsonCallBack);
-    }
+    }*/
 
 
-    public static void registerAccountByPhone(Object tag,String phone ,String authCode,
+    /*public static void registerAccountByPhone(Object tag,String phone ,String authCode,
                                               String password, OnJsonCallBack onJsonCallBack){
         Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
@@ -69,9 +69,9 @@ public class AccountProvider extends BaseProvider {
         request(httpRequest.build() , onJsonCallBack);
 
         //post(tag , "/user/registerByPhone" , params , onJsonCallBack);
-    }
+    }*/
 
-    public static void doLoginByPassword(Object tag, String phone,
+   /* public static void doLoginByPassword(Object tag, String phone,
                                          String password, OnJsonCallBack onJsonCallBack) {
         Map<String, Object> params = new HashMap<>();
         params.put("userName" , phone);
@@ -83,10 +83,10 @@ public class AccountProvider extends BaseProvider {
                 .build();
         request(httpRequest.build() , onJsonCallBack);
        // post(tag , "/auth/getTokenByUserPWD" , params , onJsonCallBack);
-    }
+    }*/
 
 
-    public static void findPassword(Context tag, String phone,String authCode,
+    /*public static void findPassword(Context tag, String phone,String authCode,
                                     String password, OnJsonCallBack onJsonCallBack){
         Map<String, Object> params = new HashMap<>();
         params.put("phone" , phone);
@@ -101,6 +101,6 @@ public class AccountProvider extends BaseProvider {
 
 
         //post(tag , "/user/update/passwdByPhone" , params , onJsonCallBack);
-    }
+    }*/
 
 }

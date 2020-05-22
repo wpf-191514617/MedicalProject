@@ -10,7 +10,8 @@
     android:paddingBottom="@dimen/dimen_8dp">
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civDoctorAvatar"
         android:layout_width="@dimen/dimen_43dp"
         android:layout_height="@dimen/dimen_43dp"
         android:src="@mipmap/ic_launcher" />

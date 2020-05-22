@@ -7,7 +7,6 @@ import com.qiniu.android.http.ResponseInfo;
 import com.qiniu.android.storage.Configuration;
 import com.qiniu.android.storage.UpCompletionHandler;
 import com.qiniu.android.storage.UploadManager;
-import com.qiniu.android.storage.UploadOptions;
 
 import org.json.JSONObject;
 
@@ -15,7 +14,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
 

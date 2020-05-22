@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_mine_head"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginRight="@dimen/dimen_15dp"
+        android:background="@drawable/bg_white_top_radius"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingBottom="@dimen/dimen_60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserAvatar"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_60dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_14dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDoctorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张医生"
+                        android:textColor="#ff333333"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvDoctorLevel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_weight="1"
+                        android:text="内科主治医师"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_79dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_9dp"
+                        android:background="@drawable/bg_gray_radius_17"
+                        android:gravity="center_vertical"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_14dp"
+                            android:layout_height="@dimen/dimen_14dp"
+                            android:src="@drawable/ic_check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_4dp"
+                            android:text="认证医师"
+                            android:textColor="#ff333333"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvHospitalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="东莞市滨海湾中心医院"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tvDoctorNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="医生号：11225699"
+                    android:textColor="#ff3eaef1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/tvUserCarte"
+            android:layout_width="@dimen/dimen_247dp"
+            android:layout_height="@dimen/dimen_247dp"
+            android:layout_marginTop="@dimen/dimen_56dp"
+            android:src="@mipmap/ic_launcher" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:text="让患者用慧医家扫一扫加您"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+
+        <com.beitone.medical.doctor.widget.AppButton
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_45dp"
+            android:layout_marginTop="@dimen/dimen_21dp"
+            android:text="分享名片" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

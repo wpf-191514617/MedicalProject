@@ -13,6 +13,7 @@ import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.constant.EventCode;
 import com.beitone.medical_store.app.entity.response.UserResponse;
 import com.beitone.medical_store.app.helper.UserHelper;
+import com.beitone.medical_store.app.httpentity.GetTokenByUserPWD;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
@@ -22,6 +23,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 import cn.betatown.mobile.beitonelibrary.bean.EventData;
+import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
+import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 
@@ -140,7 +143,11 @@ public class LoginFragment extends BaseFragment {
     }
 
     private void doLogin(String phone, String password) {
-        AccountProvider.doLoginByPassword(this, phone, password, new OnJsonCallBack<String>() {
+
+        GetTokenByUserPWD request = new GetTokenByUserPWD();
+        request.phone = phone;
+        request.password = password;
+        BaseProvider.request(new HttpRequest(request).build(getActivity()),new OnJsonCallBack<String>() {
             @Override
             public void onResult(String data) {
                 if (data != null) {
@@ -166,6 +173,8 @@ public class LoginFragment extends BaseFragment {
                 showToast(msg);
             }
         });
+
+      //  AccountProvider.doLoginByPassword(this, phone, password, );
     }
 
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/dimen_25dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dimen_8dp"
+    android:layout_marginRight="@dimen/dimen_5dp"
+    android:layout_marginLeft="@dimen/dimen_5dp"
+    android:paddingRight="@dimen/dimen_8dp"
+    android:background="@drawable/bg_tag"
+    android:layout_marginTop="@dimen/dimen_12dp"
+    android:textColor="@drawable/sel_tv_white"
+    android:text="查看全部">
+
+</TextView>

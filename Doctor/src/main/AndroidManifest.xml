@@ -9,13 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ui.home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.UserCarteActivity"/>
+        <activity android:name=".ui.patient.PatientListActivity"/>
+        <activity android:name=".ui.patient.PatientDetailActivity"/>
+        <activity android:name=".ui.patient.ReportListActivity"/>
+        <activity android:name=".ui.patient.ReportInfoActivity"/>
+        <activity android:name=".ui.patient.ReportDetailActivity"/>
+        <activity android:name=".ui.evaluation.EvaluationListActivity"/>
     </application>
 
 </manifest>

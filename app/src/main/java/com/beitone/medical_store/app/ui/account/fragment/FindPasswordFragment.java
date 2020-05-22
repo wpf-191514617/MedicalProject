@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.httpentity.GetPhoneCodeRequest;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.view.AppDialog;
 import com.beitone.medical_store.app.widget.AppButton;
@@ -14,6 +15,8 @@ import com.beitone.medical_store.app.widget.AppButton;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
+import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
+import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 import cn.betatown.mobile.beitonelibrary.widget.CountDownButton;
@@ -99,7 +102,9 @@ public class FindPasswordFragment extends BaseFragment {
 
 
     private void sendAuthCode(String phone) {
-        AccountProvider.sendAuthCode(this, phone, new OnJsonCallBack() {
+        GetPhoneCodeRequest codeRequest = new GetPhoneCodeRequest();
+        codeRequest.phone = phone;
+        BaseProvider.request(new HttpRequest(codeRequest).build(getActivity()), new OnJsonCallBack() {
             @Override
             public void onResult(Object data) {
                 countDownButton.start();
@@ -120,6 +125,7 @@ public class FindPasswordFragment extends BaseFragment {
                 showToast(msg);
             }
         });
+
     }
 
 

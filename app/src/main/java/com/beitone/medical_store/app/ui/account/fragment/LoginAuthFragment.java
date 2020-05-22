@@ -19,6 +19,8 @@ import com.beitone.medical_store.app.constant.EventCode;
 import com.beitone.medical_store.app.entity.response.AuthLoginResponse;
 import com.beitone.medical_store.app.entity.response.UserResponse;
 import com.beitone.medical_store.app.helper.UserHelper;
+import com.beitone.medical_store.app.httpentity.GetPhoneCodeRequest;
+import com.beitone.medical_store.app.httpentity.GetTokenByPhoneCodeRequest;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.view.AppDialog;
 import com.beitone.medical_store.app.widget.AppButton;
@@ -29,6 +31,8 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
 import cn.betatown.mobile.beitonelibrary.bean.EventData;
+import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
+import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 import cn.betatown.mobile.beitonelibrary.util.Trace;
@@ -216,22 +220,24 @@ public class LoginAuthFragment extends BaseFragment {
     }
 
     private void doLogin(String mobile, String authCode) {
-
-        AccountProvider.doLoginByAuthCode(this, mobile, authCode, new OnJsonCallBack<AuthLoginResponse>() {
+        GetTokenByPhoneCodeRequest request = new GetTokenByPhoneCodeRequest();
+        request.phone = mobile;
+        request.authCode = authCode;
+        BaseProvider.request(new HttpRequest(request).build(getActivity()),new OnJsonCallBack<AuthLoginResponse>() {
             @Override
             public void onResult(AuthLoginResponse data) {
-              if (data != null){
-                  UserHelper.getInstance().putUserId(getActivity() , data.getUserId());
-                  UserHelper.getInstance().putUserInfo(data.getUserInfo());
-                  UserHelper.getInstance().putUserToken(getActivity() , data.getToken());
-                  EventData eventData = new EventData(EventCode.EVENT_LOGIN_SUCCESS);
-                  EventBus.getDefault().post(eventData);
-                  if (data.isFirst()){
-                      mCallback.registerAccount(mobile,authCode);
-                  } else {
+                if (data != null){
+                    UserHelper.getInstance().putUserId(getActivity() , data.getUserId());
+                    UserHelper.getInstance().putUserInfo(data.getUserInfo());
+                    UserHelper.getInstance().putUserToken(getActivity() , data.getToken());
+                    EventData eventData = new EventData(EventCode.EVENT_LOGIN_SUCCESS);
+                    EventBus.getDefault().post(eventData);
+                    if (data.isFirst()){
+                        mCallback.registerAccount(mobile,authCode);
+                    } else {
                         mCallback.loginSuccess();
-                  }
-              }
+                    }
+                }
             }
 
             @Override
@@ -244,6 +250,7 @@ public class LoginAuthFragment extends BaseFragment {
                 showToast(msg);
             }
         });
+
     }
 
     private void showRegisterAccount(String mobile, String authCode) {
@@ -260,7 +267,9 @@ public class LoginAuthFragment extends BaseFragment {
     }
 
     private void sendAuthCode(String phone) {
-        AccountProvider.sendAuthCode(this, phone, new OnJsonCallBack() {
+        GetPhoneCodeRequest codeRequest = new GetPhoneCodeRequest();
+        codeRequest.phone = phone;
+        BaseProvider.request(new HttpRequest(codeRequest).build(getActivity()),  new OnJsonCallBack() {
             @Override
             public void onResult(Object data) {
                 countDownButton.start();
@@ -281,6 +290,9 @@ public class LoginAuthFragment extends BaseFragment {
                 showToast(msg);
             }
         });
+
+
+       // AccountProvider.sendAuthCode(this, phone,);
     }
 
     private Spannable getDialogSpannable() {

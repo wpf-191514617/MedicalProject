@@ -60,5 +60,5 @@ dependencies {
     implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
     implementation project(path: ':StoreUI')
     implementation 'com.qiniu:qiniu-android-sdk:7.3.3'
-
+    implementation 'com.amap.api:location:3.3.0'
 }

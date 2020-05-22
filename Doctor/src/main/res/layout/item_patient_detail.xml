@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayf5"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dimen_15dp"
+    android:paddingTop="@dimen/dimen_20dp"
+    android:paddingRight="@dimen/dimen_15dp"
+    android:paddingBottom="@dimen/dimen_5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="@dimen/dimen_6dp"
+            android:layout_height="@dimen/dimen_6dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:background="@drawable/bg_circle" />
+
+
+        <View
+            android:layout_width="@dimen/dimen_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grayDE"
+            android:layout_marginBottom="@dimen/dimen_8dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_14dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_stroke_radiu3"
+                android:paddingLeft="@dimen/dimen_5dp"
+                android:paddingTop="@dimen/dimen_2dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_2dp"
+                android:text="本人"
+                android:textColor="#ff649bf5"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 2020/01/12 09:11"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/dimen_11dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病情："
+                android:textColor="#ff858585"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左下肢内测皮肤可见红色丘疹，疱疹伴有片状糜烂疱疹伴有片状糜烂"
+                android:lineSpacingExtra="@dimen/dimen_5dp"
+                android:layout_marginLeft="@dimen/dimen_3dp"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="诊断："
+                android:textColor="#ff858585"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="急性湿疹"
+                android:lineSpacingExtra="@dimen/dimen_5dp"
+                android:layout_marginLeft="@dimen/dimen_3dp"
+                android:textColor="#ff333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="处方："
+                android:textColor="#ff858585"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看处方"
+                android:lineSpacingExtra="@dimen/dimen_5dp"
+                android:textColor="#15D2C3"
+                android:paddingTop="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_5dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingLeft="@dimen/dimen_3dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报告："
+                android:textColor="#ff858585"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:id="@+id/tvCheckReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看报告"
+                android:lineSpacingExtra="@dimen/dimen_5dp"
+                android:textColor="#15D2C3"
+                android:paddingTop="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_5dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingLeft="@dimen/dimen_3dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

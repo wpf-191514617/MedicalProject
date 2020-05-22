@@ -115,23 +115,21 @@ public class SelectImageLayout extends LinearLayout {
         mFeedGridAdapter.setData(entities);
     }
 
-
-    public List<String> getImageFiles(){
-        List<SelectImageEntity> entities = mFeedGridAdapter.getDataFilter();
-        List<String> stringList = new ArrayList<>();
-        for (SelectImageEntity entity : entities) {
-            stringList.add(entity.imagePath);
-        }
-        return stringList;
-    }
-
-
     public void addImageFiles(List<File> imgs){
         List<String> images = new ArrayList<>();
         for (File img : imgs) {
             images.add(img.getPath());
         }
         addImages(images);
+    }
+
+    public List<String> getImageFiles() {
+        List<String> stringList = new ArrayList<>();
+        List<SelectImageEntity> entities = mFeedGridAdapter.getDataFilter();
+        for (SelectImageEntity entity : entities) {
+            stringList.add(entity.imagePath);
+        }
+        return stringList;
     }
 
 
@@ -190,7 +188,7 @@ public class SelectImageLayout extends LinearLayout {
                 viewHolder.ivRemoveImage = view.findViewById(R.id.ivRemoveImage);
                 viewHolder.layoutPhoto =view.findViewById(R.id.layoutPhoto);
 
-                LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) viewHolder.layoutPhoto.getLayoutParams();
+                LayoutParams layoutParams = (LayoutParams) viewHolder.layoutPhoto.getLayoutParams();
                 layoutParams.width = mItemSize;
                 layoutParams.height = mItemSize;
                 viewHolder.layoutPhoto.setLayoutParams(layoutParams);
@@ -215,7 +213,7 @@ public class SelectImageLayout extends LinearLayout {
                 }
             }
 
-            viewHolder.ivRemoveImage.setOnClickListener(new View.OnClickListener() {
+            viewHolder.ivRemoveImage.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     imageData.remove(i);

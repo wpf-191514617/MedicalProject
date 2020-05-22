@@ -3,6 +3,7 @@ package com.beitone.medical_store.app;
 import android.app.Application;
 import android.content.Context;
 
+import com.beitone.medical_store.app.helper.LocationHelper;
 import com.bt.http.OkHttpUtils;
 import com.bt.http.https.HttpsUtils;
 
@@ -47,6 +48,7 @@ public class MedicalApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
+        LocationHelper.getLocationHelper(this).startMapLocation();
         try {
             String a = "";
             InputStream[] inputStreams =

@@ -14,7 +14,6 @@ import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import cn.betatown.mobile.beitonelibrary.R;
 import cn.betatown.mobile.beitonelibrary.bean.EventData;
 import cn.betatown.mobile.beitonelibrary.viewcontroller.callback.BaseView;
 import me.jessyan.autosize.internal.CustomAdapt;
@@ -115,7 +114,8 @@ public abstract class BaseFragment extends BToneFragment implements BaseView, Cu
         if (TextUtils.isEmpty(value)) {
             value = "";
         }
-        tv.setText(value);
+        if (tv != null)
+            tv.setText(value);
     }
 
     @Override

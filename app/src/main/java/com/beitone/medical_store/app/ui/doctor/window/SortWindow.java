@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.entity.SortEntity;
 import com.beitone.medical_store.app.util.TestUtil;
 
 import cn.betatown.mobile.beitonelibrary.adapter.listener.OnRecyclerItemClickListener;
@@ -73,17 +74,17 @@ public class SortWindow extends BasePopupWindow {
 
 
 
-    class SortListAdapter extends BaseRecyclerAdapter<String>{
+    class SortListAdapter extends BaseRecyclerAdapter<SortEntity>{
 
         public SortListAdapter(RecyclerView recyclerView) {
             super(recyclerView, R.layout.item_text_select);
         }
 
         @Override
-        protected void fillData(BaseViewHolderHelper helper, int position, String model) {
+        protected void fillData(BaseViewHolderHelper helper, int position, SortEntity model) {
             TextView tvTextName = helper.getTextView(R.id.tvTextName);
             ImageView ivTextCheck = helper.getImageView(R.id.ivTextCheck);
-            tvTextName.setText(model);
+            helper.setText(tvTextName , model.content);
             if (mCheckedPosition == position){
                 tvTextName.setSelected(true);
                 ivTextCheck.setVisibility(View.VISIBLE);
@@ -96,7 +97,7 @@ public class SortWindow extends BasePopupWindow {
 
 
     public interface OnSelectSortListener{
-        void onSort(String sortType);
+        void onSort(SortEntity sortEntity);
     }
 
 }

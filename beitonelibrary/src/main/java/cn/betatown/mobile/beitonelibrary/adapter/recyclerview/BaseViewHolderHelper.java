@@ -198,6 +198,15 @@ public class BaseViewHolderHelper {
         return this;
     }
 
+
+    public BaseViewHolderHelper setText(TextView textView, CharSequence text) {
+        if (text == null) {
+            text = "";
+        }
+        textView.setText(text);
+        return this;
+    }
+
     /**
      * 设置对应id的控件的文本内容
      *

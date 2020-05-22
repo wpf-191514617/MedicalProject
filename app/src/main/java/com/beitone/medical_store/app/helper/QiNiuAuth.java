@@ -83,7 +83,7 @@ public class QiNiuAuth {
     private Mac createMac() {
         Mac mac;
         try {
-            mac = javax.crypto.Mac.getInstance("HmacSHA1");
+            mac = Mac.getInstance("HmacSHA1");
             mac.init(secretKey);
         } catch (GeneralSecurityException e) {
             e.printStackTrace();

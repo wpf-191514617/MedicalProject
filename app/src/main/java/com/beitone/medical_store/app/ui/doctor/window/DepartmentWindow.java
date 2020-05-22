@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.entity.ParentEntity;
+import com.beitone.medical_store.app.entity.response.TreeFloorResponse;
 import com.beitone.medical_store.app.util.TestUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.betatown.mobile.beitonelibrary.adapter.AdapterUtil;
 import cn.betatown.mobile.beitonelibrary.adapter.listener.OnRecyclerItemClickListener;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseRecyclerAdapter;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseViewHolderHelper;
@@ -35,7 +37,7 @@ public class DepartmentWindow extends BasePopupWindow {
     private ParentListAdapter mParentListAdapter;
     private ChildListAdapter mChildListAdapter;
 
-    private String childName;
+    private TreeFloorResponse.ChildrenBean childName;
 
     private OnSelectDepartmentListener mOnSelectDepartmentListener;
 
@@ -44,10 +46,24 @@ public class DepartmentWindow extends BasePopupWindow {
         mOnSelectDepartmentListener = selectDepartmentListener;
     }
 
+
+    private List<TreeFloorResponse> mFloorResponseList;
+
+    public void setFloorResponseList(List<TreeFloorResponse> mFloorResponseList) {
+        if (!AdapterUtil.isListNotEmpty(mFloorResponseList)){
+            mParentListAdapter.clear();
+            mChildListAdapter.clear();
+            return;
+        }
+        this.mFloorResponseList = mFloorResponseList;
+        mParentListAdapter.setData(mFloorResponseList);
+        mChildListAdapter.setData(mFloorResponseList.get(0).getChildren());
+    }
+
     @Override
     public View initView() {
         mParentEntityList = TestUtil.getParentData();
-        childName = "";
+
         View contentView =
                 LayoutInflater.from(getContext()).inflate(R.layout.layout_department_window, null);
         rvDepartmentParent = contentView.findViewById(R.id.rvDepartmentParent);
@@ -75,13 +91,13 @@ public class DepartmentWindow extends BasePopupWindow {
         mChildListAdapter = new ChildListAdapter(rvDepartmentChild);
         rvDepartmentChild.setAdapter(mChildListAdapter);
 
-        mParentListAdapter.setData(mParentEntityList);
-        mChildListAdapter.setData(mParentEntityList.get(0).childList);
+
         mParentListAdapter.setOnRVItemClickListener(new OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(ViewGroup parent, View itemView, int position) {
                 mParentListAdapter.setCheckedPosition(position);
-                mChildListAdapter.setData(mParentEntityList.get(position).childList);
+                mChildListAdapter.setData(mParentListAdapter.getData().get(position).getChildren());
+               // mChildListAdapter.setData(mParentEntityList.get(position).childList);
             }
         });
         mChildListAdapter.setOnRVItemClickListener(new OnRecyclerItemClickListener() {
@@ -90,7 +106,7 @@ public class DepartmentWindow extends BasePopupWindow {
                 if (mOnSelectDepartmentListener != null) {
                     childName = mChildListAdapter.getItem(position);
                     mChildListAdapter.notifyDataSetChanged();
-                    mOnSelectDepartmentListener.onSelectDepartment(mParentEntityList.get(mParentListAdapter.getCheckedPosition()),
+                    mOnSelectDepartmentListener.onSelectDepartment(mParentListAdapter.getData().get(mParentListAdapter.getCheckedPosition()),
                             mChildListAdapter.getItem(position));
                 }
                 dismiss();
@@ -107,7 +123,7 @@ public class DepartmentWindow extends BasePopupWindow {
     }
 
 
-    class ParentListAdapter extends BaseRecyclerAdapter<ParentEntity> {
+    class ParentListAdapter extends BaseRecyclerAdapter<TreeFloorResponse> {
 
         public ParentListAdapter(RecyclerView recyclerView) {
             super(recyclerView, R.layout.item_parent);
@@ -115,9 +131,9 @@ public class DepartmentWindow extends BasePopupWindow {
         }
 
         @Override
-        protected void fillData(BaseViewHolderHelper helper, int position, ParentEntity model) {
+        protected void fillData(BaseViewHolderHelper helper, int position, TreeFloorResponse model) {
             TextView textView = helper.getTextView(R.id.tvParentName);
-            textView.setText(model.parentName);
+            helper.setText(textView , model.getDeptName());
             if (position == mCheckedPosition) {
                 textView.setSelected(true);
             } else {
@@ -127,18 +143,19 @@ public class DepartmentWindow extends BasePopupWindow {
     }
 
 
-    class ChildListAdapter extends BaseRecyclerAdapter<String> {
+    class ChildListAdapter extends BaseRecyclerAdapter<TreeFloorResponse.ChildrenBean> {
 
         public ChildListAdapter(RecyclerView recyclerView) {
             super(recyclerView, R.layout.item_text_select);
         }
 
         @Override
-        protected void fillData(BaseViewHolderHelper helper, int position, String model) {
+        protected void fillData(BaseViewHolderHelper helper, int position,
+                                TreeFloorResponse.ChildrenBean model) {
             TextView tvTextName = helper.getTextView(R.id.tvTextName);
             ImageView ivTextCheck = helper.getImageView(R.id.ivTextCheck);
-            tvTextName.setText(model);
-            if (childName.equals(model)) {
+            helper.setText(tvTextName , model.getDeptName());
+            if (childName != null && childName.equals(model)) {
                 tvTextName.setSelected(true);
                 ivTextCheck.setVisibility(View.VISIBLE);
             } else {
@@ -150,7 +167,7 @@ public class DepartmentWindow extends BasePopupWindow {
 
 
     public interface OnSelectDepartmentListener {
-        void onSelectDepartment(ParentEntity parentEntity, String child);
+        void onSelectDepartment(TreeFloorResponse floorResponse, TreeFloorResponse.ChildrenBean child);
     }
 
 }

@@ -44,8 +44,8 @@ public class AllergensListActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         AllergensListAdapter allergensListAdapter = new AllergensListAdapter(recyclerView);
         recyclerView.setAdapter(allergensListAdapter);
-        List<String> data = TestUtil.getSortDatas();
-        allergensListAdapter.setData(data);
+       // List<String> data = TestUtil.getSortDatas();
+        //allergensListAdapter.setData(data);
     }
 
     @Override

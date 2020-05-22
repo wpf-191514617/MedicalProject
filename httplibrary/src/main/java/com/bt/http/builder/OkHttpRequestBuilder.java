@@ -3,7 +3,6 @@ package com.bt.http.builder;
 
 import com.bt.http.request.RequestCall;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -14,8 +13,8 @@ public abstract class OkHttpRequestBuilder<T extends OkHttpRequestBuilder>
 {
     protected String url;
     protected Object tag;
-    protected Map<String, String> headers = new HashMap<>();
-    protected Map<String, Object> params = new HashMap<>();
+    protected Map<String, String> headers = new LinkedHashMap<>();
+    protected Map<String, String> params = new LinkedHashMap<>();
     protected int id;
 
     public T id(int id)
@@ -65,7 +64,7 @@ public abstract class OkHttpRequestBuilder<T extends OkHttpRequestBuilder>
         return headers;
     }
 
-    public Map<String, Object> getParams() {
+    public Map<String, String> getParams() {
         return params;
     }
 

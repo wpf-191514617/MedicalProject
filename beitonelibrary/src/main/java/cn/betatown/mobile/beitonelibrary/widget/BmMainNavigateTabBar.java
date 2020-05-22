@@ -19,7 +19,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -182,7 +181,13 @@ public class BmMainNavigateTabBar extends LinearLayout implements View.OnClickLi
         Object object = v.getTag();
         if (object != null && object instanceof ViewHolder) {
             ViewHolder holder = (ViewHolder) v.getTag();
-            if(mTabSelectListener != null && mTabSelectListener.onTabSelected(holder)){
+
+            if (mTabSelectListener != null) {
+                boolean isSelect = mTabSelectListener.onTabSelected(holder);
+                if (isSelect) {
+                    showFragment(holder);
+                }
+            } else {
                 showFragment(holder);
             }
         }

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_185dp"
+        android:background="@drawable/bg_mine_head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_33dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_60dp"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_13dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张医生"
+                        android:textColor="#ffffffff"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen_59dp"
+                        android:layout_height="wrap_content"
+                        android:padding="1.5dp"
+                        android:background="@drawable/bg_white_radius_17"
+                        android:layout_marginLeft="@dimen/dimen_9dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_14dp"
+                            android:layout_height="@dimen/dimen_14dp"
+                            android:src="@drawable/ic_check"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="已认证"
+                            android:textColor="#ff333333"
+                            android:layout_marginLeft="@dimen/dimen_4dp"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:id="@+id/layoutUserCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+                        
+                        <ImageView
+                            android:layout_width="@dimen/dimen_13dp"
+                            android:layout_height="@dimen/dimen_13dp"
+                            android:src="@drawable/iv_mine_code"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="我的名片"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="@dimen/dimen_6dp"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慧医家互联网医院—内科主治医师"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_10dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_38dp"
+            android:background="#FEEFD3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:text="根据政策规定需要完成实名认证方可进行互联网诊疗，点击认证>"
+                android:textColor="#ffff803f"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <com.lihang.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:hl_cornerRadius="@dimen/dimen_10dp"
+        app:hl_dx="0dp"
+        app:hl_dy="0dp"
+        app:hl_shadowColor="#2a000000"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="-55dp"
+        app:hl_shadowLimit="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutMinePatient"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_mine_patient"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我的患者"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"/>
+
+            </LinearLayout>
+
+
+            <include layout="@layout/line"/>
+
+
+            <LinearLayout
+                android:id="@+id/layoutMineInCome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_mine_income"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我的收入"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"/>
+
+            </LinearLayout>
+
+
+            <include layout="@layout/line"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/layoutMineFunction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_mine_function"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我的功能"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"/>
+
+            </LinearLayout>
+
+
+            <include layout="@layout/line"/>
+
+
+            <LinearLayout
+                android:id="@+id/layoutMineEvaluation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_mine_evaluation"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我的评价"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"/>
+
+            </LinearLayout>
+
+
+            <include layout="@layout/line"/>
+
+            <LinearLayout
+                android:id="@+id/layoutMineSetting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_18dp"
+                    android:layout_height="@dimen/dimen_18dp"
+                    android:src="@drawable/ic_mine_setting"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我的设置"
+                    android:layout_marginLeft="@dimen/dimen_15dp"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </com.lihang.ShadowLayout>
+
+
+
+</LinearLayout>

@@ -45,7 +45,7 @@ public class MedicineHomeActivity extends BaseActivity {
                 LinearLayoutManager.HORIZONTAL , false));
         medicineListAdapter = new MedicineListAdapter(rvMineMedicine);
         rvMineMedicine.setAdapter(medicineListAdapter);
-        medicineListAdapter.setData(TestUtil.getSortDatas());
+        medicineListAdapter.setData(TestUtil.getSortDatas(10));
 
         rvPharmacy.setLayoutManager(new LinearLayoutManager(this));
         pharmacyListAdapter = new PharmacyListAdapter(rvPharmacy);

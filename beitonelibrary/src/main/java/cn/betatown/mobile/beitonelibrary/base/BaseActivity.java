@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 
-import com.android.tu.loadingdialog.LoadingDialog;
+import com.android.tu.loadingdialog.LoadingDailog;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -26,20 +26,19 @@ public abstract class BaseActivity extends BaseAppcomtActivity implements BaseVi
 
     public final String TAG = getClass().getSimpleName();
 
-    private LoadingDialog mLoadingDailog;
+    private LoadingDailog mLoadingDailog;
 
-    protected void showLoadingDialog() {
-        if (mLoadingDailog == null) {
-            LoadingDialog.Builder loadingBuilder = new LoadingDialog.Builder(this)
-                    .setShowMessage(false)
-                    .setCancelable(false);
-            mLoadingDailog = loadingBuilder.create();
+    protected void showLoadingDialog(){
+        if (mLoadingDailog == null){
+            mLoadingDailog = new LoadingDailog(this);
+            mLoadingDailog.setCancelable(false);
+            mLoadingDailog.setCanceledOnTouchOutside(false);
         }
         mLoadingDailog.show();
     }
 
-    protected void onDismissLoading() {
-        if (mLoadingDailog != null && mLoadingDailog.isShowing()) {
+    protected void onDismissLoading(){
+        if (mLoadingDailog != null && mLoadingDailog.isShowing()){
             mLoadingDailog.dismiss();
         }
     }

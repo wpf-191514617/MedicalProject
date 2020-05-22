@@ -2,6 +2,7 @@ package cn.betatown.mobile.beitonelibrary.widget;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -16,7 +17,6 @@ import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.PopupWindow;
 
-import cn.betatown.mobile.beitonelibrary.R;
 import cn.betatown.mobile.beitonelibrary.util.Utils;
 
 public abstract class BasePopupWindow extends PopupWindow {
@@ -51,7 +51,7 @@ public abstract class BasePopupWindow extends PopupWindow {
         mRootView = initView();
         mFrameLayout = new FrameLayout(mContext);
         mFrameLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        mFrameLayout.setBackgroundColor(mContext.getResources().getColor(R.color.color_00000050));
+        mFrameLayout.setBackgroundColor(Color.parseColor("#70000000"));
         mFrameLayout.setFocusable(true);
         mFrameLayout.setFocusableInTouchMode(true);
 //        setCustomDensity(mActivity,((Activity) context).getApplication());

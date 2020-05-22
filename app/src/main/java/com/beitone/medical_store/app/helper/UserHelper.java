@@ -4,12 +4,7 @@ import android.content.Context;
 
 import com.beitone.medical_store.app.MedicalApplication;
 import com.beitone.medical_store.app.entity.response.UserResponse;
-import com.beitone.medical_store.app.provider.AccountProvider;
 
-import org.greenrobot.eventbus.EventBus;
-
-import cn.betatown.mobile.beitonelibrary.bean.EventData;
-import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.GsonUtil;
 import cn.betatown.mobile.beitonelibrary.util.PreferencesUtils;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
@@ -79,7 +74,8 @@ public class UserHelper {
     }
 
     public boolean isLogin(Context context) {
-        if (!StringUtil.isEmpty(getUserId(context))) {
+        if (!StringUtil.isEmpty(getUserId(context)) &&
+                !StringUtil.isEmpty(getUserToken(context))) {
             return true;
         }
         return false;

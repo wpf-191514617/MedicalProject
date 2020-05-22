@@ -23,9 +23,10 @@
             app:inputGravity="right"
             app:inputSelect="true"
             android:layout_marginRight="@dimen/dimen_15dp"
+            android:visibility="gone"
             />
 
-        <include layout="@layout/line"/>
+        <!--<include layout="@layout/line"/>-->
 
 
         <com.beitone.medical_store.app.widget.InputLayout

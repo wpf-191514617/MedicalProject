@@ -5,6 +5,7 @@ import android.content.Context;
 import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.entity.DepartmentEntity;
 import com.beitone.medical_store.app.entity.ParentEntity;
+import com.beitone.medical_store.app.entity.SortEntity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,10 +52,22 @@ public class TestUtil {
         return entities;
     }
 
+    public static List<String> getSortDatas(int size){
+        List<String> datas = new ArrayList<>();
+        for (int i =0;i < size;i++){
+            datas.add(String.valueOf(i));
+        }
+        return datas;
+    }
 
-    public static List<String> getSortDatas(){
+
+    public static List<SortEntity> getSortDatas(){
         String[] sortData = {"综合排序","问诊量","价格从低到高","价格从高到低"};
-        return Arrays.asList(sortData);
+        List<SortEntity> sortEntities = new ArrayList<>();
+        for (int i = 0; i < sortData.length; i++) {
+            sortEntities.add(new SortEntity(i+1 , sortData[i]));
+        }
+        return sortEntities;
     }
 
     public static List<String> getTags(){

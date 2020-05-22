@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_21dp"
+        android:paddingLeft="@dimen/dimen_16dp"
+        android:paddingRight="@dimen/dimen_16dp"
+        android:paddingBottom="@dimen/dimen_19dp">
+
+
+        <ImageView
+            android:layout_width="@dimen/dimen_44dp"
+            android:layout_height="@dimen/dimen_44dp"
+            android:src="@mipmap/ic_launcher_round"/>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_12dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张某某"
+                        android:textColor="#ff333333"
+                        android:textSize="16sp" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="5"
+                        app:mrb_progressTint="#FEA50B"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        app:mrb_secondaryProgressTint="#FEA50B"
+                        style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small" />
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:gravity="center"
+                    android:paddingLeft="8.5dp"
+                    android:text="申请消评"
+                    android:textColor="#ffffffff"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textSize="12sp"
+                    android:paddingRight="8.5dp"
+                    android:background="@drawable/bg_button"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:lineSpacingExtra="@dimen/dimen_5dp"
+                android:text="耐心细心认真，医生指导的非常专业，以后还来找张医生，无微不至。"
+                android:textColor="#ff858585"
+                android:textSize="12sp"
+                />
+
+
+            <TextView
+                android:id="@+id/tvSeeDoctorTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医院就诊  2019-11-01"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:textColor="#ff858585"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <include layout="@layout/line"/>
+
+</LinearLayout>

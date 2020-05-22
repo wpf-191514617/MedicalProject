@@ -11,12 +11,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.helper.UserHelper;
+import com.beitone.medical_store.app.httpentity.PasswdByPhone;
+import com.beitone.medical_store.app.httpentity.PasswdRequest;
 import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.widget.AppButton;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
+import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
+import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 
@@ -112,7 +117,34 @@ public class SetPasswordFragment extends BaseFragment {
     }
 
     private void findPassword() {
-        AccountProvider.findPassword(getActivity(), phone, authCode,
+        PasswdByPhone request = new PasswdByPhone();
+        request.phone = phone;
+        request.authCode = authCode;
+        request.password = etPassword.getText().toString();
+        BaseProvider.request(new HttpRequest(request).build(getActivity()),new OnJsonCallBack() {
+            @Override
+            public void onResult(Object data) {
+                if (mCallback != null) {
+                    mCallback.onSetPasswordDone(true);
+                }
+            }
+
+            @Override
+            public void onError(String msg) {
+                super.onError(msg);
+                showToast(msg);
+            }
+
+            @Override
+            public void onFailed(String msg) {
+                super.onFailed(msg);
+                showToast(msg);
+            }
+
+        });
+
+
+        /*AccountProvider.findPassword(getActivity(), phone, authCode,
                 etPassword.getText().toString(), new OnJsonCallBack() {
                     @Override
                     public void onResult(Object data) {
@@ -133,12 +165,15 @@ public class SetPasswordFragment extends BaseFragment {
                         showToast(msg);
                     }
 
-                });
+                });*/
     }
 
 
     private void registerByPhone() {
-        AccountProvider.setLoginPassword(getActivity(), etPassword.getText().toString(),
+        PasswdRequest request = new PasswdRequest();
+        request.newPasswd = etPassword.getText().toString();
+        request.userId = UserHelper.getInstance().getUserId(getActivity());
+        BaseProvider.request(new HttpRequest(request).build(getActivity()),
                 new OnJsonCallBack() {
                     @Override
                     public void onResult(Object data) {
@@ -159,27 +194,6 @@ public class SetPasswordFragment extends BaseFragment {
                         showToast(msg);
                     }
                 });
-        /*AccountProvider.registerAccountByPhone(this, phone, authCode,
-                etPassword.getText().toString(), new OnJsonCallBack<UserResponse>() {
-                    @Override
-                    public void onResult(UserResponse data) {
-                        UserHelper.getInstance().putUserInfo(data);
-                        if (mCallback != null)
-                            mCallback.onSetPasswordDone(false);
-                    }
-
-                    @Override
-                    public void onError(String msg) {
-                        super.onError(msg);
-                        showToast(msg);
-                    }
-
-                    @Override
-                    public void onFailed(String msg) {
-                        super.onFailed(msg);
-                        showToast(msg);
-                    }
-                });*/
     }
 
     public void registerAndSetPassword(String mobile, String authCode) {
