@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayf5"
+        android:orientation="vertical">
+
+        <com.beitone.medical.doctor.widget.InputLayout
+            android:id="@+id/inputAppeal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputLable="主诉：" />
+
+        <com.beitone.medical.doctor.widget.InputLayout
+            android:id="@+id/inputDiagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_7dp"
+            app:inputLable="诊断：" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:background="@color/grayDE" />
+
+        <com.beitone.medical.doctor.widget.InputLayout
+            android:id="@+id/inputSuggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputHnit="选填"
+            app:inputLable="建议：" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:background="@color/grayDE" />
+
+        <com.beitone.medical.doctor.widget.InputLayout
+            android:id="@+id/inputAllergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:inputHnit="请选择"
+            app:inputLable="过敏史"
+            app:inputSelect="true" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_6dp"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dimen_5dp">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="处方开立"
+                android:textColor="#ff858585"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新增处方单"
+                android:padding="@dimen/dimen_10dp"
+                android:textColor="#ff4086ff"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

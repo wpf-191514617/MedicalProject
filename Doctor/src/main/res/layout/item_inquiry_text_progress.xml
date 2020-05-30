@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayf5"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_17dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingBottom="@dimen/dimen_21dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civPatient"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_13dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/tvPatientName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张某某"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvPatientSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:text="男  36岁"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvPatientServiceCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:text="服务次数：0"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPatientAllergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="无过敏史"
+                    android:textColor="#ff858585"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvInquiryContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginBottom="@dimen/dimen_13dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"
+            android:text="已回复：嗯嗯，是的"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tvInquiryTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020.3.09  10:22"
+            android:textColor="#ff858585"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

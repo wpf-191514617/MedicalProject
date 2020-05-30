@@ -36,15 +36,17 @@ public class AppButton extends AppCompatButton {
         }
         switch (style) {
             case 1:
-                setBackgroundResource(R.drawable.bg_button_blue);
+                setBackgroundResource(R.drawable.bg_blue);
+                setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
                 break;
             default:
                 setBackgroundResource(R.drawable.bg_button);
+                setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
                 break;
         }
 
         setTextColor(getResources().getColor(R.color.white));
-        setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+
         if (!TextUtils.isEmpty(btnText)) {
             setText(btnText);
         }

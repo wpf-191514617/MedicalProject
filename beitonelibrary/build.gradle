@@ -50,4 +50,6 @@ dependencies {
     api 'com.github.xiaohaibin:XBanner:1.6.6'
     api 'top.zibin:Luban:1.1.8'
     implementation 'com.github.gittjy:LoadingDialog:1.0.2'
+    api 'cn.yc:YCStatusBarLib:1.4.3'
+    api 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

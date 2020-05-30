@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dimen_15dp"
+    android:paddingRight="@dimen/dimen_15dp"
+    android:paddingTop="@dimen/dimen_18dp"
+    android:paddingBottom="@dimen/dimen_20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDrugName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.风热感冒颗粒  X1"
+        android:textColor="#ff333333"
+        android:textSize="14sp"
+        android:layout_marginBottom="@dimen/dimen_16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="@dimen/dimen_5dp"
+                android:layout_height="@dimen/dimen_5dp"
+                android:background="@drawable/bg_red_circle"/>
+
+            <TextView
+                android:id="@+id/tvFormat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_8dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="@dimen/dimen_5dp"
+            android:layout_height="@dimen/dimen_5dp"
+            android:background="@drawable/bg_red_circle"/>
+
+        <TextView
+            android:id="@+id/tvUsage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="@dimen/dimen_5dp"
+            android:layout_height="@dimen/dimen_5dp"
+            android:background="@drawable/bg_red_circle"/>
+
+        <TextView
+            android:id="@+id/tvEntrust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/dimen_5dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

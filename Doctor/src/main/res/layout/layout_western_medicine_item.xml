@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_46dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="西药处方1"
+            android:textColor="#ff333333"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen_7dp"
+            android:paddingRight="@dimen/dimen_7dp"
+            android:text="修改"
+            android:textColor="#ff4086ff"
+            android:textSize="14sp"
+            android:gravity="center_vertical"/>
+
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="@dimen/dimen_12dp"
+            android:background="#DEDEDE"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen_7dp"
+            android:paddingRight="@dimen/dimen_7dp"
+            android:text="删除"
+            android:textColor="#ff4086ff"
+            android:textSize="14sp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/line"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWesternMedicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        />
+
+
+</LinearLayout>

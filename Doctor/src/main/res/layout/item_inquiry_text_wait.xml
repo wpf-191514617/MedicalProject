@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayf5"
+    android:paddingBottom="@dimen/dimen_8dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dimen_21dp"
+        android:paddingTop="@dimen/dimen_17dp"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civPatient"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_13dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/tvPatientName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张某某"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/tvPatientSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="男  36岁"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/dimen_10dp"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvPatientServiceCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="服务次数：0"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/dimen_10dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPatientAllergy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无过敏史"
+                    android:textColor="#ff858585"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_5dp"/>
+
+            </LinearLayout>
+
+            
+            <TextView
+                android:id="@+id/btnConsultation"
+                android:layout_width="@dimen/dimen_64dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:gravity="center"
+                android:background="@drawable/bg_button"
+                android:text="接诊"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"/>
+            
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="疾病主诉：这两天头痛神经一跳一跳的疼，让人心烦意乱，左边脑袋特别严重..."
+            android:textColor="#ff333333"
+            android:textSize="12sp"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:layout_marginBottom="@dimen/dimen_13dp"
+            android:lineSpacingExtra="@dimen/dimen_5dp"/>
+
+
+
+        <net.shopnc.b2b2c.android.custom.MyGridView
+            android:id="@+id/gridInquiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent"
+            android:verticalSpacing="@dimen/dimen_10dp"
+            android:horizontalSpacing="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_13dp"/>
+
+
+        <TextView
+            android:id="@+id/tvInquiryTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020.3.09  10:22"
+            android:textColor="#ff858585"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

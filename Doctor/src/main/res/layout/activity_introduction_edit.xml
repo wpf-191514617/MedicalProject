@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_38dp"
+        android:background="#FEEFD3"
+        android:text="个人介绍会展示给患者，烦请认真填写"
+        android:gravity="center"
+        android:textColor="#ffff803f"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="擅长疾病"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_140dp"
+            android:layout_marginTop="@dimen/dimen_17dp"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:paddingLeft="@dimen/dimen_13dp"
+            android:paddingRight="@dimen/dimen_13dp"
+            android:paddingBottom="@dimen/dimen_9dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_gray_radiu3">
+
+
+            <EditText
+                android:id="@+id/etSpecialty"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="临床酸相关及幽门螺杆菌相关上胃肠道疾病（包括食管、胃及十二指肠炎症、溃疡及肿。"
+                android:textColorHint="#ff858585"
+                android:textColor="@color/gray33"
+                android:textSize="12sp"
+                android:maxLength="200"
+                android:background="@null"
+                android:gravity="top|left"
+                android:lineSpacingExtra="@dimen/dimen_5dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="最多输入200字"
+                android:textColor="#ffb4b4b4"
+                android:textSize="12sp"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人简介"
+            android:layout_marginTop="@dimen/dimen_21dp"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_140dp"
+            android:layout_marginTop="@dimen/dimen_17dp"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:paddingLeft="@dimen/dimen_13dp"
+            android:paddingRight="@dimen/dimen_13dp"
+            android:paddingBottom="@dimen/dimen_9dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_gray_radiu3">
+
+
+            <EditText
+                android:id="@+id/etIntroduction"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="执业经历：男，医学博士，消化内科主任医师、教授。南京军区科委会消化内科学专业委员会副主任委员，中华医学会南京市消化内镜分会委员。"
+                android:textColorHint="#ff858585"
+                android:textColor="@color/gray33"
+                android:textSize="12sp"
+                android:maxLength="200"
+                android:background="@null"
+                android:gravity="top|left"
+                android:lineSpacingExtra="@dimen/dimen_5dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="最多输入200字"
+                android:textColor="#ffb4b4b4"
+                android:textSize="12sp"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <com.beitone.medical.doctor.widget.AppButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        app:btnStyle="blue"
+        android:text="保存"/>
+
+</LinearLayout>

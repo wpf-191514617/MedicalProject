@@ -3,11 +3,17 @@ package com.beitone.medical_store.app.ui.user;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.beitone.medical_store.app.R;
+import com.beitone.medical_store.app.helper.UserHelper;
+import com.beitone.medical_store.app.httpentity.MyRecipelListRequest;
 import com.beitone.medical_store.app.util.TestUtil;
 
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseRecyclerAdapter;
 import cn.betatown.mobile.beitonelibrary.adapter.recyclerview.BaseViewHolderHelper;
 import cn.betatown.mobile.beitonelibrary.base.BaseRecyclerActivity;
+import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
+import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
+import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
+import cn.betatown.mobile.beitonelibrary.util.Trace;
 
 public class MineMedicineListActivity extends BaseRecyclerActivity {
 
@@ -22,7 +28,16 @@ public class MineMedicineListActivity extends BaseRecyclerActivity {
     }
 
     private void loadList() {
-        setData(TestUtil.getTestListData());
+        MyRecipelListRequest listRequest = new MyRecipelListRequest();
+        listRequest.current = mCurrentPage;
+        listRequest.userId = UserHelper.getInstance().getUserId(this);
+        BaseProvider.request(new HttpRequest(listRequest).build(this),
+                new OnJsonCallBack() {
+            @Override
+            public void onResult(Object data) {
+                Trace.d("data----" + data);
+            }
+        });
     }
 
     @Override

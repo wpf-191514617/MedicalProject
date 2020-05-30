@@ -22,6 +22,7 @@
             android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civDoctorAvatar"
                 android:layout_width="@dimen/dimen_60dp"
                 android:layout_height="@dimen/dimen_60dp"
                 android:layout_marginLeft="@dimen/dimen_15dp"
@@ -40,6 +41,7 @@
                     android:gravity="bottom">
 
                     <TextView
+                        android:id="@+id/tvDoctorName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="张医生"
@@ -47,6 +49,7 @@
                         android:textSize="16sp" />
 
                     <LinearLayout
+                        android:id="@+id/layoutDoctorStatus"
                         android:layout_width="@dimen/dimen_59dp"
                         android:layout_height="wrap_content"
                         android:padding="1.5dp"
@@ -102,6 +105,7 @@
 
 
                 <TextView
+                    android:id="@+id/tvDoctorHospital"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="慧医家互联网医院—内科主治医师"

@@ -16,7 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.UserCarteActivity"/>
+        <activity android:name=".ui.user.UserCarteActivity"/>
+        <activity android:name=".ui.user.IntroductionEditActivity"/>
+        <activity android:name=".ui.user.IntroductionPreviewActivity"/>
+        <activity android:name=".ui.user.RevenueActivity"/>
+
+        <activity android:name=".ui.inquiry.TextInquiryHomeActivity"/>
+
+        <activity android:name=".ui.inquiry.MedicalRecordActivity"/>
+
         <activity android:name=".ui.patient.PatientListActivity"/>
         <activity android:name=".ui.patient.PatientDetailActivity"/>
         <activity android:name=".ui.patient.ReportListActivity"/>

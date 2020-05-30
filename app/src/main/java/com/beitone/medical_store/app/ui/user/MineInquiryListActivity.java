@@ -44,6 +44,8 @@ public class MineInquiryListActivity extends BaseActivity {
 
         String[] titles = {"全部","待接待","已接待","完成"};
 
+        String[] keys = {"" , "1" , "2" , "3"};
+
         public InquiryListPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
         }
@@ -51,7 +53,7 @@ public class MineInquiryListActivity extends BaseActivity {
         @NonNull
         @Override
         public Fragment getItem(int position) {
-            return new InquiryListFragment();
+            return new InquiryListFragment(keys[position]);
         }
 
         @Override

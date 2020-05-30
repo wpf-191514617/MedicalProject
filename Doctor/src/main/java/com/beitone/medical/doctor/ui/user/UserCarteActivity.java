@@ -1,6 +1,5 @@
-package com.beitone.medical.doctor.ui;
+package com.beitone.medical.doctor.ui.user;
 
-import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 

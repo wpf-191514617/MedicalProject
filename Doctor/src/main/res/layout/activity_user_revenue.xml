@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorRevenue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutRevenue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_235dp"
+        android:background="@android:color/transparent">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_revenue"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:id="@+id/rlRevenue"
+                    android:layout_width="match_parent"
+                    android:paddingTop="@dimen/dimen_6dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivRevenueBack"
+                        android:layout_width="@dimen/dimen_50dp"
+                        android:layout_height="@dimen/dimen_37dp"
+                        android:paddingLeft="@dimen/dimen_19dp"
+                        android:src="@drawable/back"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_20dp"
+                        android:paddingTop="@dimen/dimen_10dp"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的收入"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="@dimen/dimen_7dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_17" />
+
+
+
+                    <TextView
+                        android:id="@+id/tvMenuBankCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingBottom="@dimen/dimen_9dp"
+                        android:paddingTop="@dimen/dimen_10dp"
+                        android:paddingLeft="@dimen/dimen_10dp"
+                        android:paddingRight="@dimen/dimen_17dp"
+                        android:text="银行卡"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_56dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_orange_head"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:text="每个自然月仅可提现一次"
+                    android:textColor="#ffff803f"
+                    android:textSize="14sp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="68.60"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="29sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账户余额（元）"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="@dimen/dimen_6dp"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dimen_16dp"
+                    android:paddingLeft="@dimen/dimen_16dp"
+                    android:gravity="bottom"
+                    android:layout_marginTop="@dimen/dimen_16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="累计总收入：8,520.00元"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="@dimen/dimen_92dp"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:background="@drawable/bg_white_stroke_radius_30"
+                        android:text="申请提现"
+                        android:gravity="center"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"/>
+                    
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/bg_white_top_radius"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:orientation="vertical">
+
+            <com.beitone.medical.doctor.view.RevenueChartLineView
+                android:id="@+id/chartLineView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/line"/>
+
+
+            <com.beitone.medical.doctor.view.RevenuePieChartView
+                android:id="@+id/charPieView"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:layout_height="wrap_content"/>
+
+
+            <include layout="@layout/line"/>
+
+
+            <com.beitone.medical.doctor.view.RevenueListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
