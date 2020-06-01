@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_21dp"
+            android:paddingRight="@dimen/dimen_15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_90dp"
+                android:layout_marginBottom="@dimen/dimen_18dp"
+                android:background="@drawable/bg_gray_radiu3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_12dp"
+                android:paddingRight="@dimen/dimen_15dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_58dp"
+                    android:layout_height="@dimen/dimen_58dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_13dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="阿莫西林"
+                        android:textColor="#ff333333"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:text="规格：10G*10D"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_3dp"
+                        android:text="厂家：香港某某制药厂"
+                        android:textColor="#ff333333"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="库存充足"
+                    android:textColor="#ff333333"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请输入每次用量"
+                app:inputLable="当前药房"
+                app:inputSelect="true" />
+
+            <include layout="@layout/line" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请输入"
+                app:inputLable="每次用量" />
+
+            <include layout="@layout/line" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请选择"
+                app:inputLable="频率"
+                app:inputSelect="true" />
+
+
+            <include layout="@layout/line" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请选择"
+                app:inputLable="用法"
+                app:inputSelect="true" />
+
+
+            <include layout="@layout/line" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请选择"
+                app:inputLable="付数" />
+
+            <include layout="@layout/line" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请选择"
+                app:inputLable="嘱托" />
+
+            <include layout="@layout/line" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总价："
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="#FE7047"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 元"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总量："
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="#FE7047"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 盒"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:orientation="horizontal">
+
+                <com.beitone.medical.doctor.widget.AppButton
+                    android:id="@+id/btnReset"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_8dp"
+                    android:layout_weight="1"
+                    android:text="重置"
+                    app:btnStyle="strokeGray" />
+
+
+                <com.beitone.medical.doctor.widget.AppButton
+                    android:id="@+id/btnSaveAndMedicine"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_8dp"
+                    android:layout_weight="1"
+                    android:text="保存并新增药品"
+                    app:btnStyle="haveRadius" />
+
+            </LinearLayout>
+
+
+            <com.beitone.medical.doctor.widget.AppButton
+                android:id="@+id/btnSaveMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_13dp"
+                android:layout_marginBottom="@dimen/dimen_25dp"
+                android:text="保存"
+                app:btnStyle="haveRadius" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

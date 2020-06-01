@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingTop="@dimen/dimen_21dp"
+        android:paddingRight="@dimen/dimen_10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:text="选择开立的处方类型"
+            android:textColor="#ff858585"
+            android:textSize="14sp" />
+
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            app:hl_cornerRadius="@dimen/dimen_10dp"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="#2a000000"
+            app:hl_shadowLimit="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/layoutWesternMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_140dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_62dp"
+                    android:layout_height="@dimen/dimen_62dp"
+                    android:src="@drawable/ic_western_medicine"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开立西药"
+                    android:textColor="#ff333333"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+
+        </com.lihang.ShadowLayout>
+
+
+
+        <com.lihang.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            app:hl_cornerRadius="@dimen/dimen_10dp"
+            app:hl_dx="0dp"
+            app:hl_dy="0dp"
+            app:hl_shadowColor="#2a000000"
+            app:hl_shadowLimit="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/layoutChineseMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_140dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_62dp"
+                    android:layout_height="@dimen/dimen_62dp"
+                    android:src="@drawable/ic_chinese_medicine"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开立中药"
+                    android:textColor="#ff333333"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+
+        </com.lihang.ShadowLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

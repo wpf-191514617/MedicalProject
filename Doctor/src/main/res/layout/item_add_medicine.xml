@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayf5"
+    android:paddingBottom="@dimen/dimen_18dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvAddMedicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+新增药品"
+            android:textColor="#ff4086ff"
+            android:textSize="14sp"
+            android:padding="@dimen/dimen_10dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

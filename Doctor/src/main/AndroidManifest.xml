@@ -25,6 +25,11 @@
 
         <activity android:name=".ui.inquiry.MedicalRecordActivity"/>
 
+
+        <activity android:name=".ui.prescription.SelectPrescriptionTypeActivity"/>
+        <activity android:name=".ui.prescription.PrescriptionActivity"/>
+
+
         <activity android:name=".ui.patient.PatientListActivity"/>
         <activity android:name=".ui.patient.PatientDetailActivity"/>
         <activity android:name=".ui.patient.ReportListActivity"/>

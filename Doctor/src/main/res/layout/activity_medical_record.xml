@@ -8,87 +8,115 @@
     <include layout="@layout/toolbar" />
 
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/grayf5"
-        android:orientation="vertical">
-
-        <com.beitone.medical.doctor.widget.InputLayout
-            android:id="@+id/inputAppeal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:inputLable="主诉：" />
-
-        <com.beitone.medical.doctor.widget.InputLayout
-            android:id="@+id/inputDiagnosis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_7dp"
-            app:inputLable="诊断：" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.8dp"
-            android:layout_marginLeft="@dimen/dimen_15dp"
-            android:layout_marginRight="@dimen/dimen_15dp"
-            android:background="@color/grayDE" />
-
-        <com.beitone.medical.doctor.widget.InputLayout
-            android:id="@+id/inputSuggest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:inputHnit="选填"
-            app:inputLable="建议：" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.8dp"
-            android:layout_marginLeft="@dimen/dimen_15dp"
-            android:layout_marginRight="@dimen/dimen_15dp"
-            android:background="@color/grayDE" />
-
-        <com.beitone.medical.doctor.widget.InputLayout
-            android:id="@+id/inputAllergy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:inputHnit="请选择"
-            app:inputLable="过敏史"
-            app:inputSelect="true" />
-
+        android:layout_height="@dimen/dimen_0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/dimen_15dp"
-            android:paddingTop="@dimen/dimen_6dp"
-            android:paddingBottom="@dimen/dimen_5dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingRight="@dimen/dimen_5dp">
+            android:layout_height="match_parent"
+            android:background="@color/grayf5"
+            android:orientation="vertical">
 
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:id="@+id/inputAppeal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="处方开立"
-                android:textColor="#ff858585"
-                android:textSize="14sp" />
+                app:inputLable="主诉：" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:id="@+id/inputDiagnosis"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="新增处方单"
-                android:padding="@dimen/dimen_10dp"
-                android:textColor="#ff4086ff"
-                android:textSize="14sp"
-                />
+                android:layout_marginTop="@dimen/dimen_7dp"
+                app:inputLable="诊断：" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:background="@color/grayDE" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:id="@+id/inputSuggest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="选填"
+                app:inputLable="建议：" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:background="@color/grayDE" />
+
+            <com.beitone.medical.doctor.widget.InputLayout
+                android:id="@+id/inputAllergy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputHnit="请选择"
+                app:inputLable="过敏史"
+                app:inputSelect="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen_15dp"
+                android:paddingTop="@dimen/dimen_6dp"
+                android:paddingRight="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/dimen_5dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="处方开立"
+                    android:textColor="#ff858585"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvCreatePrescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="新增处方单"
+                    android:textColor="#ff4086ff"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <com.beitone.medical.doctor.view.WesternMedicineItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.beitone.medical.doctor.view.ChineseMedicineItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_15dp"/>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
+
+
+    <com.beitone.medical.doctor.widget.AppButton
+        android:id="@+id/btnSavePrescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:btnStyle="blue"
+        android:text="保存"/>
 
 </LinearLayout>

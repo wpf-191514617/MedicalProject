@@ -1,6 +1,7 @@
 package com.beitone.medical.doctor.ui.user;
 
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -10,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import com.beitone.medical.doctor.R;
+import com.beitone.medical.doctor.view.RevenueChartLineView;
+import com.beitone.medical.doctor.view.RevenuePieChartView;
 import com.google.android.material.appbar.AppBarLayout;
 
 import butterknife.BindView;
@@ -39,6 +42,7 @@ public class RevenueActivity extends BaseActivity {
     RevenueChartLineView chartLineView;
     @BindView(R.id.charPieView)
     RevenuePieChartView charPieView;
+
 
     @Override
     protected int getContentViewLayoutId() {
@@ -87,5 +91,4 @@ public class RevenueActivity extends BaseActivity {
                 break;
         }
     }
-
 }

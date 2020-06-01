@@ -6,6 +6,8 @@
         <attr name="btnStyle" format="enum">
             <enum name="def" value="0"/>
             <enum name="blue" value="1"/>
+            <enum name="haveRadius" value="2"/>
+            <enum name="strokeGray" value="3"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="InputLayout">
