@@ -29,7 +29,7 @@ public abstract class BasePopupWindow extends PopupWindow {
     /**
      * 透明背景
      */
-    private FrameLayout mFrameLayout;
+    protected FrameLayout mFrameLayout;
     /**
      * 上下文
      */
@@ -48,12 +48,12 @@ public abstract class BasePopupWindow extends PopupWindow {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
         mActivity = (Activity) context;
-        mRootView = initView();
         mFrameLayout = new FrameLayout(mContext);
         mFrameLayout.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         mFrameLayout.setBackgroundColor(Color.parseColor("#70000000"));
         mFrameLayout.setFocusable(true);
         mFrameLayout.setFocusableInTouchMode(true);
+        mRootView = initView();
 //        setCustomDensity(mActivity,((Activity) context).getApplication());
         mFrameLayout.addView(mRootView);
         setContentView(mFrameLayout);

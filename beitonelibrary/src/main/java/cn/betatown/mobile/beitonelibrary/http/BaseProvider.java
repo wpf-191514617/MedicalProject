@@ -32,7 +32,7 @@ public class BaseProvider {
     private static final String TAG = "btHttp";
 
     public static final int LIMIT = 20;
-    private static String BaseUrl = "http://47.113.94.178:7000/platform-auth";
+    private static String BaseUrl = "http2://47.113.94.178:7000/platform-auth";
   //  private static String BaseUrl = "http://test.hyj91.com/inqApi/hyj-inquiry";
 
 
@@ -145,7 +145,13 @@ public class BaseProvider {
                             String res = null;
                             if (responseResult != null) {
                                 res = responseResult.toString();
+                            } else {
+                                responseResult = response.datas;
+                                if (responseResult !=null){
+                                    res = responseResult.toString();
+                                }
                             }
+
                             Trace.d("onHttp", "result---" + res);
                             Object obj = onHttpCallBack.parseNetResponse(res);
                             onHttpCallBack.onResult(obj);

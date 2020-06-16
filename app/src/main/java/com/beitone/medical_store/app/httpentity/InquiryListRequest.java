@@ -28,7 +28,7 @@ public class InquiryListRequest extends BaseRequestEntity {
     public LinkedHashMap<String, String> getHead() {
         if (UserHelper.getInstance().isLogin(MedicalApplication.getContext())){
             LinkedHashMap<String, String> map = new LinkedHashMap<>();
-            map.put("Authorization", UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+            map.put("Authorization", UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));
             return map;
         }
         return null;

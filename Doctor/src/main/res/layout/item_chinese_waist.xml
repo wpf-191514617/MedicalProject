@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grayf5"
+    android:paddingLeft="@dimen/dimen_15dp"
+    android:paddingRight="@dimen/dimen_5dp"
+    android:paddingBottom="@dimen/dimen_5dp"
+    android:paddingTop="@dimen/dimen_7dp"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="药方列表"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tvWaistTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用处方模板"
+        android:textColor="#ff4086ff"
+        android:textSize="14sp"
+        android:padding="@dimen/dimen_10dp"/>
+
+
+</LinearLayout>

@@ -6,17 +6,20 @@ import com.bt.http.OkHttpUtils;
 import com.bt.http.builder.OkHttpRequestBuilder;
 import com.bt.http.builder.PostStringBuilder;
 
+import java.net.URLEncoder;
 import java.util.LinkedHashMap;
 import java.util.Set;
 
+import cn.betatown.mobile.beitonelibrary.BeiToneApplication;
 import cn.betatown.mobile.beitonelibrary.http.request.BaseRequestEntity;
+import cn.betatown.mobile.beitonelibrary.util.StringUtil;
 import okhttp3.MediaType;
 
 public class HttpRequest {
 
     private BaseRequestEntity requestEntity;
 
-    private String BaseUrl = "http://demo.hyj91.com/";
+    private String BaseUrl = "https://demo.hyj91.com/";
 
     public HttpRequest(BaseRequestEntity requestEntity) {
         this.requestEntity = requestEntity;
@@ -48,8 +51,15 @@ public class HttpRequest {
             }
             requestBuilder.getHeaders().putAll(requestEntity.getHead());
         }
-        requestBuilder.addHeader("Client-Auth",
+
+        if (!StringUtil.isEmpty(BeiToneApplication.getAccessToken())){
+            requestBuilder.addHeader("qdp-Auth",
+                    "bearer " + BeiToneApplication.getAccessToken());
+        } else {
+            requestBuilder.addHeader("Client-Auth",
                 "aW5xdWlyeV91aTozM2Y5NDY3OC00NjgwLTVlZDItYTkyZS1iOTk4MzFhOGJlMDM=");
+        }
+
         String url = requestEntity.getUrl();
         if (requestEntity.getQuery() != null) {
             StringBuilder builder = new StringBuilder(url);

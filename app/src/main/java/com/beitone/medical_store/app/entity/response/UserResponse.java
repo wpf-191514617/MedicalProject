@@ -6,34 +6,90 @@ public class UserResponse {
 
 
     /**
-     * userId : 5477728426887373
-     * userName : u868341
+     * password : 31b511b80f0badb5fb8da41344f58264
+     * username : u229900
+     * authorities : [{"authority":"user"}]
+     * accountNonExpired : true
+     * accountNonLocked : true
+     * credentialsNonExpired : true
+     * enabled : true
+     * userId : 1268104763585597442
      * tenantId : 000001
-     * memberId : 5477728426887373
-     * memberName : u868341
-     * roleIds : ["3"]
-     * deptIds : null
-     * token : eyJhbGciOiJIUzUxMiJ9
-     * .eyJpc3MiOiJaS1lTIiwic3ViIjoiNTQ3NzcyODQyNjg4NzM3MyIsImlhdCI6MTU4NTcyNzY1OCwiZXhwIjoxNTg2MzMyNDU4fQ.x7-E0osaMoFV9DCu19oplhtW478Nep80zAxbYdWCCO7UjVC1t6LN5696__owQKu5HcMxGQZfJGNag1kwc6yHyg
-     * desc : null
-     * userInfo : {"tenantId":"000001","userId":"5477728426887373","userName":"u868341",
-     * "nickName":"u868341","avatar":null,"email":null,"phone":"15529000512","birthday":null,
-     * "roleId":"3","deptId":null,"roleName":null,"deptName":null,"createUser":null,
-     * "createTime":"2020-04-01 15:54:18","updateUser":null,"updateTime":"2020-04-01 15:54:18",
-     * "status":null,"isDeleted":false,"idCard":null,"sex":null,"payOpenId":null,"province":null,
-     * "city":null,"country":null,"unionid":null}
+     * name : u229900
+     * realName : null
+     * account : u229900
+     * deptId : 1257959736742031362
+     * roleId : 1260832565723848705
+     * roleName : user
+     * avatar :
+     * first : false
      */
 
+    private String password;
+    private String username;
+    private boolean accountNonExpired;
+    private boolean accountNonLocked;
+    private boolean credentialsNonExpired;
+    private boolean enabled;
     private String userId;
-    private String userName;
     private String tenantId;
-    private String memberId;
-    private String memberName;
-    private String deptIds;
-    private String token;
-    private String desc;
-    private UserInfoBean userInfo;
-    private List<String> roleIds;
+    private String name;
+    private Object realName;
+    private String account;
+    private String deptId;
+    private String roleId;
+    private String roleName;
+    private String avatar;
+    private boolean first;
+    private List<AuthoritiesBean> authorities;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public boolean isAccountNonExpired() {
+        return accountNonExpired;
+    }
+
+    public void setAccountNonExpired(boolean accountNonExpired) {
+        this.accountNonExpired = accountNonExpired;
+    }
+
+    public boolean isAccountNonLocked() {
+        return accountNonLocked;
+    }
+
+    public void setAccountNonLocked(boolean accountNonLocked) {
+        this.accountNonLocked = accountNonLocked;
+    }
+
+    public boolean isCredentialsNonExpired() {
+        return credentialsNonExpired;
+    }
+
+    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
+        this.credentialsNonExpired = credentialsNonExpired;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
 
     public String getUserId() {
         return userId;
@@ -41,14 +97,6 @@ public class UserResponse {
 
     public void setUserId(String userId) {
         this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getTenantId() {
@@ -59,315 +107,91 @@ public class UserResponse {
         this.tenantId = tenantId;
     }
 
-    public String getMemberId() {
-        return memberId;
+    public String getName() {
+        return name;
     }
 
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getMemberName() {
-        return memberName;
+    public Object getRealName() {
+        return realName;
     }
 
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
+    public void setRealName(Object realName) {
+        this.realName = realName;
     }
 
-    public String getDeptIds() {
-        return deptIds;
+    public String getAccount() {
+        return account;
     }
 
-    public void setDeptIds(String deptIds) {
-        this.deptIds = deptIds;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
-    public String getToken() {
-        return token;
+    public String getDeptId() {
+        return deptId;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setDeptId(String deptId) {
+        this.deptId = deptId;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getRoleId() {
+        return roleId;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setRoleId(String roleId) {
+        this.roleId = roleId;
     }
 
-    public UserInfoBean getUserInfo() {
-        return userInfo;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setUserInfo(UserInfoBean userInfo) {
-        this.userInfo = userInfo;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
-    public List<String> getRoleIds() {
-        return roleIds;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setRoleIds(List<String> roleIds) {
-        this.roleIds = roleIds;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
-    public static class UserInfoBean {
+    public boolean isFirst() {
+        return first;
+    }
+
+    public void setFirst(boolean first) {
+        this.first = first;
+    }
+
+    public List<AuthoritiesBean> getAuthorities() {
+        return authorities;
+    }
+
+    public void setAuthorities(List<AuthoritiesBean> authorities) {
+        this.authorities = authorities;
+    }
+
+    public static class AuthoritiesBean {
         /**
-         * tenantId : 000001
-         * userId : 5477728426887373
-         * userName : u868341
-         * nickName : u868341
-         * avatar : null
-         * email : null
-         * phone : 15529000512
-         * birthday : null
-         * roleId : 3
-         * deptId : null
-         * roleName : null
-         * deptName : null
-         * createUser : null
-         * createTime : 2020-04-01 15:54:18
-         * updateUser : null
-         * updateTime : 2020-04-01 15:54:18
-         * status : null
-         * isDeleted : false
-         * idCard : null
-         * sex : null
-         * payOpenId : null
-         * province : null
-         * city : null
-         * country : null
-         * unionid : null
+         * authority : user
          */
 
-        private String tenantId;
-        private String userId;
-        private String userName;
-        private String nickName;
-        private Object avatar;
-        private Object email;
-        private String phone;
-        private Object birthday;
-        private String roleId;
-        private Object deptId;
-        private Object roleName;
-        private Object deptName;
-        private Object createUser;
-        private String createTime;
-        private Object updateUser;
-        private String updateTime;
-        private Object status;
-        private boolean isDeleted;
-        private Object idCard;
-        private Object sex;
-        private Object payOpenId;
-        private Object province;
-        private Object city;
-        private Object country;
-        private Object unionid;
+        private String authority;
 
-        public String getTenantId() {
-            return tenantId;
+        public String getAuthority() {
+            return authority;
         }
 
-        public void setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-        }
-
-        public String getUserId() {
-            return userId;
-        }
-
-        public void setUserId(String userId) {
-            this.userId = userId;
-        }
-
-        public String getUserName() {
-            return userName;
-        }
-
-        public void setUserName(String userName) {
-            this.userName = userName;
-        }
-
-        public String getNickName() {
-            return nickName;
-        }
-
-        public void setNickName(String nickName) {
-            this.nickName = nickName;
-        }
-
-        public Object getAvatar() {
-            return avatar;
-        }
-
-        public void setAvatar(Object avatar) {
-            this.avatar = avatar;
-        }
-
-        public Object getEmail() {
-            return email;
-        }
-
-        public void setEmail(Object email) {
-            this.email = email;
-        }
-
-        public String getPhone() {
-            return phone;
-        }
-
-        public void setPhone(String phone) {
-            this.phone = phone;
-        }
-
-        public Object getBirthday() {
-            return birthday;
-        }
-
-        public void setBirthday(Object birthday) {
-            this.birthday = birthday;
-        }
-
-        public String getRoleId() {
-            return roleId;
-        }
-
-        public void setRoleId(String roleId) {
-            this.roleId = roleId;
-        }
-
-        public Object getDeptId() {
-            return deptId;
-        }
-
-        public void setDeptId(Object deptId) {
-            this.deptId = deptId;
-        }
-
-        public Object getRoleName() {
-            return roleName;
-        }
-
-        public void setRoleName(Object roleName) {
-            this.roleName = roleName;
-        }
-
-        public Object getDeptName() {
-            return deptName;
-        }
-
-        public void setDeptName(Object deptName) {
-            this.deptName = deptName;
-        }
-
-        public Object getCreateUser() {
-            return createUser;
-        }
-
-        public void setCreateUser(Object createUser) {
-            this.createUser = createUser;
-        }
-
-        public String getCreateTime() {
-            return createTime;
-        }
-
-        public void setCreateTime(String createTime) {
-            this.createTime = createTime;
-        }
-
-        public Object getUpdateUser() {
-            return updateUser;
-        }
-
-        public void setUpdateUser(Object updateUser) {
-            this.updateUser = updateUser;
-        }
-
-        public String getUpdateTime() {
-            return updateTime;
-        }
-
-        public void setUpdateTime(String updateTime) {
-            this.updateTime = updateTime;
-        }
-
-        public Object getStatus() {
-            return status;
-        }
-
-        public void setStatus(Object status) {
-            this.status = status;
-        }
-
-        public boolean isIsDeleted() {
-            return isDeleted;
-        }
-
-        public void setIsDeleted(boolean isDeleted) {
-            this.isDeleted = isDeleted;
-        }
-
-        public Object getIdCard() {
-            return idCard;
-        }
-
-        public void setIdCard(Object idCard) {
-            this.idCard = idCard;
-        }
-
-        public Object getSex() {
-            return sex;
-        }
-
-        public void setSex(Object sex) {
-            this.sex = sex;
-        }
-
-        public Object getPayOpenId() {
-            return payOpenId;
-        }
-
-        public void setPayOpenId(Object payOpenId) {
-            this.payOpenId = payOpenId;
-        }
-
-        public Object getProvince() {
-            return province;
-        }
-
-        public void setProvince(Object province) {
-            this.province = province;
-        }
-
-        public Object getCity() {
-            return city;
-        }
-
-        public void setCity(Object city) {
-            this.city = city;
-        }
-
-        public Object getCountry() {
-            return country;
-        }
-
-        public void setCountry(Object country) {
-            this.country = country;
-        }
-
-        public Object getUnionid() {
-            return unionid;
-        }
-
-        public void setUnionid(Object unionid) {
-            this.unionid = unionid;
+        public void setAuthority(String authority) {
+            this.authority = authority;
         }
     }
 }

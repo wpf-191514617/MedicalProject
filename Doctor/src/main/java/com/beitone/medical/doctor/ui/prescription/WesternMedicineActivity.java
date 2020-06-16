@@ -1,11 +1,13 @@
 package com.beitone.medical.doctor.ui.prescription;
 
+import com.beitone.medical.doctor.R;
+
 import cn.betatown.mobile.beitonelibrary.base.BaseActivity;
 
 public class WesternMedicineActivity extends BaseActivity {
     @Override
     protected int getContentViewLayoutId() {
-        return 0;
+        return R.layout.activity_western_medicine;
     }
 
     @Override

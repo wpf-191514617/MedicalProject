@@ -6,34 +6,59 @@ public class FindDocResponse {
 
 
     /**
-     * records : [{"doctorId":"2010","doctorName":"陈笑英","phone":null,"deptId":"668530",
-     * "deptName":"内科","hospitalId":"000003","hospitalName":"东莞市滨海湾中心医院","hyjDeptId":"66859",
-     * "level":"副主任医生","specialty":"新型冠状病毒，肺炎免费咨询。内科常见病、多发及疑难病症的诊疗，擅侯对呼吸系统、消化系统，泌尿系统等疾病的诊治。",
-     * "evaluate":0,"collection":0,"reply":0,"tag":"","practitioners":"20年","resume":"",
-     * "createTime":null,"updateTime":null,"createUser":null,"updateUser":null,"doctorPic":"",
-     * "certificatePic":null,"licensePic":null,"idCard":null,"nation":null,"isDeleted":null,
-     * "status":null,"sex":2,"birthDate":null,"certificate":null,"certificateNo":null,
-     * "certificateDate":null,"practisingCertificateNo":null,"openingDate":null,
-     * "employmentDate":null,"registrationDate":null,"haveCertificateUrl":null,
-     * "havePractisingCertificateUrl":null,"doctorStatus":1,"auditStatus":0,"commonId":null,
-     * "textPrice":0.01,"videoPrice":0,"voicePrice":0.01,"textResLeft":0,"videoResLeft":0,
-     * "voiceResLeft":0,"storeId":0,"similarity":0,"grade":"三甲医院"},{"doctorId":"2011",
-     * "doctorName":"卢贵财","phone":null,"deptId":"668710","deptName":"内科","hospitalId":"000003",
-     * "hospitalName":"东莞市滨海湾中心医院","hyjDeptId":"66859","level":"副主任医生",
-     * "specialty":"新型冠状病毒，肺炎免费咨询。呼吸系统，消化系统，泌尿系统常见病的诊治。","evaluate":0,"collection":0,"reply":0,
-     * "tag":"","practitioners":"20年","resume":"","createTime":null,"updateTime":null,
-     * "createUser":null,"updateUser":null,"doctorPic":"","certificatePic":null,
-     * "licensePic":null,"idCard":null,"nation":null,"isDeleted":null,"status":null,"sex":1,
-     * "birthDate":null,"certificate":null,"certificateNo":null,"certificateDate":null,
-     * "practisingCertificateNo":null,"openingDate":null,"employmentDate":null,
-     * "registrationDate":null,"haveCertificateUrl":null,"havePractisingCertificateUrl":null,
-     * "doctorStatus":1,"auditStatus":0,"commonId":null,"textPrice":0.01,"videoPrice":0,
-     * "voicePrice":0.01,"textResLeft":0,"videoResLeft":0,"voiceResLeft":0,"storeId":0,
-     * "similarity":0,"grade":"三甲医院"}]
-     * total : 2
+     * records : [{"doctorId":"1269837091915698177","doctorName":"王苟长","phone":null,"level":"",
+     * "specialty":"","evaluate":null,"collection":null,"reply":null,"tag":null,
+     * "practitioners":"","resume":"","createTime":null,"updateTime":null,"createUser":null,
+     * "updateUser":null,"doctorPic":"","certificatePic":null,"licensePic":null,"idCard":null,
+     * "nation":null,"isDeleted":0,"sex":1,"birthDate":null,"certificate":null,
+     * "certificateNo":null,"certificateDate":null,"practisingCertificateNo":null,
+     * "openingDate":null,"employmentDate":null,"registrationDate":null,
+     * "haveCertificateUrl":null,"havePractisingCertificateUrl":null,"doctorStatus":null,
+     * "education":null,"deptId":"1267653486841958401","deptName":"内科","hospitalId":"000003",
+     * "hospitalName":"怡心园医院","hyjDeptId":null,"business":"[1,3]","storeId":0,"commonId":null,
+     * "textPrice":0.01,"videoPrice":0.01,"voicePrice":0.01,"textInqNumber":0,"voiceInqNumber":0,
+     * "videoInqNumber":0,"similarity":0,"grade":"二甲医院","auditStatus":null,"deptIdJson":null},{
+     * "doctorId":"1269836945932947458","doctorName":"周大成","phone":null,"level":"",
+     * "specialty":"擅长精神类相关的","evaluate":null,"collection":null,"reply":null,"tag":null,
+     * "practitioners":"","resume":"","createTime":null,"updateTime":null,"createUser":null,
+     * "updateUser":null,"doctorPic":"","certificatePic":null,"licensePic":null,"idCard":null,
+     * "nation":null,"isDeleted":0,"sex":1,"birthDate":null,"certificate":null,
+     * "certificateNo":null,"certificateDate":null,"practisingCertificateNo":null,
+     * "openingDate":null,"employmentDate":null,"registrationDate":null,
+     * "haveCertificateUrl":null,"havePractisingCertificateUrl":null,"doctorStatus":null,
+     * "education":null,"deptId":"1263424810726318082","deptName":"精神科","hospitalId":"000003",
+     * "hospitalName":"怡心园医院","hyjDeptId":null,"business":"[1,3]","storeId":0,"commonId":null,
+     * "textPrice":0.01,"videoPrice":0.01,"voicePrice":0.01,"textInqNumber":0,"voiceInqNumber":0,
+     * "videoInqNumber":0,"similarity":0,"grade":"二甲医院","auditStatus":null,"deptIdJson":null},{
+     * "doctorId":"1269836845970100225","doctorName":"陈广发","phone":null,"level":"",
+     * "specialty":"专门进行心理咨询和辅导","evaluate":null,"collection":null,"reply":null,"tag":null,
+     * "practitioners":"","resume":"","createTime":null,"updateTime":null,"createUser":null,
+     * "updateUser":null,"doctorPic":"","certificatePic":null,"licensePic":null,"idCard":null,
+     * "nation":null,"isDeleted":0,"sex":1,"birthDate":null,"certificate":null,
+     * "certificateNo":null,"certificateDate":null,"practisingCertificateNo":null,
+     * "openingDate":null,"employmentDate":null,"registrationDate":null,
+     * "haveCertificateUrl":null,"havePractisingCertificateUrl":null,"doctorStatus":null,
+     * "education":null,"deptId":"1263424619340226562","deptName":"心理科","hospitalId":"000003",
+     * "hospitalName":"怡心园医院","hyjDeptId":null,"business":"[1,2,3]","storeId":0,"commonId":null,
+     * "textPrice":30,"videoPrice":30,"voicePrice":30,"textInqNumber":0,"voiceInqNumber":0,
+     * "videoInqNumber":0,"similarity":0,"grade":"二甲医院","auditStatus":null,"deptIdJson":null},{
+     * "doctorId":"1269837091915698177","doctorName":"王苟长","phone":null,"level":"",
+     * "specialty":"","evaluate":null,"collection":null,"reply":null,"tag":null,
+     * "practitioners":"","resume":"","createTime":null,"updateTime":null,"createUser":null,
+     * "updateUser":null,"doctorPic":"","certificatePic":null,"licensePic":null,"idCard":null,
+     * "nation":null,"isDeleted":0,"sex":1,"birthDate":null,"certificate":null,
+     * "certificateNo":null,"certificateDate":null,"practisingCertificateNo":null,
+     * "openingDate":null,"employmentDate":null,"registrationDate":null,
+     * "haveCertificateUrl":null,"havePractisingCertificateUrl":null,"doctorStatus":null,
+     * "education":null,"deptId":"1263424619340226562","deptName":"心理科","hospitalId":"000003",
+     * "hospitalName":"怡心园医院","hyjDeptId":null,"business":"[1,2,3]","storeId":0,"commonId":null,
+     * "textPrice":30,"videoPrice":30,"voicePrice":30,"textInqNumber":0,"voiceInqNumber":0,
+     * "videoInqNumber":0,"similarity":0,"grade":"二甲医院","auditStatus":null,"deptIdJson":null}]
+     * total : 4
      * size : 10
      * current : 1
      * orders : []
+     * hitCount : false
      * searchCount : true
      * pages : 1
      */
@@ -41,6 +66,7 @@ public class FindDocResponse {
     private int total;
     private int size;
     private int current;
+    private boolean hitCount;
     private boolean searchCount;
     private int pages;
     private List<RecordsBean> records;
@@ -68,6 +94,14 @@ public class FindDocResponse {
 
     public void setCurrent(int current) {
         this.current = current;
+    }
+
+    public boolean isHitCount() {
+        return hitCount;
+    }
+
+    public void setHitCount(boolean hitCount) {
+        this.hitCount = hitCount;
     }
 
     public boolean isSearchCount() {
@@ -104,21 +138,16 @@ public class FindDocResponse {
 
     public static class RecordsBean {
         /**
-         * doctorId : 2010
-         * doctorName : 陈笑英
+         * doctorId : 1269837091915698177
+         * doctorName : 王苟长
          * phone : null
-         * deptId : 668530
-         * deptName : 内科
-         * hospitalId : 000003
-         * hospitalName : 东莞市滨海湾中心医院
-         * hyjDeptId : 66859
-         * level : 副主任医生
-         * specialty : 新型冠状病毒，肺炎免费咨询。内科常见病、多发及疑难病症的诊疗，擅侯对呼吸系统、消化系统，泌尿系统等疾病的诊治。
-         * evaluate : 0
-         * collection : 0
-         * reply : 0
-         * tag :
-         * practitioners : 20年
+         * level :
+         * specialty :
+         * evaluate : null
+         * collection : null
+         * reply : null
+         * tag : null
+         * practitioners :
          * resume :
          * createTime : null
          * updateTime : null
@@ -129,9 +158,8 @@ public class FindDocResponse {
          * licensePic : null
          * idCard : null
          * nation : null
-         * isDeleted : null
-         * status : null
-         * sex : 2
+         * isDeleted : 0
+         * sex : 1
          * birthDate : null
          * certificate : null
          * certificateNo : null
@@ -142,34 +170,37 @@ public class FindDocResponse {
          * registrationDate : null
          * haveCertificateUrl : null
          * havePractisingCertificateUrl : null
-         * doctorStatus : 1
-         * auditStatus : 0
+         * doctorStatus : null
+         * education : null
+         * deptId : 1267653486841958401
+         * deptName : 内科
+         * hospitalId : 000003
+         * hospitalName : 怡心园医院
+         * hyjDeptId : null
+         * business : [1,3]
+         * storeId : 0
          * commonId : null
          * textPrice : 0.01
-         * videoPrice : 0
+         * videoPrice : 0.01
          * voicePrice : 0.01
-         * textResLeft : 0
-         * videoResLeft : 0
-         * voiceResLeft : 0
-         * storeId : 0
+         * textInqNumber : 0
+         * voiceInqNumber : 0
+         * videoInqNumber : 0
          * similarity : 0
-         * grade : 三甲医院
+         * grade : 二甲医院
+         * auditStatus : null
+         * deptIdJson : null
          */
 
         private String doctorId;
         private String doctorName;
         private Object phone;
-        private String deptId;
-        private String deptName;
-        private String hospitalId;
-        private String hospitalName;
-        private String hyjDeptId;
         private String level;
         private String specialty;
-        private int evaluate;
-        private int collection;
-        private int reply;
-        private String tag;
+        private Object evaluate;
+        private Object collection;
+        private Object reply;
+        private Object tag;
         private String practitioners;
         private String resume;
         private Object createTime;
@@ -181,8 +212,7 @@ public class FindDocResponse {
         private Object licensePic;
         private Object idCard;
         private Object nation;
-        private Object isDeleted;
-        private Object status;
+        private int isDeleted;
         private int sex;
         private Object birthDate;
         private Object certificate;
@@ -194,18 +224,26 @@ public class FindDocResponse {
         private Object registrationDate;
         private Object haveCertificateUrl;
         private Object havePractisingCertificateUrl;
-        private int doctorStatus;
-        private int auditStatus;
+        private Object doctorStatus;
+        private Object education;
+        private String deptId;
+        private String deptName;
+        private String hospitalId;
+        private String hospitalName;
+        private Object hyjDeptId;
+        private String business;
+        private int storeId;
         private Object commonId;
         private double textPrice;
-        private int videoPrice;
+        private double videoPrice;
         private double voicePrice;
-        private int textResLeft;
-        private int videoResLeft;
-        private int voiceResLeft;
-        private int storeId;
+        private int textInqNumber;
+        private int voiceInqNumber;
+        private int videoInqNumber;
         private int similarity;
         private String grade;
+        private Object auditStatus;
+        private Object deptIdJson;
 
         public String getDoctorId() {
             return doctorId;
@@ -231,46 +269,6 @@ public class FindDocResponse {
             this.phone = phone;
         }
 
-        public String getDeptId() {
-            return deptId;
-        }
-
-        public void setDeptId(String deptId) {
-            this.deptId = deptId;
-        }
-
-        public String getDeptName() {
-            return deptName;
-        }
-
-        public void setDeptName(String deptName) {
-            this.deptName = deptName;
-        }
-
-        public String getHospitalId() {
-            return hospitalId;
-        }
-
-        public void setHospitalId(String hospitalId) {
-            this.hospitalId = hospitalId;
-        }
-
-        public String getHospitalName() {
-            return hospitalName;
-        }
-
-        public void setHospitalName(String hospitalName) {
-            this.hospitalName = hospitalName;
-        }
-
-        public String getHyjDeptId() {
-            return hyjDeptId;
-        }
-
-        public void setHyjDeptId(String hyjDeptId) {
-            this.hyjDeptId = hyjDeptId;
-        }
-
         public String getLevel() {
             return level;
         }
@@ -287,35 +285,35 @@ public class FindDocResponse {
             this.specialty = specialty;
         }
 
-        public int getEvaluate() {
+        public Object getEvaluate() {
             return evaluate;
         }
 
-        public void setEvaluate(int evaluate) {
+        public void setEvaluate(Object evaluate) {
             this.evaluate = evaluate;
         }
 
-        public int getCollection() {
+        public Object getCollection() {
             return collection;
         }
 
-        public void setCollection(int collection) {
+        public void setCollection(Object collection) {
             this.collection = collection;
         }
 
-        public int getReply() {
+        public Object getReply() {
             return reply;
         }
 
-        public void setReply(int reply) {
+        public void setReply(Object reply) {
             this.reply = reply;
         }
 
-        public String getTag() {
+        public Object getTag() {
             return tag;
         }
 
-        public void setTag(String tag) {
+        public void setTag(Object tag) {
             this.tag = tag;
         }
 
@@ -407,20 +405,12 @@ public class FindDocResponse {
             this.nation = nation;
         }
 
-        public Object getIsDeleted() {
+        public int getIsDeleted() {
             return isDeleted;
         }
 
-        public void setIsDeleted(Object isDeleted) {
+        public void setIsDeleted(int isDeleted) {
             this.isDeleted = isDeleted;
-        }
-
-        public Object getStatus() {
-            return status;
-        }
-
-        public void setStatus(Object status) {
-            this.status = status;
         }
 
         public int getSex() {
@@ -511,20 +501,76 @@ public class FindDocResponse {
             this.havePractisingCertificateUrl = havePractisingCertificateUrl;
         }
 
-        public int getDoctorStatus() {
+        public Object getDoctorStatus() {
             return doctorStatus;
         }
 
-        public void setDoctorStatus(int doctorStatus) {
+        public void setDoctorStatus(Object doctorStatus) {
             this.doctorStatus = doctorStatus;
         }
 
-        public int getAuditStatus() {
-            return auditStatus;
+        public Object getEducation() {
+            return education;
         }
 
-        public void setAuditStatus(int auditStatus) {
-            this.auditStatus = auditStatus;
+        public void setEducation(Object education) {
+            this.education = education;
+        }
+
+        public String getDeptId() {
+            return deptId;
+        }
+
+        public void setDeptId(String deptId) {
+            this.deptId = deptId;
+        }
+
+        public String getDeptName() {
+            return deptName;
+        }
+
+        public void setDeptName(String deptName) {
+            this.deptName = deptName;
+        }
+
+        public String getHospitalId() {
+            return hospitalId;
+        }
+
+        public void setHospitalId(String hospitalId) {
+            this.hospitalId = hospitalId;
+        }
+
+        public String getHospitalName() {
+            return hospitalName;
+        }
+
+        public void setHospitalName(String hospitalName) {
+            this.hospitalName = hospitalName;
+        }
+
+        public Object getHyjDeptId() {
+            return hyjDeptId;
+        }
+
+        public void setHyjDeptId(Object hyjDeptId) {
+            this.hyjDeptId = hyjDeptId;
+        }
+
+        public String getBusiness() {
+            return business;
+        }
+
+        public void setBusiness(String business) {
+            this.business = business;
+        }
+
+        public int getStoreId() {
+            return storeId;
+        }
+
+        public void setStoreId(int storeId) {
+            this.storeId = storeId;
         }
 
         public Object getCommonId() {
@@ -543,11 +589,11 @@ public class FindDocResponse {
             this.textPrice = textPrice;
         }
 
-        public int getVideoPrice() {
+        public double getVideoPrice() {
             return videoPrice;
         }
 
-        public void setVideoPrice(int videoPrice) {
+        public void setVideoPrice(double videoPrice) {
             this.videoPrice = videoPrice;
         }
 
@@ -559,36 +605,28 @@ public class FindDocResponse {
             this.voicePrice = voicePrice;
         }
 
-        public int getTextResLeft() {
-            return textResLeft;
+        public int getTextInqNumber() {
+            return textInqNumber;
         }
 
-        public void setTextResLeft(int textResLeft) {
-            this.textResLeft = textResLeft;
+        public void setTextInqNumber(int textInqNumber) {
+            this.textInqNumber = textInqNumber;
         }
 
-        public int getVideoResLeft() {
-            return videoResLeft;
+        public int getVoiceInqNumber() {
+            return voiceInqNumber;
         }
 
-        public void setVideoResLeft(int videoResLeft) {
-            this.videoResLeft = videoResLeft;
+        public void setVoiceInqNumber(int voiceInqNumber) {
+            this.voiceInqNumber = voiceInqNumber;
         }
 
-        public int getVoiceResLeft() {
-            return voiceResLeft;
+        public int getVideoInqNumber() {
+            return videoInqNumber;
         }
 
-        public void setVoiceResLeft(int voiceResLeft) {
-            this.voiceResLeft = voiceResLeft;
-        }
-
-        public int getStoreId() {
-            return storeId;
-        }
-
-        public void setStoreId(int storeId) {
-            this.storeId = storeId;
+        public void setVideoInqNumber(int videoInqNumber) {
+            this.videoInqNumber = videoInqNumber;
         }
 
         public int getSimilarity() {
@@ -605,6 +643,22 @@ public class FindDocResponse {
 
         public void setGrade(String grade) {
             this.grade = grade;
+        }
+
+        public Object getAuditStatus() {
+            return auditStatus;
+        }
+
+        public void setAuditStatus(Object auditStatus) {
+            this.auditStatus = auditStatus;
+        }
+
+        public Object getDeptIdJson() {
+            return deptIdJson;
+        }
+
+        public void setDeptIdJson(Object deptIdJson) {
+            this.deptIdJson = deptIdJson;
         }
     }
 }

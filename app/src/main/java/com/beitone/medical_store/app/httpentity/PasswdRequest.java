@@ -12,10 +12,12 @@ public class PasswdRequest extends BaseRequestEntity {
 
     public String newPasswd;
     public String userId;
+    public String code;
+    public String phone;
 
     @Override
     public String getUrl() {
-        return "inqApi/platform-auth/user/update/passwd";
+        return "inqApi/qdp-user/update/passwdByPhone";
     }
 
     @Override
@@ -33,6 +35,8 @@ public class PasswdRequest extends BaseRequestEntity {
         Map<String, Object> params = new LinkedHashMap<>();
         params.put("newPasswd" , newPasswd);
         params.put("userId" , userId);
-        return null;
+        params.put("code" , code);
+        params.put("phone" , phone);
+        return params;
     }
 }

@@ -1,6 +1,8 @@
 package com.beitone.medical_store.app.ui.account.fragment;
 
-import android.content.DialogInterface;
+import android.annotation.SuppressLint;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -9,24 +11,26 @@ import android.text.TextPaint;
 import android.text.TextWatcher;
 import android.text.style.ClickableSpan;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.beitone.medical_store.app.MedicalApplication;
 import com.beitone.medical_store.app.R;
 import com.beitone.medical_store.app.constant.EventCode;
 import com.beitone.medical_store.app.entity.response.AuthLoginResponse;
-import com.beitone.medical_store.app.entity.response.UserResponse;
 import com.beitone.medical_store.app.helper.UserHelper;
 import com.beitone.medical_store.app.httpentity.GetPhoneCodeRequest;
 import com.beitone.medical_store.app.httpentity.GetTokenByPhoneCodeRequest;
-import com.beitone.medical_store.app.provider.AccountProvider;
 import com.beitone.medical_store.app.view.AppDialog;
 import com.beitone.medical_store.app.widget.AppButton;
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
 
 import org.greenrobot.eventbus.EventBus;
 
+import androidx.annotation.NonNull;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.betatown.mobile.beitonelibrary.base.BaseFragment;
@@ -34,8 +38,9 @@ import cn.betatown.mobile.beitonelibrary.bean.EventData;
 import cn.betatown.mobile.beitonelibrary.http.BaseProvider;
 import cn.betatown.mobile.beitonelibrary.http.HttpRequest;
 import cn.betatown.mobile.beitonelibrary.http.callback.OnJsonCallBack;
+import cn.betatown.mobile.beitonelibrary.http.callback.OnStringCallback;
+import cn.betatown.mobile.beitonelibrary.util.GsonUtil;
 import cn.betatown.mobile.beitonelibrary.util.StringUtil;
-import cn.betatown.mobile.beitonelibrary.util.Trace;
 import cn.betatown.mobile.beitonelibrary.widget.CountDownButton;
 
 public class LoginAuthFragment extends BaseFragment {
@@ -187,7 +192,7 @@ public class LoginAuthFragment extends BaseFragment {
                     return;
                 }
 
-                if (!cbProtocol.isSelected()){
+                if (!cbProtocol.isSelected()) {
                     new AppDialog.Builder(getActivity()).setTitle("请阅读并同意以下协议")
                             .setMessage(getDialogSpannable())
                             .setNative("不同意", null)
@@ -223,35 +228,116 @@ public class LoginAuthFragment extends BaseFragment {
         GetTokenByPhoneCodeRequest request = new GetTokenByPhoneCodeRequest();
         request.phone = mobile;
         request.authCode = authCode;
-        BaseProvider.request(new HttpRequest(request).build(getActivity()),new OnJsonCallBack<AuthLoginResponse>() {
-            @Override
-            public void onResult(AuthLoginResponse data) {
-                if (data != null){
-                    UserHelper.getInstance().putUserId(getActivity() , data.getUserId());
-                    UserHelper.getInstance().putUserInfo(data.getUserInfo());
-                    UserHelper.getInstance().putUserToken(getActivity() , data.getToken());
-                    EventData eventData = new EventData(EventCode.EVENT_LOGIN_SUCCESS);
-                    EventBus.getDefault().post(eventData);
-                    if (data.isFirst()){
-                        mCallback.registerAccount(mobile,authCode);
-                    } else {
-                        mCallback.loginSuccess();
+        BaseProvider.request(new HttpRequest(request).build(getActivity()),
+                new OnStringCallback() {
+                    @Override
+                    public void onResult(Object obj) {
+                        if (obj != null) {
+                            AuthLoginResponse data = GsonUtil.GsonToBean(obj.toString(),
+                                    AuthLoginResponse.class);
+                            if (data != null) {
+                                if (data.getUserInfo() != null) {
+                                    UserHelper.getInstance().putUserId(getActivity(),
+                                            data.getUserInfo().getUserId());
+                                    UserHelper.getInstance().putUserInfo(data.getUserInfo());
+                                }
+                                UserHelper.getInstance().putAccessToken(getActivity(),
+                                        data.getAccess_token());
+                                UserHelper.getInstance().putToken(getActivity(), data.getToken());
+
+                                MedicalApplication.putAccessToken(data.getAccess_token());
+                                MedicalApplication.putToken(data.getToken());
+
+                                EventData eventData = new EventData(EventCode.EVENT_LOGIN_SUCCESS);
+                                EventBus.getDefault().post(eventData);
+                                if (data.isIsFirst()) {
+                                    registerIMAccount(mobile, authCode);
+                                } else {
+                                    loginIMAccount(mobile);
+                                   // mCallback.loginSuccess();
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailed(String msg) {
+                        super.onFailed(msg);
+                        if (msg.contains("用户不存在")) {
+                            showRegisterAccount(mobile, authCode);
+                            return;
+                        }
+                        showToast(msg);
+                    }
+
+                    @Override
+                    public void onError(String msg) {
+                        super.onError(msg);
+                        showToast(msg);
                     }
                 }
+        );
+
+    }
+
+    private void loginIMAccount(String mobile) {
+        EMClient.getInstance().login(mobile, mobile, new EMCallBack() {
+            @Override
+            public void onSuccess() {
+                // 加载群组
+                EMClient.getInstance().groupManager().loadAllGroups();
+                // 加载会话
+                EMClient.getInstance().chatManager().loadAllConversations();
+
+
+
             }
 
             @Override
-            public void onFailed(String msg) {
-                super.onFailed(msg);
-                if (msg.contains("用户不存在")){
-                    showRegisterAccount(mobile, authCode);
-                    return;
-                }
-                showToast(msg);
+            public void onError(int i, String s) {
+                showToast("登录失败");
+            }
+
+            @Override
+            public void onProgress(int i, String s) {
+
             }
         });
-
     }
+
+    private void registerIMAccount(String mobile, String authCode) {
+        new Thread() {
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    EMClient.getInstance().createAccount(mobile, mobile);
+                    Message message = Message.obtain();
+                    message.what = 100;
+                    message.obj = mobile + "," + authCode;
+                    mHandler.sendMessage(message);
+                } catch (HyphenateException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+    }
+
+
+    @SuppressLint("HandlerLeak")
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 100) {
+                String str = (String) msg.obj;
+                String[] array = str.split(",");
+                UserHelper.getInstance().putIMUserName(array[0].trim());
+                mCallback.registerAccount(array[0], array[1]);
+            }
+        }
+    };
+
 
     private void showRegisterAccount(String mobile, String authCode) {
         new AppDialog.Builder(getActivity()).setTitle("用户不存在，是否设置密码进行注册？")
@@ -259,8 +345,8 @@ public class LoginAuthFragment extends BaseFragment {
                 .setPositive("确定", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if (mCallback != null){
-                            mCallback.registerAccount(mobile , authCode);
+                        if (mCallback != null) {
+                            mCallback.registerAccount(mobile, authCode);
                         }
                     }
                 }).build().show();
@@ -269,7 +355,8 @@ public class LoginAuthFragment extends BaseFragment {
     private void sendAuthCode(String phone) {
         GetPhoneCodeRequest codeRequest = new GetPhoneCodeRequest();
         codeRequest.phone = phone;
-        BaseProvider.request(new HttpRequest(codeRequest).build(getActivity()),  new OnJsonCallBack() {
+        BaseProvider.request(new HttpRequest(codeRequest).build(getActivity()),
+                new OnJsonCallBack() {
             @Override
             public void onResult(Object data) {
                 countDownButton.start();
@@ -292,7 +379,7 @@ public class LoginAuthFragment extends BaseFragment {
         });
 
 
-       // AccountProvider.sendAuthCode(this, phone,);
+        // AccountProvider.sendAuthCode(this, phone,);
     }
 
     private Spannable getDialogSpannable() {
@@ -345,8 +432,11 @@ public class LoginAuthFragment extends BaseFragment {
 
     public interface Callback {
         void loginSuccess();
+
         void registerAccount(String mobile, String authCode);
+
         void loginWith(int type);
+
         void loginForPassword();
     }
 

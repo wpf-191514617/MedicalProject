@@ -21,21 +21,21 @@ public class AppButton extends AppCompatButton {
     }
 
     public AppButton(Context context, AttributeSet attrs, int defStyleAttr) {
-                super(context, attrs, defStyleAttr);
-                init(context, attrs);
-            }
+        super(context, attrs, defStyleAttr);
+        init(context, attrs);
+    }
 
-            private void init(Context context, AttributeSet attrs) {
-                TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.AppButton);
-                String btnText = array.getString(R.styleable.AppButton_btnText);
-                boolean btnEnable = array.getBoolean(R.styleable.AppButton_btnEnable, true);
-                int style = array.getInteger(R.styleable.AppButton_btnStyle , 0);
-                array.recycle();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    setStateListAnimator(null);
-                }
-                switch (style){
-                    case 1:
+    private void init(Context context, AttributeSet attrs) {
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.AppButton);
+        String btnText = array.getString(R.styleable.AppButton_btnText);
+        boolean btnEnable = array.getBoolean(R.styleable.AppButton_btnEnable, true);
+        int style = array.getInteger(R.styleable.AppButton_btnStyle, 0);
+        array.recycle();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            setStateListAnimator(null);
+        }
+        switch (style) {
+            case 1:
                 setBackgroundResource(R.drawable.bg_button_blue);
                 break;
             default:
@@ -44,7 +44,7 @@ public class AppButton extends AppCompatButton {
         }
 
         setTextColor(getResources().getColor(R.color.white));
-        setTextSize(TypedValue.COMPLEX_UNIT_SP , 16);
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         if (!TextUtils.isEmpty(btnText)) {
             setText(btnText);
         }

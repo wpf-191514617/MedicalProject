@@ -1,5 +1,6 @@
 package com.beitone.medical_store.app.ui.doctor.fragment;
 
+import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -81,10 +82,14 @@ public class SelectDoctorListFragment extends BaseFragment {
             @Override
             public void onResult(List<CreateInquiryResponse> data) {
                 if (AdapterUtil.isListNotEmpty(data)){
-                    jumpTo(SubmitInterrogationOrderActivity.class);
+                    CreateInquiryResponse response = data.get(0);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("goodsId" , response.getGoodsId());
+                    jumpTo(SubmitInterrogationOrderActivity.class , bundle);
                 }
             }
         });
+
         // jumpTo(SubmitInterrogationOrderActivity.class);
     }
 }

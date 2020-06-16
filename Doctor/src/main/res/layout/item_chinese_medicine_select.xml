@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayf5"
+    android:paddingTop="@dimen/dimen_8dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_15dp"
+        android:paddingRight="@dimen/dimen_15dp"
+        android:paddingTop="@dimen/dimen_20dp"
+        android:paddingBottom="@dimen/dimen_20dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="频次"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+
+                <com.beitone.medical.doctor.widget.AppSpinner
+                    android:id="@+id/spinnerFrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    app:textHint="选择频次"
+                    android:layout_marginLeft="@dimen/dimen_10dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dimen_18dp"
+                android:layout_height="@dimen/dimen_10dp"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用法"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+
+                <com.beitone.medical.doctor.widget.AppSpinner
+                    android:id="@+id/spinnerUsage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    app:textHint="选择用法"
+                    android:layout_marginLeft="@dimen/dimen_10dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剂数"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+
+                <com.beitone.medical.doctor.widget.AppSpinner
+                    android:id="@+id/spinnerDosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    app:textHint="选择剂数"
+                    android:layout_marginLeft="@dimen/dimen_10dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/dimen_18dp"
+                android:layout_height="@dimen/dimen_10dp"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="煎法"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+
+                <com.beitone.medical.doctor.widget.AppSpinner
+                    android:id="@+id/spinnerRoasting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_40dp"
+                    app:textHint="选择煎法"
+                    android:layout_marginLeft="@dimen/dimen_10dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="说明"
+                android:textColor="#ff000000"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/etExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:background="@drawable/bg_gray_stroke_radius"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_11dp"
+                android:textColorHint="#858585"
+                android:textColor="@color/gray33"
+                android:hint="选填"
+                android:textSize="@dimen/sp_14"
+                android:maxLines="1" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

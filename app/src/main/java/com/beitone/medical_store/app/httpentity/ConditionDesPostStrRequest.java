@@ -3,24 +3,17 @@ package com.beitone.medical_store.app.httpentity;
 
 import com.beitone.medical_store.app.MedicalApplication;
 import com.beitone.medical_store.app.helper.UserHelper;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParser;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
-import org.json.JSONArray;
-
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 import cn.betatown.mobile.beitonelibrary.adapter.AdapterUtil;
 import cn.betatown.mobile.beitonelibrary.http.request.BasePostStrRequestEntity;
-import cn.betatown.mobile.beitonelibrary.util.GsonUtil;
 
 /**
  * 病情描述请求实体
@@ -44,7 +37,7 @@ public class ConditionDesPostStrRequest extends BasePostStrRequestEntity {
     @Override
     public LinkedHashMap<String, String> getHead() {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
-        map.put("Authorization", UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+        /*map.put("Authorization", UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));*/
         return map;
     }
 

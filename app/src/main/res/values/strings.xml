@@ -19,4 +19,8 @@
         <item>内科</item>
         <item>更多科室</item>
     </string-array>
+    <string name="at_your_in_group">%s在群聊中@了你</string>
+    <string name="msg_recall_by_user">%1$s 撤回了一条消息</string>
+    <string name="alert_request_video">%1$s发来视频请求</string>
+    <string name="alert_request_voice">%1$s发来语音请求</string>
 </resources>

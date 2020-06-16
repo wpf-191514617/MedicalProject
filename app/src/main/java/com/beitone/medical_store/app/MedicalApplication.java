@@ -3,19 +3,28 @@ package com.beitone.medical_store.app;
 import android.app.Application;
 import android.content.Context;
 
+import androidx.multidex.MultiDex;
+
+import com.beitone.medical_store.app.helper.EaseHelper;
 import com.beitone.medical_store.app.helper.LocationHelper;
 import com.bt.http.OkHttpUtils;
 import com.bt.http.https.HttpsUtils;
+import com.hyphenate.easeui.EaseUI;
+import com.hyphenate.push.EMPushHelper;
+import com.hyphenate.push.EMPushType;
+import com.hyphenate.push.PushListener;
+import com.hyphenate.util.EMLog;
 
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
+import cn.betatown.mobile.beitonelibrary.BeiToneApplication;
 import okhttp3.OkHttpClient;
 import okio.Buffer;
 
-public class MedicalApplication extends Application {
+public class MedicalApplication extends BeiToneApplication {
 
-    private static Context context;
+
     private String CER_HYJ = "-----BEGIN RSA PRIVATE KEY-----\n" +
             "MIIEpQIBAAKCAQEAvLfPEio+7Ve/GZTuURjZ7pl2Q8EzAWZV4JhCO2xGxniBFwF7\n" +
             "g9F4QZR71f1CaHc5yW5PruPYgdnyCCEa0P8AbScKxMgIdIODUdOj4R7/4ZiCXvcp\n" +
@@ -47,7 +56,7 @@ public class MedicalApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        context = this;
+        MultiDex.install(this);
         LocationHelper.getLocationHelper(this).startMapLocation();
         try {
             String a = "";
@@ -65,13 +74,25 @@ public class MedicalApplication extends Application {
                     .writeTimeout(60000L, TimeUnit.MILLISECONDS)
                     .build();
             OkHttpUtils.initClient(okHttpClient);
+
+
+            EaseHelper.getInstance().init(this);
+
+            if (EaseUI.getInstance().isMainProcess(this)) {
+
+                EMPushHelper.getInstance().setPushListener(new PushListener() {
+                    @Override
+                    public void onError(EMPushType pushType, long errorCode) {
+                        // TODO: 返回的errorCode仅9xx为环信内部错误，可从EMError中查询，其他错误请根据pushType去相应第三方推送网站查询。
+                        EMLog.e("PushClient", "Push client occur a error: " + pushType + " - " + errorCode);
+                    }
+                });
+            }
+
         } catch (Exception e) {
 
         }
     }
 
-    public static Context getContext() {
-        return context;
-    }
 
 }

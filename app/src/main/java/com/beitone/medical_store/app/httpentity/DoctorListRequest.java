@@ -24,7 +24,7 @@ public class DoctorListRequest extends BaseRequestEntity {
         if (UserHelper.getInstance().isLogin(MedicalApplication.getContext())) {
             LinkedHashMap<String, String> map = new LinkedHashMap<>();
             map.put("Authorization",
-                    UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+                    UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));
             return map;
         }
         return null;

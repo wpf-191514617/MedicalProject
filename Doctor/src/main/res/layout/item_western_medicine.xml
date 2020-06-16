@@ -6,6 +6,7 @@
     android:paddingRight="@dimen/dimen_15dp"
     android:paddingTop="@dimen/dimen_18dp"
     android:paddingBottom="@dimen/dimen_5dp"
+    android:background="@color/white"
     android:orientation="vertical">
 
 
@@ -37,6 +38,7 @@
 
 
         <TextView
+            android:id="@+id/tvUpdateMedicine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/dimen_7dp"

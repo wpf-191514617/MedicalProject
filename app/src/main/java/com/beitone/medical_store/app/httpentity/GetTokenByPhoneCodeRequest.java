@@ -14,12 +14,14 @@ public class GetTokenByPhoneCodeRequest extends BaseRequestEntity {
 
     @Override
     public String getUrl() {
-        return "inqApi/platform-auth/auth/getTokenByPhoneCode";
+        return "inqApi/qdp-auth/oauth/token";
     }
 
     @Override
     public LinkedHashMap<String, String> getHead() {
-        return null;
+        LinkedHashMap<String, String> hashMap = new LinkedHashMap();
+        hashMap.put("Authorization" , "Basic d2VhcHA6d2VhcHBfc2VjcmV0");
+        return hashMap;
     }
 
     @Override
@@ -31,7 +33,7 @@ public class GetTokenByPhoneCodeRequest extends BaseRequestEntity {
     public Object getParams() {
         Map<String, Object> params = new LinkedHashMap<>();
         params.put("phone" , phone);
-        params.put("isRememberMe" , "true");
+        params.put("grant_type" , "sms");
         params.put("code" , authCode);
         return params;
     }

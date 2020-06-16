@@ -26,4 +26,7 @@
             <enum name="authcode" value="4" />
         </attr>
     </declare-styleable>
+    <declare-styleable name="AppSpinner">
+        <attr name="textHint" format="string"/>
+    </declare-styleable>
 </resources>

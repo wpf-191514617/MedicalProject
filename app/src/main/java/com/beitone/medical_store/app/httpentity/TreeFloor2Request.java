@@ -27,7 +27,7 @@ public class TreeFloor2Request extends BaseRequestEntity {
     @Override
     public LinkedHashMap<String, String> getHead() {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
-        map.put("Authorization", UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+        map.put("Authorization", UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));
         return map;
     }
 

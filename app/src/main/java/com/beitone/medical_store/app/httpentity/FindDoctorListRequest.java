@@ -25,7 +25,7 @@ public class FindDoctorListRequest extends BaseRequestEntity {
     public LinkedHashMap<String, String> getHead() {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         map.put("Authorization",
-                UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+                UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));
         if (!TextUtils.isEmpty(hospitalId)) {
             map.put("hospitalId", hospitalId);
         }

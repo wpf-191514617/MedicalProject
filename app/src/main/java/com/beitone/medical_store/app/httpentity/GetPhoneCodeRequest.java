@@ -12,7 +12,7 @@ public class GetPhoneCodeRequest extends BaseRequestEntity {
 
     @Override
     public String getUrl() {
-        return "inqApi/platform-auth/auth/getPhoneCode";
+        return "inqApi/qdp-auth/oauth/getPhoneCode";
     }
 
     @Override

@@ -28,7 +28,8 @@
 
         <activity android:name=".ui.prescription.SelectPrescriptionTypeActivity"/>
         <activity android:name=".ui.prescription.PrescriptionActivity"/>
-
+        <activity android:name=".ui.prescription.WesternMedicineActivity"/>
+        <activity android:name=".ui.prescription.ChineseMedicineActivity"/>
 
         <activity android:name=".ui.patient.PatientListActivity"/>
         <activity android:name=".ui.patient.PatientDetailActivity"/>

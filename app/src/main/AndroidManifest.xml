@@ -74,7 +74,7 @@
         <!-- 问诊 -->
         <activity
             android:name=".ui.interrogation.SubmitQuestionActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ui.interrogation.SelectSeeDoctorPeopleActivity"
             android:screenOrientation="portrait" />
@@ -162,6 +162,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.hospital.medical_card.MedicalCardDetailActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.interrogation.ChatActivity"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name="com.donkingliang.imageselector.ImageSelectorActivity"
@@ -179,8 +181,60 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
 
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+
 
         <service android:name="com.amap.api.location.APSService"/>
+
+
+
+        <service android:name=".fcm.EMFCMMSGService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".fcm.EMFCMTokenRefreshService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- FCM required end -->
+
+        <!-- huawei push end -->
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1119200305107338#hyj" />
+        <!-- 声明sdk所需的service -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+
 
         <provider
             android:name="androidx.core.content.FileProvider"

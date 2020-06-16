@@ -1,7 +1,5 @@
 package com.beitone.medical_store.app.httpentity;
 
-import android.text.TextUtils;
-
 import com.beitone.medical_store.app.MedicalApplication;
 import com.beitone.medical_store.app.helper.UserHelper;
 
@@ -23,7 +21,7 @@ public class CreateInquiryRequest extends BaseRequestEntity {
     public LinkedHashMap<String, String> getHead() {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
         map.put("Authorization",
-                UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+                UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));
         return map;
     }
 

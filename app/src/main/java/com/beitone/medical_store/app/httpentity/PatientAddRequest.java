@@ -3,7 +3,6 @@ package com.beitone.medical_store.app.httpentity;
 import com.beitone.medical_store.app.MedicalApplication;
 import com.beitone.medical_store.app.helper.UserHelper;
 
-import java.util.Date;
 import java.util.LinkedHashMap;
 
 import cn.betatown.mobile.beitonelibrary.http.request.BasePostStrRequestEntity;
@@ -27,7 +26,7 @@ public class PatientAddRequest extends BasePostStrRequestEntity {
     @Override
     public LinkedHashMap<String, String> getHead() {
         LinkedHashMap<String, String> map = new LinkedHashMap<>();
-        map.put("Authorization", UserHelper.getInstance().getUserToken(MedicalApplication.getContext()));
+        map.put("Authorization", UserHelper.getInstance().getAccessToken(MedicalApplication.getContext()));
         return map;
     }
 

@@ -10,8 +10,7 @@
         android:id="@+id/tvInputLable"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="0.28"
-        android:paddingLeft="@dimen/dimen_15dp"
+        android:layout_weight="0.3"
         android:text="持卡人"
         android:textColor="@color/gray33"
         android:textSize="@dimen/sp_14" />

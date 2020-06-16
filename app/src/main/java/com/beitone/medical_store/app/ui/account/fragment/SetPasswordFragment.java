@@ -142,30 +142,6 @@ public class SetPasswordFragment extends BaseFragment {
             }
 
         });
-
-
-        /*AccountProvider.findPassword(getActivity(), phone, authCode,
-                etPassword.getText().toString(), new OnJsonCallBack() {
-                    @Override
-                    public void onResult(Object data) {
-                        if (mCallback != null) {
-                            mCallback.onSetPasswordDone(true);
-                        }
-                    }
-
-                    @Override
-                    public void onError(String msg) {
-                        super.onError(msg);
-                        showToast(msg);
-                    }
-
-                    @Override
-                    public void onFailed(String msg) {
-                        super.onFailed(msg);
-                        showToast(msg);
-                    }
-
-                });*/
     }
 
 
@@ -173,6 +149,8 @@ public class SetPasswordFragment extends BaseFragment {
         PasswdRequest request = new PasswdRequest();
         request.newPasswd = etPassword.getText().toString();
         request.userId = UserHelper.getInstance().getUserId(getActivity());
+        request.code = authCode;
+        request.phone = phone;
         BaseProvider.request(new HttpRequest(request).build(getActivity()),
                 new OnJsonCallBack() {
                     @Override
